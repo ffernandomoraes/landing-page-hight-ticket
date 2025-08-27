@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import { 
   Carousel, 
   CarouselContent, 
@@ -91,10 +92,17 @@ const StrategicPackagesSection = () => {
       <div className="container mx-auto px-4 py-2">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">
-            Pacotes Estratégicos High Ticket: <br />
-            <span className="text-brand-blue">personalização total para você vender mais</span>
+          <div className="flex justify-center mb-4">
+            <Badge variant="default" className="mb-4">
+              High Ticket
+            </Badge>
+          </div>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 leading-tight">
+            Pacotes Estratégicos:
           </h2>
+          <p className="text-2xl md:text-3xl lg:text-4xl font-thin text-brand-blue leading-tight">
+            Personalização total para você vender mais
+          </p>
         </div>
 
         {/* Carousel */}
