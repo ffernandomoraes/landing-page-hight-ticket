@@ -21,7 +21,7 @@ const FeaturesSection = () => {
           {/* Second Column - Stats and Details */}
           <div className="space-y-8">
             {/* Stats Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-3 gap-3 md:gap-6">
               <AnimatedStatsCard
                 number={50}
                 unit="Bilhões"
