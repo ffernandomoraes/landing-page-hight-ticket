@@ -34,6 +34,18 @@ All colors MUST be HSL.
     --gradient-hero-blue: linear-gradient(135deg, hsl(210 95% 20%), hsl(210 95% 10%));
     --gradient-cta: linear-gradient(135deg, hsl(var(--brand-blue)), hsl(210 95% 30%));
 
+    /* Card border gradients */
+    --gradient-border-1: linear-gradient(135deg, hsl(210 95% 20%), hsl(210 90% 35%));
+    --gradient-border-2: linear-gradient(135deg, hsl(210 90% 35%), hsl(210 85% 45%));
+    --gradient-border-3: linear-gradient(135deg, hsl(210 85% 45%), hsl(210 80% 55%));
+    --gradient-border-4: linear-gradient(135deg, hsl(210 80% 55%), hsl(210 75% 65%));
+
+    /* Button gradients */
+    --gradient-btn-1: linear-gradient(135deg, hsl(210 95% 20%), hsl(210 90% 30%));
+    --gradient-btn-2: linear-gradient(135deg, hsl(210 90% 30%), hsl(210 85% 40%));
+    --gradient-btn-3: linear-gradient(135deg, hsl(210 85% 40%), hsl(210 80% 50%));
+    --gradient-btn-4: linear-gradient(135deg, hsl(210 80% 50%), hsl(180 70% 60%));
+
     --muted: 0 0% 97.5%;
     --muted-foreground: 210 10% 45%;
 
@@ -161,5 +173,60 @@ All colors MUST be HSL.
   
   .shadow-outline-hover:hover {
     box-shadow: 0 6px 20px -6px hsl(210 95% 20% / 0.2);
+  }
+
+  /* Card shadow utilities */
+  .card-shadow-1:hover {
+    box-shadow: 0 20px 40px -10px hsl(210 95% 20% / 0.3), 0 0 30px hsl(210 90% 35% / 0.2);
+  }
+  
+  .card-shadow-2:hover {
+    box-shadow: 0 20px 40px -10px hsl(210 90% 35% / 0.3), 0 0 30px hsl(210 85% 45% / 0.2);
+  }
+  
+  .card-shadow-3:hover {
+    box-shadow: 0 20px 40px -10px hsl(210 85% 45% / 0.3), 0 0 30px hsl(210 80% 55% / 0.2);
+  }
+  
+  .card-shadow-4:hover {
+    box-shadow: 0 20px 40px -10px hsl(210 80% 55% / 0.3), 0 0 30px hsl(180 70% 60% / 0.2);
+  }
+
+  /* Border gradients */
+  .border-gradient-1 {
+    border: 2px solid transparent;
+    background: linear-gradient(white, white) padding-box, var(--gradient-border-1) border-box;
+  }
+  
+  .border-gradient-2 {
+    border: 2px solid transparent;
+    background: linear-gradient(white, white) padding-box, var(--gradient-border-2) border-box;
+  }
+  
+  .border-gradient-3 {
+    border: 2px solid transparent;
+    background: linear-gradient(white, white) padding-box, var(--gradient-border-3) border-box;
+  }
+  
+  .border-gradient-4 {
+    border: 2px solid transparent;
+    background: linear-gradient(white, white) padding-box, var(--gradient-border-4) border-box;
+  }
+
+  /* Button gradient backgrounds */
+  .btn-gradient-1 {
+    background: var(--gradient-btn-1);
+  }
+  
+  .btn-gradient-2 {
+    background: var(--gradient-btn-2);
+  }
+  
+  .btn-gradient-3 {
+    background: var(--gradient-btn-3);
+  }
+  
+  .btn-gradient-4 {
+    background: var(--gradient-btn-4);
   }
 }
