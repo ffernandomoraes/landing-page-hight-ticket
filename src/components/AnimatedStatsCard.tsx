@@ -7,9 +7,10 @@ interface AnimatedStatsCardProps {
   description: string;
   icon: LucideIcon;
   suffix?: string;
+  colorClass?: string;
 }
 
-const AnimatedStatsCard = ({ number, unit, description, icon: Icon, suffix = "" }: AnimatedStatsCardProps) => {
+const AnimatedStatsCard = ({ number, unit, description, icon: Icon, suffix = "", colorClass = "text-blue-900" }: AnimatedStatsCardProps) => {
   const { count, ref } = useCountAnimation(number, 2500);
 
   const formatNumber = (num: number) => {
@@ -26,13 +27,13 @@ const AnimatedStatsCard = ({ number, unit, description, icon: Icon, suffix = "" 
     >
       <div className="flex items-start justify-between mb-2 md:mb-4">
         <Icon 
-          className="w-6 h-6 md:w-8 md:h-8 text-brand-blue group-hover:text-brand-blue/80 transition-colors" 
+          className={`w-6 h-6 md:w-8 md:h-8 ${colorClass} group-hover:opacity-80 transition-colors`}
           strokeWidth={1.5}
         />
       </div>
       
       <div className="space-y-2">
-        <div className="text-lg md:text-2xl lg:text-3xl font-bold text-brand-blue">
+        <div className={`text-lg md:text-2xl lg:text-3xl font-bold ${colorClass}`}>
           {formatNumber(count)} {unit}
         </div>
         

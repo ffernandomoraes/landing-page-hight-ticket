@@ -30,6 +30,7 @@ const FeaturesSection = () => {
                 description="De reais em vendas"
                 icon={TrendingUp}
                 suffix="Bilhões"
+                colorClass="text-blue-900"
               />
               <AnimatedStatsCard
                 number={25}
@@ -37,6 +38,7 @@ const FeaturesSection = () => {
                 description="De compradores"
                 icon={Users}
                 suffix="Milhões"
+                colorClass="text-blue-700"
               />
               <AnimatedStatsCard
                 number={200000}
@@ -44,6 +46,7 @@ const FeaturesSection = () => {
                 description="Produtores vendendo aqui"
                 icon={Store}
                 suffix="Mil"
+                colorClass="text-blue-500"
               />
             </div>
             
