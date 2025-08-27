@@ -238,8 +238,8 @@ const StrategicPackagesSection = () => {
               })}
             </CarouselContent>
             
-            <CarouselPrevious className="hidden md:flex -left-12 w-12 h-12 rounded-full" />
-            <CarouselNext className="hidden md:flex -right-12 w-12 h-12 rounded-full" />
+            <CarouselPrevious className="hidden md:flex -left-16 w-12 h-12 rounded-full" />
+            <CarouselNext className="hidden md:flex -right-16 w-12 h-12 rounded-full" />
           </Carousel>
         </div>
       </div>
