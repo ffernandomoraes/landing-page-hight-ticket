@@ -20,15 +20,24 @@ const FeaturesSection = () => {
             {/* Stats Cards */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6">
-                <div className="text-2xl md:text-3xl font-bold text-brand-blue"><span className="border border-brand-blue text-brand-blue px-1 rounded">+</span> 50 Bilhões</div>
+                <div className="text-2xl md:text-3xl font-bold text-brand-blue flex items-center gap-2">
+                  <span className="border border-brand-blue text-brand-blue w-6 h-6 flex items-center justify-center text-sm rounded">+</span> 
+                  50 Bilhões
+                </div>
                 <div className="text-gray-800 text-xs">De reais em vendas</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6">
-                <div className="text-2xl md:text-3xl font-bold text-brand-blue"><span className="border border-brand-blue text-brand-blue px-1 rounded">+</span> 25 Milhões</div>
+                <div className="text-2xl md:text-3xl font-bold text-brand-blue flex items-center gap-2">
+                  <span className="border border-brand-blue text-brand-blue w-6 h-6 flex items-center justify-center text-sm rounded">+</span> 
+                  25 Milhões
+                </div>
                 <div className="text-gray-800 text-xs">De compradores</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6">
-                <div className="text-2xl md:text-3xl font-bold text-brand-blue"><span className="border border-brand-blue text-brand-blue px-1 rounded">+</span> 200 Mil</div>
+                <div className="text-2xl md:text-3xl font-bold text-brand-blue flex items-center gap-2">
+                  <span className="border border-brand-blue text-brand-blue w-6 h-6 flex items-center justify-center text-sm rounded">+</span> 
+                  <span>200<br/>Mil</span>
+                </div>
                 <div className="text-gray-800 text-xs">Produtores vendendo aqui</div>
               </div>
             </div>
