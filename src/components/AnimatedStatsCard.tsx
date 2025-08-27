@@ -28,7 +28,7 @@ const AnimatedStatsCard = ({ number, unit, description, icon: Icon, suffix = "" 
   return (
     <div 
       ref={ref}
-      className="bg-white/20 backdrop-blur-sm border border-white/30 p-6 transition-all duration-300 hover:shadow-xl hover:shadow-black/10 hover:bg-white/25 hover:scale-105 cursor-pointer group"
+      className="bg-white/20 backdrop-blur-sm border border-white/30 rounded-xl p-6 transition-all duration-300 hover:shadow-xl hover:shadow-black/10 hover:bg-white/25 hover:scale-105 cursor-pointer group"
     >
       <div className="flex items-start justify-between mb-4">
         <Icon 
