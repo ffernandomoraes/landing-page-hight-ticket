@@ -20,20 +20,20 @@ const FeaturesSection = () => {
             {/* Stats Cards */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6">
-                <div className="text-2xl md:text-3xl font-bold text-white">+ 50 Bilhões</div>
+                <div className="text-2xl md:text-3xl font-bold text-white"><span className="text-[#FFBC00]">+</span> 50 Bilhões</div>
                 <div className="text-white/70 text-xs">De reais em vendas</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6">
-                <div className="text-2xl md:text-3xl font-bold text-white">+ 25 Milhões</div>
+                <div className="text-2xl md:text-3xl font-bold text-white"><span className="text-[#FFBC00]">+</span> 25 Milhões</div>
                 <div className="text-white/70 text-xs">De compradores</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6">
-                <div className="text-2xl md:text-3xl font-bold text-white">+ 200 Mil</div>
+                <div className="text-2xl md:text-3xl font-bold text-white"><span className="text-[#FFBC00]">+</span> 200 Mil</div>
                 <div className="text-white/70 text-xs">Produtores vendendo aqui</div>
               </div>
             </div>
             
-            <p className="text-base text-white/70 leading-relaxed">
+            <p className="text-base text-gray-800 leading-relaxed">
               Na Eduzz, você reúne em um único lugar a gestão de cursos online e eventos presenciais, com opções de pagamento via Pix ou cartão (parcelado em até 18 x) e uma área de membros white‑label com a sua marca. Tenha relatórios detalhados de desempenho e escale negócios de alto valor com segurança e praticidade.
             </p>
           </div>
