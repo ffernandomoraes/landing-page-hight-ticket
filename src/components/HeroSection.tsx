@@ -25,7 +25,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="min-h-screen bg-gradient-hero flex items-center pt-24">
+    <section className="min-h-screen bg-gradient-hero-blue flex items-center pt-24">
       <div className="container mx-auto px-4 py-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           
