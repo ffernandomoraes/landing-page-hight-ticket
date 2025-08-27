@@ -52,8 +52,8 @@ const strategicPackages: StrategyPackage[] = [
     subtitle: "Autoridade e exclusividade na mesma oferta",
     description: [
       { text: "Curso digital que educa e qualifica seu público", icon: BookOpen },
-      { text: "Evento presencial exclusivo para criar conexão real", icon: Users },
-      { text: "Oferta high ticket para clientes mais comprometidos", icon: Crown }, 
+      { text: "Evento presencial exclusivo e de alto impacto", icon: Users },
+      { text: "High ticket para clientes premium", icon: Crown }, 
       { text: "Sistema completo que funciona 24/7", icon: Zap }
     ],
     benefit: "maior autoridade da marca e conversão potencializada pela relação direta no evento.",
@@ -67,9 +67,9 @@ const strategicPackages: StrategyPackage[] = [
     title: "Assinatura + Evento Presencial + High Ticket",
     subtitle: "Receita recorrente e upsell de valor elevado",
     description: [
-      { text: "Receita recorrente que cresce todo mês no automático", icon: DollarSign },
+      { text: "Receita recorrente mensal automática", icon: DollarSign },
       { text: "Eventos exclusivos só para assinantes VIP", icon: Trophy },
-      { text: "Oferta high ticket apresentada pessoalmente", icon: Sparkles },
+      { text: "High ticket apresentado pessoalmente", icon: Sparkles },
       { text: "Previsibilidade total de faturamento", icon: TrendingUp }
     ],
     benefit: "previsibilidade de caixa com assinaturas e oportunidade de upsell no evento.",
@@ -83,10 +83,10 @@ const strategicPackages: StrategyPackage[] = [
     title: "Lançamento pago + Evento Presencial + High Ticket",
     subtitle: "Impacto imediato e relacionamento profundo",
     description: [
-      { text: "Lançamento que já gera receita desde o primeiro dia", icon: Rocket },
-      { text: "Evento presencial para fortalecer relacionamentos", icon: HandHeart },
-      { text: "High ticket vendido com alta conversão pós-evento", icon: Percent },
-      { text: "Ciclo de vendas rápido com resultados garantidos", icon: Timer }
+      { text: "Lançamento com receita imediata", icon: Rocket },
+      { text: "Evento para fortalecer relacionamentos", icon: HandHeart },
+      { text: "High ticket com conversão elevada", icon: Percent },
+      { text: "Ciclo de vendas rápido e eficaz", icon: Timer }
     ],
     benefit: "geração de receita antes do evento e maior taxa de conversão no high ticket devido ao envolvimento presencial.",
     cta: "Fale com um estrategista",
@@ -99,10 +99,10 @@ const strategicPackages: StrategyPackage[] = [
     title: "Evento Presencial + High Ticket",
     subtitle: "Experiência intensa e conversão máxima",
     description: [
-      { text: "Evento presencial de alto impacto e exclusividade", icon: Flame },
-      { text: "Venda direta com taxa de conversão premium", icon: Percent },
-      { text: "Experiência imersiva que gera transformação real", icon: Star },
-      { text: "Suporte completo: do planejamento à execução", icon: HeartHandshake }
+      { text: "Evento presencial de alto impacto", icon: Flame },
+      { text: "Venda direta com conversão premium", icon: Percent },
+      { text: "Experiência imersiva transformadora", icon: Star },
+      { text: "Suporte completo: planejamento à execução", icon: HeartHandshake }
     ],
     benefit: "conversão elevada pela experiência presencial e percepção de valor premium.",
     cta: "Converse com nosso gerente",
