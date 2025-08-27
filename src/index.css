@@ -176,16 +176,32 @@ All colors MUST be HSL.
   }
 
   /* Card shadow utilities */
+  .card-shadow-1 {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
   .card-shadow-1:hover {
     box-shadow: 0 20px 40px -10px hsl(210 95% 20% / 0.3), 0 0 30px hsl(210 90% 35% / 0.2);
+  }
+  
+  .card-shadow-2 {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
   
   .card-shadow-2:hover {
     box-shadow: 0 20px 40px -10px hsl(210 90% 35% / 0.3), 0 0 30px hsl(210 85% 45% / 0.2);
   }
   
+  .card-shadow-3 {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
   .card-shadow-3:hover {
     box-shadow: 0 20px 40px -10px hsl(210 85% 45% / 0.3), 0 0 30px hsl(210 80% 55% / 0.2);
+  }
+  
+  .card-shadow-4 {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
   
   .card-shadow-4:hover {
@@ -215,18 +231,26 @@ All colors MUST be HSL.
 
   /* Button gradient backgrounds */
   .btn-gradient-1 {
-    background: var(--gradient-btn-1);
+    background: transparent;
+    border: 2px solid transparent;
+    background: linear-gradient(white, white) padding-box, linear-gradient(135deg, hsl(210 95% 20%), hsl(180 80% 50%)) border-box;
   }
   
   .btn-gradient-2 {
-    background: var(--gradient-btn-2);
+    background: transparent;
+    border: 2px solid transparent;
+    background: linear-gradient(white, white) padding-box, linear-gradient(135deg, hsl(210 90% 25%), hsl(180 75% 55%)) border-box;
   }
   
   .btn-gradient-3 {
-    background: var(--gradient-btn-3);
+    background: transparent;
+    border: 2px solid transparent;
+    background: linear-gradient(white, white) padding-box, linear-gradient(135deg, hsl(210 85% 30%), hsl(180 70% 60%)) border-box;
   }
   
   .btn-gradient-4 {
-    background: var(--gradient-btn-4);
+    background: transparent;
+    border: 2px solid transparent;
+    background: linear-gradient(white, white) padding-box, linear-gradient(135deg, hsl(210 80% 35%), hsl(180 65% 65%)) border-box;
   }
 }

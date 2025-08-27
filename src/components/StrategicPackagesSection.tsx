@@ -147,10 +147,10 @@ const StrategicPackagesSection = () => {
                           </div>
                           
                           <Button 
-                            className={`w-full text-xs text-white hover:opacity-90 transition-opacity flex-shrink-0 btn-gradient-${cardIndex}`}
+                            className={`w-full text-xs text-foreground hover:bg-primary/5 transition-all flex-shrink-0 btn-gradient-${cardIndex}`}
                             size="sm"
                           >
-                            <Target className="w-3 h-3 mr-2" />
+                            <Target className="w-3 h-3 mr-2 text-primary" />
                             {pkg.cta}
                           </Button>
                         </div>
