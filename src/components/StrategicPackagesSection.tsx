@@ -93,8 +93,8 @@ const StrategicPackagesSection = () => {
         {/* Section Header */}
         <div className="text-center mb-8">
           <div className="flex justify-center mb-4">
-            <Badge variant="outline" className="mb-4 h-10 px-4 bg-transparent border-brand-blue border-2 text-brand-blue">
-              <Target className="w-4 h-4 mr-2 text-secondary" />
+            <Badge variant="outline" className="mb-4 h-10 px-4 bg-transparent border-brand-blue border text-brand-blue">
+              <Target className="w-4 h-4 mr-2" color="#3b88ed" />
               High Ticket
             </Badge>
           </div>
