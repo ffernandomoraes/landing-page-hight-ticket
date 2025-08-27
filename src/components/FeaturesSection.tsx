@@ -36,7 +36,10 @@ const FeaturesSection = () => {
                 number={50}
                 unit="Bilhões"
                 description="De reais em vendas"
-                icon={TrendingUp}
+                lordIcon={{
+                  src: "https://cdn.lordicon.com/ihkpbcjb.json",
+                  size: 60
+                }}
                 suffix="Bilhões"
                 colorClass="text-blue-900"
               />
@@ -44,15 +47,21 @@ const FeaturesSection = () => {
                 number={25}
                 unit="Milhões"
                 description="De compradores"
-                icon={Users}
+                lordIcon={{
+                  src: "https://cdn.lordicon.com/ipkvjmpu.json",
+                  size: 60
+                }}
                 suffix="Milhões"
                 colorClass="text-blue-700"
               />
               <AnimatedStatsCard
-                number={200000}
+                number={200}
                 unit="Mil"
                 description="Produtores vendendo aqui"
-                icon={Store}
+                lordIcon={{
+                  src: "https://cdn.lordicon.com/jdnoclpe.json",
+                  size: 60
+                }}
                 suffix="Mil"
                 colorClass="text-blue-500"
               />
