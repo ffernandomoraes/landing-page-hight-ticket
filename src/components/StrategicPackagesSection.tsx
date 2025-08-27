@@ -162,18 +162,16 @@ const StrategicPackagesSection = () => {
                       <Card className="h-full bg-card rounded-lg flex flex-col border-0">
                       <CardHeader className="pb-6 pt-8">
                         <div className="flex items-start gap-4 mb-4">
-                          <div className="bg-primary/10 p-3 rounded-lg group-hover:bg-primary/20 transition-colors">
-                            <LordIcon
-                              src={pkg.lordIcon.src}
-                              trigger="manual"
-                              stroke="regular"
-                              colors={pkg.lordIcon.colors}
-                              style={{
-                                width: "64px",
-                                height: "64px"
-                              }}
-                            />
-                          </div>
+                          <LordIcon
+                            src={pkg.lordIcon.src}
+                            trigger="manual"
+                            stroke="regular"
+                            colors={pkg.lordIcon.colors}
+                            style={{
+                              width: "44px",
+                              height: "44px"
+                            }}
+                          />
                           <div className="flex-1">
                             <CardTitle className="text-lg font-bold mb-2 leading-tight">
                               <span className={`bg-gradient-to-r ${pkg.titleGradient} bg-clip-text text-transparent`}>
