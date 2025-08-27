@@ -9,17 +9,11 @@ import {
   CarouselPrevious 
 } from "@/components/ui/carousel";
 import { 
-  GraduationCap, 
-  Calendar, 
-  Rocket, 
-  Users, 
-  TrendingUp, 
   Target,
   BookOpen,
   Zap,
   DollarSign,
   Crown,
-  Calendar as CalendarIcon,
   HandHeart,
   Sparkles,
   Trophy,
@@ -27,8 +21,12 @@ import {
   Flame,
   Percent,
   Star,
-  HeartHandshake
+  HeartHandshake,
+  Users,
+  TrendingUp,
+  Rocket
 } from "lucide-react";
+import LordIcon from "./LordIcon";
 
 interface StrategyPackage {
   id: number;
@@ -40,7 +38,10 @@ interface StrategyPackage {
   }>;
   benefit: string;
   cta: string;
-  icon: React.ComponentType<any>;
+  lordIcon: {
+    src: string;
+    colors: string;
+  };
   titleGradient: string;
   borderGradient: string;
 }
@@ -58,14 +59,17 @@ const strategicPackages: StrategyPackage[] = [
     ],
     benefit: "maior autoridade da marca e conversão potencializada pela relação direta no evento.",
     cta: "Personalize este pacote",
-    icon: GraduationCap,
+    lordIcon: {
+      src: "https://cdn.lordicon.com/amdfceua.json",
+      colors: "primary:#012445,secondary:#FFBC00"
+    },
     titleGradient: "from-brand-blue to-brand-yellow",
     borderGradient: "from-brand-yellow to-brand-blue"
   },
   {
     id: 2,
     title: "Assinatura + Evento Presencial + High Ticket",
-    subtitle: "Receita recorrente e upsell de valor elevado",
+    subtitle: "Receita recorrente mensal automática",
     description: [
       { text: "Receita recorrente mensal automática", icon: DollarSign },
       { text: "Eventos exclusivos só para assinantes VIP", icon: Trophy },
@@ -74,14 +78,17 @@ const strategicPackages: StrategyPackage[] = [
     ],
     benefit: "previsibilidade de caixa com assinaturas e oportunidade de upsell no evento.",
     cta: "Saiba como implementar",
-    icon: TrendingUp,
+    lordIcon: {
+      src: "https://cdn.lordicon.com/alwzvvks.json",
+      colors: "primary:#012445,secondary:#10B981"
+    },
     titleGradient: "from-brand-blue to-emerald-400",
     borderGradient: "from-emerald-400 to-brand-blue"
   },
   {
     id: 3,
     title: "Lançamento pago + Evento Presencial + High Ticket",
-    subtitle: "Impacto imediato e relacionamento profundo",
+    subtitle: "Lançamento que gera receita desde o primeiro dia",
     description: [
       { text: "Lançamento com receita imediata", icon: Rocket },
       { text: "Evento para fortalecer relacionamentos", icon: HandHeart },
@@ -90,7 +97,10 @@ const strategicPackages: StrategyPackage[] = [
     ],
     benefit: "geração de receita antes do evento e maior taxa de conversão no high ticket devido ao envolvimento presencial.",
     cta: "Fale com um estrategista",
-    icon: Rocket,
+    lordIcon: {
+      src: "https://cdn.lordicon.com/rqmwejgl.json",
+      colors: "primary:#012445,secondary:#0EA5E9"
+    },
     titleGradient: "from-brand-blue to-sky-300",
     borderGradient: "from-sky-300 to-brand-blue"
   },
@@ -106,7 +116,10 @@ const strategicPackages: StrategyPackage[] = [
     ],
     benefit: "conversão elevada pela experiência presencial e percepção de valor premium.",
     cta: "Converse com nosso gerente",
-    icon: Users,
+    lordIcon: {
+      src: "https://cdn.lordicon.com/xzafublo.json",
+      colors: "primary:#012445,secondary:#A855F7"
+    },
     titleGradient: "from-brand-blue to-purple-400",
     borderGradient: "from-purple-400 to-brand-blue"
   }
@@ -143,7 +156,6 @@ const StrategicPackagesSection = () => {
           >
             <CarouselContent className="-ml-2 md:-ml-4 py-8">
               {strategicPackages.map((pkg) => {
-                const IconComponent = pkg.icon;
                 return (
                   <CarouselItem key={pkg.id} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3 py-2">
                     <div className={`h-full p-[1px] rounded-lg bg-gradient-to-b ${pkg.borderGradient} group hover:shadow-lg transition-all duration-300 hover:-translate-y-1`}>
@@ -151,7 +163,16 @@ const StrategicPackagesSection = () => {
                       <CardHeader className="pb-6 pt-8">
                         <div className="flex items-start gap-4 mb-4">
                           <div className="bg-primary/10 p-3 rounded-lg group-hover:bg-primary/20 transition-colors">
-                            <IconComponent className="w-6 h-6 text-primary" />
+                            <LordIcon
+                              src={pkg.lordIcon.src}
+                              trigger="manual"
+                              stroke="regular"
+                              colors={pkg.lordIcon.colors}
+                              style={{
+                                width: "64px",
+                                height: "64px"
+                              }}
+                            />
                           </div>
                           <div className="flex-1">
                             <CardTitle className="text-lg font-bold mb-2 leading-tight">
