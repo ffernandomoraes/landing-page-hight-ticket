@@ -14,17 +14,34 @@ import {
   Rocket, 
   Users, 
   TrendingUp, 
-  Target 
+  Target,
+  BookOpen,
+  Zap,
+  DollarSign,
+  Crown,
+  Calendar as CalendarIcon,
+  HandHeart,
+  Sparkles,
+  Trophy,
+  Timer,
+  Flame,
+  Percent,
+  Star,
+  HeartHandshake
 } from "lucide-react";
 
 interface StrategyPackage {
   id: number;
   title: string;
   subtitle: string;
-  description: string[];
+  description: Array<{
+    text: string;
+    icon: React.ComponentType<any>;
+  }>;
   benefit: string;
   cta: string;
   icon: React.ComponentType<any>;
+  titleGradient: string;
 }
 
 const strategicPackages: StrategyPackage[] = [
@@ -33,56 +50,60 @@ const strategicPackages: StrategyPackage[] = [
     title: "Curso + Evento Presencial + High Ticket",
     subtitle: "Autoridade e exclusividade na mesma oferta",
     description: [
-      "📚 Curso digital que educa e qualifica seu público",
-      "🎯 Evento presencial exclusivo para criar conexão real",
-      "💎 Oferta high ticket para clientes mais comprometidos", 
-      "⚡ Sistema completo que funciona 24/7"
+      { text: "Curso digital que educa e qualifica seu público", icon: BookOpen },
+      { text: "Evento presencial exclusivo para criar conexão real", icon: Users },
+      { text: "Oferta high ticket para clientes mais comprometidos", icon: Crown }, 
+      { text: "Sistema completo que funciona 24/7", icon: Zap }
     ],
     benefit: "maior autoridade da marca e conversão potencializada pela relação direta no evento.",
     cta: "Personalize este pacote",
-    icon: GraduationCap
+    icon: GraduationCap,
+    titleGradient: "from-brand-blue to-brand-yellow"
   },
   {
     id: 2,
     title: "Assinatura + Evento Presencial + High Ticket",
     subtitle: "Receita recorrente e upsell de valor elevado",
     description: [
-      "💰 Receita recorrente que cresce todo mês no automático",
-      "🏆 Eventos exclusivos só para assinantes VIP",
-      "🚀 Oferta high ticket apresentada pessoalmente",
-      "📈 Previsibilidade total de faturamento"
+      { text: "Receita recorrente que cresce todo mês no automático", icon: DollarSign },
+      { text: "Eventos exclusivos só para assinantes VIP", icon: Trophy },
+      { text: "Oferta high ticket apresentada pessoalmente", icon: Sparkles },
+      { text: "Previsibilidade total de faturamento", icon: TrendingUp }
     ],
     benefit: "previsibilidade de caixa com assinaturas e oportunidade de upsell no evento.",
     cta: "Saiba como implementar",
-    icon: TrendingUp
+    icon: TrendingUp,
+    titleGradient: "from-brand-blue to-emerald-400"
   },
   {
     id: 3,
     title: "Lançamento pago + Evento Presencial + High Ticket",
     subtitle: "Impacto imediato e relacionamento profundo",
     description: [
-      "🎪 Lançamento que já gera receita desde o primeiro dia",
-      "🤝 Evento presencial para fortalecer relacionamentos",
-      "💸 High ticket vendido com alta conversão pós-evento",
-      "⏰ Ciclo de vendas rápido com resultados garantidos"
+      { text: "Lançamento que já gera receita desde o primeiro dia", icon: Rocket },
+      { text: "Evento presencial para fortalecer relacionamentos", icon: HandHeart },
+      { text: "High ticket vendido com alta conversão pós-evento", icon: Percent },
+      { text: "Ciclo de vendas rápido com resultados garantidos", icon: Timer }
     ],
     benefit: "geração de receita antes do evento e maior taxa de conversão no high ticket devido ao envolvimento presencial.",
     cta: "Fale com um estrategista",
-    icon: Rocket
+    icon: Rocket,
+    titleGradient: "from-brand-blue to-sky-300"
   },
   {
     id: 4,
     title: "Evento Presencial + High Ticket",
     subtitle: "Experiência intensa e conversão máxima",
     description: [
-      "🔥 Evento presencial de alto impacto e exclusividade",
-      "💯 Venda direta com taxa de conversão premium",
-      "🌟 Experiência imersiva que gera transformação real",
-      "🎪 Suporte completo: do planejamento à execução"
+      { text: "Evento presencial de alto impacto e exclusividade", icon: Flame },
+      { text: "Venda direta com taxa de conversão premium", icon: Percent },
+      { text: "Experiência imersiva que gera transformação real", icon: Star },
+      { text: "Suporte completo: do planejamento à execução", icon: HeartHandshake }
     ],
     benefit: "conversão elevada pela experiência presencial e percepção de valor premium.",
     cta: "Converse com nosso gerente",
-    icon: Users
+    icon: Users,
+    titleGradient: "from-brand-blue to-purple-400"
   }
 ];
 
@@ -128,7 +149,7 @@ const StrategicPackagesSection = () => {
                           </div>
                           <div className="flex-1">
                             <CardTitle className="text-lg font-bold mb-2 leading-tight">
-                              <span className="bg-gradient-to-r from-brand-blue to-brand-yellow bg-clip-text text-transparent">
+                              <span className={`bg-gradient-to-r ${pkg.titleGradient} bg-clip-text text-transparent`}>
                                 {pkg.title}
                               </span>
                             </CardTitle>
@@ -141,13 +162,21 @@ const StrategicPackagesSection = () => {
                       
                       <CardContent className="pt-0 pb-8 flex flex-col flex-1">
                         <div className="flex flex-col h-full">
-                          <ul className="text-sm text-muted-foreground space-y-2 mb-6">
-                            {pkg.description.map((item, index) => (
-                              <li key={index} className="flex items-start gap-2">
-                                <span className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></span>
-                                <span className="leading-relaxed">{item}</span>
-                              </li>
-                            ))}
+                          <ul className="text-sm text-muted-foreground space-y-3 mb-6">
+                            {pkg.description.map((item, index) => {
+                              const IconComponent = item.icon;
+                              return (
+                                <div key={index}>
+                                  <li className="flex items-start gap-3">
+                                    <IconComponent className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" strokeWidth={1.5} />
+                                    <span className="leading-relaxed">{item.text}</span>
+                                  </li>
+                                  {index < pkg.description.length - 1 && (
+                                    <hr className="border-border mt-3" />
+                                  )}
+                                </div>
+                              );
+                            })}
                           </ul>
                           
                           <div className="bg-accent/50 p-3 rounded-lg mb-6 mt-auto">
