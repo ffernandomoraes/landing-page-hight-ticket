@@ -112,7 +112,7 @@ const StrategicPackagesSection = () => {
                 return (
                   <CarouselItem key={pkg.id} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
                     <Card className="h-full group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-border flex flex-col">
-                      <CardHeader className="pb-4">
+                      <CardHeader className="pb-6 pt-8">
                         <div className="flex items-start gap-4 mb-4">
                           <div className="bg-primary/10 p-3 rounded-lg group-hover:bg-primary/20 transition-colors">
                             <IconComponent className="w-6 h-6 text-primary" />
@@ -128,9 +128,9 @@ const StrategicPackagesSection = () => {
                         </div>
                       </CardHeader>
                       
-                      <CardContent className="pt-0 flex flex-col h-full">
-                        <div className="space-y-4 flex-1">
-                          <ul className="text-sm text-muted-foreground space-y-2">
+                      <CardContent className="pt-0 pb-8 flex flex-col flex-1">
+                        <div className="flex flex-col h-full">
+                          <ul className="text-sm text-muted-foreground space-y-2 mb-6">
                             {pkg.description.map((item, index) => (
                               <li key={index} className="flex items-start gap-2">
                                 <span className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></span>
@@ -139,7 +139,7 @@ const StrategicPackagesSection = () => {
                             ))}
                           </ul>
                           
-                          <div className="bg-accent/50 p-3 rounded-lg mt-auto">
+                          <div className="bg-accent/50 p-3 rounded-lg mb-6 mt-auto">
                             <p className="text-xs text-foreground leading-tight">
                               <span className="font-semibold">Benefício exclusivo:</span> {pkg.benefit}
                             </p>
@@ -148,7 +148,7 @@ const StrategicPackagesSection = () => {
                           <Button 
                             variant="outline" 
                             size="sm" 
-                            className="w-full text-xs hover:bg-primary hover:text-primary-foreground transition-colors mt-auto"
+                            className="w-full text-xs hover:bg-primary hover:text-primary-foreground transition-colors"
                           >
                             <Target className="w-3 h-3 mr-2" />
                             {pkg.cta}
