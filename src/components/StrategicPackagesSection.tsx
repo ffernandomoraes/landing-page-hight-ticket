@@ -47,6 +47,7 @@ interface StrategyPackage {
   borderGradient: string;
   benefitBg: string;
   buttonClasses: string;
+  dividerColor: string;
 }
 
 const strategicPackages: StrategyPackage[] = [
@@ -69,7 +70,8 @@ const strategicPackages: StrategyPackage[] = [
     titleGradient: "from-brand-blue to-brand-yellow",
     borderGradient: "from-brand-yellow/30 to-brand-blue/30 hover:from-brand-yellow hover:to-brand-blue",
     benefitBg: "bg-brand-yellow/10",
-    buttonClasses: "border-brand-yellow text-brand-yellow hover:bg-brand-yellow hover:text-white hover:border-brand-yellow"
+    buttonClasses: "border-brand-yellow text-brand-yellow hover:bg-brand-yellow hover:text-white hover:border-brand-yellow",
+    dividerColor: "border-brand-yellow/30"
   },
   {
     id: 2,
@@ -90,7 +92,8 @@ const strategicPackages: StrategyPackage[] = [
     titleGradient: "from-brand-blue to-emerald-400",
     borderGradient: "from-emerald-400/30 to-brand-blue/30 hover:from-emerald-400 hover:to-brand-blue",
     benefitBg: "bg-emerald-400/10",
-    buttonClasses: "border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white hover:border-emerald-400"
+    buttonClasses: "border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white hover:border-emerald-400",
+    dividerColor: "border-emerald-400/30"
   },
   {
     id: 3,
@@ -111,7 +114,8 @@ const strategicPackages: StrategyPackage[] = [
     titleGradient: "from-brand-blue to-sky-300",
     borderGradient: "from-sky-300/30 to-brand-blue/30 hover:from-sky-300 hover:to-brand-blue",
     benefitBg: "bg-sky-300/10",
-    buttonClasses: "border-sky-300 text-sky-300 hover:bg-sky-300 hover:text-white hover:border-sky-300"
+    buttonClasses: "border-sky-300 text-sky-300 hover:bg-sky-300 hover:text-white hover:border-sky-300",
+    dividerColor: "border-sky-300/30"
   },
   {
     id: 4,
@@ -132,7 +136,8 @@ const strategicPackages: StrategyPackage[] = [
     titleGradient: "from-brand-blue to-purple-400",
     borderGradient: "from-purple-400/30 to-brand-blue/30 hover:from-purple-400 hover:to-brand-blue",
     benefitBg: "bg-purple-400/10",
-    buttonClasses: "border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white hover:border-purple-400"
+    buttonClasses: "border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white hover:border-purple-400",
+    dividerColor: "border-purple-400/30"
   }
 ];
 
@@ -207,9 +212,9 @@ const StrategicPackagesSection = () => {
                                     <IconComponent className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" strokeWidth={1.5} />
                                     <span className="leading-relaxed">{item.text}</span>
                                   </li>
-                                  {index < pkg.description.length - 1 && (
-                                    <hr className="border-border mt-3" />
-                                  )}
+                                   {index < pkg.description.length - 1 && (
+                                     <hr className={`${pkg.dividerColor} mt-3`} />
+                                   )}
                                 </div>
                               );
                             })}
