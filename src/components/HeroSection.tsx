@@ -32,7 +32,7 @@ const HeroSection = () => {
           {/* Hero Content */}
           <div className="text-white space-y-8 animate-fade-in max-w-md">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-              Eleve seu negócio digital com a Eduzz
+              Eleve seu negócio digital com a <span className="text-secondary">Eduzz</span>
             </h1>
             
             <p className="text-xl md:text-2xl text-white/80 leading-relaxed max-w-lg">
