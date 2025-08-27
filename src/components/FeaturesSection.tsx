@@ -21,8 +21,8 @@ const FeaturesSection = () => {
             </p>
             
             <Button 
+              variant="outline"
               size="lg"
-              className="bg-white text-blue-900 hover:bg-white/90 font-semibold transition-all transform hover:scale-105"
             >
               Fale com um Gerente de Contas da Eduzz
             </Button>

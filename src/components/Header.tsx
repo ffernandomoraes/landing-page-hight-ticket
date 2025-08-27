@@ -30,10 +30,10 @@ const Header = () => {
           
           {/* CTA Buttons */}
           <div className="flex items-center space-x-3">
-            <Button variant="ghost" className="hidden sm:inline-flex">
+            <Button variant="tertiary" className="hidden sm:inline-flex">
               Entrar
             </Button>
-            <Button variant="hero" className="bg-gradient-cta text-primary-foreground hover:opacity-90 transition-opacity">
+            <Button variant="primary">
               Começar Grátis
             </Button>
           </div>
