@@ -30,7 +30,9 @@ All colors MUST be HSL.
     --brand-blue: 210 95% 20%;
 
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(var(--brand-orange)), hsl(var(--brand-yellow)));
+    --gradient-hero: linear-gradient(135deg, hsl(220 100% 25%), hsl(240 100% 15%));
+    --gradient-hero-blue: linear-gradient(135deg, hsl(220 100% 25%), hsl(240 100% 15%));
+    --gradient-hero-yellow: linear-gradient(135deg, hsl(var(--brand-orange)), hsl(var(--brand-yellow)));
     --gradient-cta: linear-gradient(135deg, hsl(var(--brand-blue)), hsl(210 95% 30%));
 
     --muted: 0 0% 97.5%;
@@ -85,7 +87,9 @@ All colors MUST be HSL.
     --brand-yellow: 43 100% 58%;
     --brand-blue: 210 95% 20%;
 
-    --gradient-hero: linear-gradient(135deg, hsl(var(--brand-orange)), hsl(var(--brand-yellow)));
+    --gradient-hero: linear-gradient(135deg, hsl(220 100% 25%), hsl(240 100% 15%));
+    --gradient-hero-blue: linear-gradient(135deg, hsl(220 100% 25%), hsl(240 100% 15%));
+    --gradient-hero-yellow: linear-gradient(135deg, hsl(var(--brand-orange)), hsl(var(--brand-yellow)));
     --gradient-cta: linear-gradient(135deg, hsl(var(--brand-blue)), hsl(210 95% 30%));
 
     --muted: 210 15% 15%;
