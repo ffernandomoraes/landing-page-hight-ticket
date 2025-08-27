@@ -88,7 +88,7 @@ const strategicPackages: StrategyPackage[] = [
 const StrategicPackagesSection = () => {
   return (
     <section className="bg-background py-28">
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto px-4 py-4">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">
