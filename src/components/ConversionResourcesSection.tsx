@@ -23,7 +23,7 @@ const resources: Resource[] = [
   {
     id: 1,
     title: "Recursos para aumentar a conversão",
-    description: "Checkout otimizado com Pix e cartão em até 18×. Integração com redes de afiliados e influenciadores para potencializar alcance e reduzir abandono.",
+    description: "Integração com redes de afiliados e influenciadores para potencializar alcance e reduzir abandono.",
     cta: "Falar com gerente",
     icon: CreditCard,
     image: conversionImage
@@ -38,7 +38,7 @@ const resources: Resource[] = [
   },
   {
     id: 3,
-    title: "Mais engajamento e retenção de alunos",
+    title: "Mais engajamento e retenção",
     description: "Área de membros white-label com gamificação e app móvel. Experiências exclusivas que fidelizam e aumentam permanência.",
     cta: "Converse com especialista",
     icon: Users,
