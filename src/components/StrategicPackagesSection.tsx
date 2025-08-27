@@ -24,7 +24,8 @@ import {
   HeartHandshake,
   Users,
   TrendingUp,
-  Rocket
+  Rocket,
+  ArrowRight
 } from "lucide-react";
 import LordIcon from "./LordIcon";
 
@@ -45,7 +46,7 @@ interface StrategyPackage {
   titleGradient: string;
   borderGradient: string;
   benefitBg: string;
-  buttonHover: string;
+  buttonClasses: string;
 }
 
 const strategicPackages: StrategyPackage[] = [
@@ -68,7 +69,7 @@ const strategicPackages: StrategyPackage[] = [
     titleGradient: "from-brand-blue to-brand-yellow",
     borderGradient: "from-brand-yellow to-brand-blue",
     benefitBg: "bg-brand-yellow/10",
-    buttonHover: "hover:bg-brand-yellow hover:text-white"
+    buttonClasses: "border-brand-yellow text-brand-yellow hover:bg-brand-yellow hover:text-white hover:border-brand-yellow"
   },
   {
     id: 2,
@@ -89,7 +90,7 @@ const strategicPackages: StrategyPackage[] = [
     titleGradient: "from-brand-blue to-emerald-400",
     borderGradient: "from-emerald-400 to-brand-blue",
     benefitBg: "bg-emerald-400/10",
-    buttonHover: "hover:bg-emerald-400 hover:text-white"
+    buttonClasses: "border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white hover:border-emerald-400"
   },
   {
     id: 3,
@@ -110,7 +111,7 @@ const strategicPackages: StrategyPackage[] = [
     titleGradient: "from-brand-blue to-sky-300",
     borderGradient: "from-sky-300 to-brand-blue",
     benefitBg: "bg-sky-300/10",
-    buttonHover: "hover:bg-sky-300 hover:text-white"
+    buttonClasses: "border-sky-300 text-sky-300 hover:bg-sky-300 hover:text-white hover:border-sky-300"
   },
   {
     id: 4,
@@ -131,7 +132,7 @@ const strategicPackages: StrategyPackage[] = [
     titleGradient: "from-brand-blue to-purple-400",
     borderGradient: "from-purple-400 to-brand-blue",
     benefitBg: "bg-purple-400/10",
-    buttonHover: "hover:bg-purple-400 hover:text-white"
+    buttonClasses: "border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white hover:border-purple-400"
   }
 ];
 
@@ -223,10 +224,10 @@ const StrategicPackagesSection = () => {
                           <Button 
                             variant="outline" 
                             size="sm" 
-                            className={`w-full text-xs transition-colors ${pkg.buttonHover}`}
+                            className={`w-full text-xs transition-colors ${pkg.buttonClasses}`}
                           >
-                            <Target className="w-3 h-3 mr-2" />
                             {pkg.cta}
+                            <ArrowRight className="w-3 h-3 ml-2" />
                           </Button>
                         </div>
                       </CardContent>
