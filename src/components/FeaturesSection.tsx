@@ -1,19 +1,17 @@
 const FeaturesSection = () => {
   return (
-    <section className="bg-gradient-hero py-20">
+    <section className="bg-gradient-to-r from-[#FFBC00] to-[#FFD700] py-20">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           
           {/* First Column - Main Content */}
           <div className="text-white space-y-8 animate-fade-in">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
-              Entre agora para a <span className="text-[#E85A4F]">maior</span>{" "}
-              <span className="text-[#E85A4F]">plataforma de produtos digitais</span>{" "}
-              do mundo.
+              Tudo o que você precisa para criar, vender e escalar <span className="text-brand-blue">infoprodutos de alto valor</span>
             </h2>
             
             <p className="text-lg md:text-xl text-white/80 leading-relaxed">
-              Na Eduzz, você encontra todas as ferramentas para criar, vender e escalar infoprodutos, eventos e consultorias de alto valor.
+              Gestão completa de cursos, eventos e consultorias, com pagamentos flexíveis e área de membros premium
             </p>
           </div>
           
@@ -36,7 +34,7 @@ const FeaturesSection = () => {
             </div>
             
             <p className="text-base text-white/70 leading-relaxed">
-              Nossa plataforma reúne gestão de cursos, eventos presenciais, pagamentos flexíveis (Pix e cartão parcelado em até 18×) e área de membros premium com sua marca, além de relatórios de desempenho detalhados.
+              Na Eduzz, você reúne em um único lugar a gestão de cursos online e eventos presenciais, com opções de pagamento via Pix ou cartão (parcelado em até 18 x) e uma área de membros white‑label com a sua marca. Tenha relatórios detalhados de desempenho e escale negócios de alto valor com segurança e praticidade.
             </p>
           </div>
         </div>
