@@ -10,7 +10,9 @@ const FeaturesSection = () => {
           {/* First Column - Main Content */}
           <div className="text-white space-y-8 animate-fade-in">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
-              Tudo o que você precisa para criar, vender e escalar <span className="text-brand-blue">infoprodutos de alto valor</span>
+              <span className="bg-gradient-to-r from-blue-900 to-blue-400 bg-clip-text text-transparent">
+                Tudo o que você precisa para criar, vender e escalar
+              </span> <span className="text-brand-blue">infoprodutos de alto valor</span>
             </h2>
             
             <p className="text-lg md:text-xl text-white/80 leading-relaxed">
