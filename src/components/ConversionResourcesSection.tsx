@@ -6,6 +6,9 @@ import {
   Users,
   ArrowRight
 } from "lucide-react";
+import conversionImage from "@/assets/conversion-resources.jpg";
+import managementImage from "@/assets/business-management.jpg";
+import engagementImage from "@/assets/student-engagement.jpg";
 
 interface Resource {
   id: number;
@@ -13,29 +16,33 @@ interface Resource {
   description: string;
   cta: string;
   icon: React.ComponentType<any>;
+  image: string;
 }
 
 const resources: Resource[] = [
   {
     id: 1,
     title: "Recursos para aumentar a conversão",
-    description: "Melhore suas vendas com tecnologia de ponta. Use um checkout otimizado com diversas formas de pagamento (Pix e cartão em até 18×) para reduzir abandono e aumentar a conversão. Potencialize o alcance integrando redes de afiliados e influenciadores.",
-    cta: "Falar com nosso gerente de contas",
-    icon: CreditCard
+    description: "Checkout otimizado com Pix e cartão em até 18×. Integração com redes de afiliados e influenciadores para potencializar alcance e reduzir abandono.",
+    cta: "Falar com gerente",
+    icon: CreditCard,
+    image: conversionImage
   },
   {
     id: 2,
     title: "Gestão completa do seu negócio",
-    description: "Administre tudo em um só lugar com o apoio de especialistas. Centralize a gestão de cursos, eventos, assinaturas e consultorias, definindo lotes, check-ins, participantes e obtendo relatórios de performance em tempo real. Conte com autonomia total e um acompanhamento 360° do time Eduzz.",
+    description: "Centralize cursos, eventos e assinaturas em um só lugar. Relatórios em tempo real e acompanhamento 360° com especialistas.",
     cta: "Saiba mais",
-    icon: BarChart3
+    icon: BarChart3,
+    image: managementImage
   },
   {
     id: 3,
     title: "Mais engajamento e retenção de alunos",
-    description: "Crie experiências exclusivas que fidelizam seu público. Ofereça uma área de membros white‑label com design premium e gamificação, além de app móvel para que alunos consumam conteúdo onde quiserem. Estimule comunidades engajadas e amplie a permanência de estudantes.",
-    cta: "Converse com um especialista",
-    icon: Users
+    description: "Área de membros white-label com gamificação e app móvel. Experiências exclusivas que fidelizam e aumentam permanência.",
+    cta: "Converse com especialista",
+    icon: Users,
+    image: engagementImage
   }
 ];
 
@@ -43,41 +50,57 @@ const ConversionResourcesSection = () => {
   return (
     <section className="bg-gradient-to-br from-[hsl(210_95%_20%)] to-[hsl(210_95%_10%)] py-28">
       <div className="container mx-auto px-4">
+        {/* Section Header */}
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
+            Soluções que impulsionam cada etapa do seu negócio
+          </h2>
+        </div>
+
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {resources.map((resource) => {
               const IconComponent = resource.icon;
               return (
-                <Card key={resource.id} className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl group">
-                  <CardHeader className="pb-6">
-                    <div className="flex items-start gap-4 mb-4">
-                      <div className="p-3 rounded-lg bg-white/10 group-hover:bg-white/20 transition-colors duration-300">
+                <Card key={resource.id} className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl group min-h-[520px] flex flex-col">
+                  <div className="relative overflow-hidden rounded-t-lg">
+                    <img 
+                      src={resource.image} 
+                      alt={resource.title}
+                      className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                  </div>
+                  
+                  <CardHeader className="pb-4 pt-6">
+                    <div className="flex items-start gap-3 mb-3">
+                      <div className="p-2 rounded-lg bg-white/10 group-hover:bg-white/20 transition-colors duration-300">
                         <IconComponent 
-                          className="w-6 h-6 text-white" 
+                          className="w-5 h-5 text-white" 
                           strokeWidth={1.5}
                         />
                       </div>
                     </div>
-                    <CardTitle className="text-xl font-bold text-white leading-tight">
+                    <CardTitle className="text-lg font-bold text-white leading-tight">
                       {resource.title}
                     </CardTitle>
                   </CardHeader>
                   
-                  <CardContent className="pt-0 pb-8">
-                    <div className="space-y-6">
+                  <CardContent className="pt-0 pb-6 flex-1 flex flex-col">
+                    <div className="space-y-4 flex-1">
                       <p className="text-white/80 leading-relaxed text-sm">
                         {resource.description}
                       </p>
-                      
-                      <Button 
-                        variant="outline" 
-                        size="sm" 
-                        className="w-full text-white border-white/30 hover:bg-white hover:text-brand-blue transition-all duration-300 group-hover:border-white/50"
-                      >
-                        {resource.cta}
-                        <ArrowRight className="w-4 h-4 ml-2" />
-                      </Button>
                     </div>
+                    
+                    <Button 
+                      variant="outline" 
+                      size="sm" 
+                      className="w-full text-white border-white/30 hover:bg-white hover:text-brand-blue transition-all duration-300 group-hover:border-white/50 mt-auto"
+                    >
+                      {resource.cta}
+                      <ArrowRight className="w-4 h-4 ml-2" />
+                    </Button>
                   </CardContent>
                 </Card>
               );
