@@ -5,7 +5,7 @@ const edu22Logo = "/lovable-uploads/67f13901-3e61-4b23-afdb-64e96b3c0eb7.png";
 const Header = () => {
   return (
     <header className="fixed top-4 left-4 right-4 z-50">
-      <div className="bg-background/60 backdrop-blur-lg rounded-xl shadow-lg border border-white/10">
+      <div className="bg-background/40 backdrop-blur-lg rounded-xl shadow-lg border border-white/10">
         <div className="container mx-auto px-6 h-16 flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
