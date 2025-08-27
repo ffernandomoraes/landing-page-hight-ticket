@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
-import { Eye, EyeOff } from "lucide-react";
+import { Eye, EyeOff, CirclePlus } from "lucide-react";
 
 const HeroSection = () => {
   const [formData, setFormData] = useState({
@@ -45,6 +45,7 @@ const HeroSection = () => {
                 size="lg"
                 onClick={() => window.open('https://accounts.eduzz.com/', '_blank')}
               >
+                <CirclePlus className="w-4 h-4" />
                 Crie sua conta
               </Button>
               <Button 
