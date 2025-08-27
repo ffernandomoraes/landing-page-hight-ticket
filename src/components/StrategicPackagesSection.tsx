@@ -67,7 +67,7 @@ const strategicPackages: StrategyPackage[] = [
       colors: "primary:#012445,secondary:#FFBC00"
     },
     titleGradient: "from-brand-blue to-brand-yellow",
-    borderGradient: "from-brand-yellow to-brand-blue",
+    borderGradient: "from-brand-yellow/30 to-brand-blue/30 hover:from-brand-yellow hover:to-brand-blue",
     benefitBg: "bg-brand-yellow/10",
     buttonClasses: "border-brand-yellow text-brand-yellow hover:bg-brand-yellow hover:text-white hover:border-brand-yellow"
   },
@@ -88,7 +88,7 @@ const strategicPackages: StrategyPackage[] = [
       colors: "primary:#012445,secondary:#10B981"
     },
     titleGradient: "from-brand-blue to-emerald-400",
-    borderGradient: "from-emerald-400 to-brand-blue",
+    borderGradient: "from-emerald-400/30 to-brand-blue/30 hover:from-emerald-400 hover:to-brand-blue",
     benefitBg: "bg-emerald-400/10",
     buttonClasses: "border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white hover:border-emerald-400"
   },
@@ -109,7 +109,7 @@ const strategicPackages: StrategyPackage[] = [
       colors: "primary:#012445,secondary:#0EA5E9"
     },
     titleGradient: "from-brand-blue to-sky-300",
-    borderGradient: "from-sky-300 to-brand-blue",
+    borderGradient: "from-sky-300/30 to-brand-blue/30 hover:from-sky-300 hover:to-brand-blue",
     benefitBg: "bg-sky-300/10",
     buttonClasses: "border-sky-300 text-sky-300 hover:bg-sky-300 hover:text-white hover:border-sky-300"
   },
@@ -130,7 +130,7 @@ const strategicPackages: StrategyPackage[] = [
       colors: "primary:#012445,secondary:#A855F7"
     },
     titleGradient: "from-brand-blue to-purple-400",
-    borderGradient: "from-purple-400 to-brand-blue",
+    borderGradient: "from-purple-400/30 to-brand-blue/30 hover:from-purple-400 hover:to-brand-blue",
     benefitBg: "bg-purple-400/10",
     buttonClasses: "border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white hover:border-purple-400"
   }
