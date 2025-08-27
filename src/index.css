@@ -52,6 +52,9 @@ All colors MUST be HSL.
     /* Yellow CTA gradient */
     --gradient-yellow-cta: linear-gradient(135deg, hsl(45 100% 50%), hsl(45 100% 60%));
 
+    /* Gradient shadow for hover effects */
+    --shadow-gradient: linear-gradient(135deg, #faff00, #05498E);
+
     --sidebar-background: 0 0% 98%;
 
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -123,5 +126,16 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .shadow-gradient-hover {
+    transition: all 0.3s ease;
+  }
+  
+  .shadow-gradient-hover:hover {
+    box-shadow: 0 25px 50px -12px rgba(250, 255, 0, 0.25), 0 0 0 1px rgba(5, 73, 142, 0.1);
+    filter: drop-shadow(0 4px 3px rgba(5, 73, 142, 0.07)) drop-shadow(0 2px 2px rgba(250, 255, 0, 0.06));
   }
 }
