@@ -178,11 +178,11 @@ const StrategicPackagesSection = () => {
                                 {pkg.title}
                               </span>
                             </CardTitle>
-                            <p className="text-sm font-medium text-primary">
-                              {pkg.subtitle}
-                            </p>
                           </div>
                         </div>
+                        <p className="text-sm font-medium text-primary">
+                          {pkg.subtitle}
+                        </p>
                       </CardHeader>
                       
                       <CardContent className="pt-0 pb-8 flex flex-col flex-1">
