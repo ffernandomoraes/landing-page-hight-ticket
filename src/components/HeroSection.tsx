@@ -32,33 +32,27 @@ const HeroSection = () => {
           {/* Hero Content */}
           <div className="text-white space-y-8 animate-fade-in">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-              Transformamos sua 
-              <span className="block text-white/90">
-                educação digital
-              </span>
-              <span className="block">
-                em resultados.
-              </span>
+              Eleve seu negócio digital com a Eduzz
             </h1>
             
             <p className="text-xl md:text-2xl text-white/80 leading-relaxed max-w-lg">
-              Com a edu22, você cria, gerencia e escala seus cursos online 
-              com o ecossistema mais completo do mercado.
+              Estratégias exclusivas para produtos de alto valor, eventos e cursos.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
                 size="lg" 
                 className="bg-white text-brand-blue hover:bg-white/90 transition-all transform hover:scale-105"
+                onClick={() => window.open('https://accounts.eduzz.com/', '_blank')}
               >
-                Começar Grátis Agora
+                Crie sua conta
               </Button>
               <Button 
                 variant="outline" 
                 size="lg"
                 className="border-white/30 text-white hover:bg-white/10 backdrop-blur-sm"
               >
-                Ver Demonstração
+                Cases de Sucesso
               </Button>
             </div>
             
