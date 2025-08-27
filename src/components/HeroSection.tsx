@@ -25,7 +25,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="min-h-screen bg-gradient-hero flex items-center pt-24">
+    <section className="min-h-screen bg-gradient-to-br from-[hsl(210_95%_20%)] to-[hsl(210_95%_10%)] flex items-center pt-24">
       <div className="container mx-auto px-4 py-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           
@@ -50,7 +50,7 @@ const HeroSection = () => {
               <Button 
                 variant="outline" 
                 size="lg"
-                className="border-white/30 text-white hover:bg-white/10 backdrop-blur-sm"
+                className="border-white text-white bg-transparent hover:bg-white hover:text-brand-blue backdrop-blur-sm transition-all"
               >
                 Cases de Sucesso
               </Button>
