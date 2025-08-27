@@ -20,15 +20,15 @@ const FeaturesSection = () => {
             {/* Stats Cards */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6">
-                <div className="text-2xl md:text-3xl font-bold text-white"><span className="text-[#FFBC00]">+</span> 50 Bilhões</div>
+                <div className="text-2xl md:text-3xl font-bold text-brand-blue"><span className="text-white">+</span> 50 Bilhões</div>
                 <div className="text-white/70 text-xs">De reais em vendas</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6">
-                <div className="text-2xl md:text-3xl font-bold text-white"><span className="text-[#FFBC00]">+</span> 25 Milhões</div>
+                <div className="text-2xl md:text-3xl font-bold text-brand-blue"><span className="text-white">+</span> 25 Milhões</div>
                 <div className="text-white/70 text-xs">De compradores</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6">
-                <div className="text-2xl md:text-3xl font-bold text-white"><span className="text-[#FFBC00]">+</span> 200 Mil</div>
+                <div className="text-2xl md:text-3xl font-bold text-brand-blue"><span className="text-white">+</span> 200 Mil</div>
                 <div className="text-white/70 text-xs">Produtores vendendo aqui</div>
               </div>
             </div>
