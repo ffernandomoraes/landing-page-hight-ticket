@@ -47,7 +47,10 @@ All colors MUST be HSL.
     --input: 0 0% 100%;
     --ring: 43 100% 58%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem; /* 12px */
+
+    /* Yellow CTA gradient */
+    --gradient-yellow-cta: linear-gradient(135deg, hsl(45 100% 50%), hsl(45 100% 60%));
 
     --sidebar-background: 0 0% 98%;
 

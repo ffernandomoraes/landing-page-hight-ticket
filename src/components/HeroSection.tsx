@@ -27,7 +27,7 @@ const HeroSection = () => {
   return (
     <section className="min-h-screen bg-gradient-to-br from-[hsl(210_95%_20%)] to-[hsl(210_95%_10%)] flex items-center pt-24">
       <div className="container mx-auto px-4 py-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-[2fr,1fr] gap-12 items-center">
           
           {/* Hero Content */}
           <div className="text-white space-y-8 animate-fade-in">
@@ -160,7 +160,7 @@ const HeroSection = () => {
               
               <Button 
                 type="submit" 
-                className="w-full h-12 bg-[#E85A4F] hover:bg-[#D94A3D] text-white rounded-2xl text-lg font-semibold transition-colors"
+                className="w-full h-12 bg-gradient-to-r from-[#FFBC00] to-[#FFD700] hover:from-[#E6A600] hover:to-[#E6C200] text-black font-semibold transition-all"
               >
                 Cadastre-se agora
               </Button>

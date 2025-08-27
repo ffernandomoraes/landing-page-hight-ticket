@@ -74,6 +74,7 @@ export default {
 				'gradient-cta': 'var(--gradient-cta)'
 			},
 			borderRadius: {
+				DEFAULT: '0.75rem', // 12px default
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
