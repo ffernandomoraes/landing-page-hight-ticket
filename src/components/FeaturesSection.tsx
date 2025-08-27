@@ -16,7 +16,7 @@ const FeaturesSection = () => {
               </span> <span className="text-brand-blue">infoprodutos de alto valor</span>
             </h2>
             
-            <p className="text-lg md:text-xl text-white/80 leading-relaxed">
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
               Gestão completa de cursos, eventos e consultorias, com pagamentos flexíveis e área de membros premium
             </p>
             
