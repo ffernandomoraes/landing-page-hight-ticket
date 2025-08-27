@@ -44,12 +44,13 @@ interface StrategyPackage {
   };
   titleGradient: string;
   borderGradient: string;
+  benefitBg: string;
 }
 
 const strategicPackages: StrategyPackage[] = [
   {
     id: 1,
-    title: "Curso + Evento Presencial + High Ticket",
+    title: "Curso + Evento Presencial\n+ High Ticket",
     subtitle: "Autoridade e exclusividade na mesma oferta",
     description: [
       { text: "Curso digital que educa e qualifica seu público", icon: BookOpen },
@@ -64,11 +65,12 @@ const strategicPackages: StrategyPackage[] = [
       colors: "primary:#012445,secondary:#FFBC00"
     },
     titleGradient: "from-brand-blue to-brand-yellow",
-    borderGradient: "from-brand-yellow to-brand-blue"
+    borderGradient: "from-brand-yellow to-brand-blue",
+    benefitBg: "bg-brand-yellow/10"
   },
   {
     id: 2,
-    title: "Assinatura + Evento Presencial + High Ticket",
+    title: "Assinatura + Evento Presencial\n+ High Ticket",
     subtitle: "Receita recorrente mensal automática",
     description: [
       { text: "Receita recorrente mensal automática", icon: DollarSign },
@@ -83,11 +85,12 @@ const strategicPackages: StrategyPackage[] = [
       colors: "primary:#012445,secondary:#10B981"
     },
     titleGradient: "from-brand-blue to-emerald-400",
-    borderGradient: "from-emerald-400 to-brand-blue"
+    borderGradient: "from-emerald-400 to-brand-blue",
+    benefitBg: "bg-emerald-400/10"
   },
   {
     id: 3,
-    title: "Lançamento pago + Evento Presencial + High Ticket",
+    title: "Lançamento pago + Evento Presencial\n+ High Ticket",
     subtitle: "Lançamento que gera receita desde o primeiro dia",
     description: [
       { text: "Lançamento com receita imediata", icon: Rocket },
@@ -102,11 +105,12 @@ const strategicPackages: StrategyPackage[] = [
       colors: "primary:#012445,secondary:#0EA5E9"
     },
     titleGradient: "from-brand-blue to-sky-300",
-    borderGradient: "from-sky-300 to-brand-blue"
+    borderGradient: "from-sky-300 to-brand-blue",
+    benefitBg: "bg-sky-300/10"
   },
   {
     id: 4,
-    title: "Evento Presencial + High Ticket",
+    title: "Evento Presencial\n+ High Ticket",
     subtitle: "Experiência intensa e conversão máxima",
     description: [
       { text: "Evento presencial de alto impacto", icon: Flame },
@@ -121,7 +125,8 @@ const strategicPackages: StrategyPackage[] = [
       colors: "primary:#012445,secondary:#A855F7"
     },
     titleGradient: "from-brand-blue to-purple-400",
-    borderGradient: "from-purple-400 to-brand-blue"
+    borderGradient: "from-purple-400 to-brand-blue",
+    benefitBg: "bg-purple-400/10"
   }
 ];
 
@@ -168,12 +173,12 @@ const StrategicPackagesSection = () => {
                             stroke="regular"
                             colors={pkg.lordIcon.colors}
                             style={{
-                              width: "44px",
-                              height: "44px"
+                              width: "49px",
+                              height: "49px"
                             }}
                           />
                           <div className="flex-1">
-                            <CardTitle className="text-lg font-bold mb-2 leading-tight">
+                            <CardTitle className="text-lg font-bold mb-2 leading-tight whitespace-pre-line">
                               <span className={`bg-gradient-to-r ${pkg.titleGradient} bg-clip-text text-transparent`}>
                                 {pkg.title}
                               </span>
@@ -204,7 +209,7 @@ const StrategicPackagesSection = () => {
                             })}
                           </ul>
                           
-                          <div className="bg-accent/50 p-3 rounded-lg mb-6 mt-auto">
+                          <div className={`${pkg.benefitBg} p-3 rounded-lg mb-6 mt-auto`}>
                             <p className="text-xs text-foreground leading-tight">
                               <span className="font-semibold">Benefício exclusivo:</span> {pkg.benefit}
                             </p>
