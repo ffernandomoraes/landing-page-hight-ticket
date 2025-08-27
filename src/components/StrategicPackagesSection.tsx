@@ -91,7 +91,7 @@ const StrategicPackagesSection = () => {
     <section className="bg-background py-28">
       <div className="container mx-auto px-4 py-2">
         {/* Section Header */}
-        <div className="text-center mb-8">
+        <div className="text-center mb-4">
           <div className="flex justify-center mb-4">
             <Badge variant="outline" className="mb-4 h-10 px-4 bg-transparent border-brand-blue border text-brand-blue">
               <Target className="w-4 h-4 mr-2" color="#3b88ed" />
