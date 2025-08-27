@@ -33,10 +33,10 @@ const strategicPackages: StrategyPackage[] = [
     title: "Curso + Evento Presencial + High Ticket",
     subtitle: "Autoridade e exclusividade na mesma oferta",
     description: [
-      "Combine venda de curso digital com evento presencial premium",
-      "O curso prepara o público para o evento",
-      "Evento gera confiança e exclusividade", 
-      "High ticket converte os mais comprometidos"
+      "📚 Curso digital que educa e qualifica seu público",
+      "🎯 Evento presencial exclusivo para criar conexão real",
+      "💎 Oferta high ticket para clientes mais comprometidos", 
+      "⚡ Sistema completo que funciona 24/7"
     ],
     benefit: "maior autoridade da marca e conversão potencializada pela relação direta no evento.",
     cta: "Personalize este pacote",
@@ -47,10 +47,10 @@ const strategicPackages: StrategyPackage[] = [
     title: "Assinatura + Evento Presencial + High Ticket",
     subtitle: "Receita recorrente e upsell de valor elevado",
     description: [
-      "Modelo de assinatura gera receita contínua",
-      "Convite para evento presencial exclusivo",
-      "Apresente oferta high ticket no evento",
-      "Pagamentos flexíveis e gestão automatizada"
+      "💰 Receita recorrente que cresce todo mês no automático",
+      "🏆 Eventos exclusivos só para assinantes VIP",
+      "🚀 Oferta high ticket apresentada pessoalmente",
+      "📈 Previsibilidade total de faturamento"
     ],
     benefit: "previsibilidade de caixa com assinaturas e oportunidade de upsell no evento.",
     cta: "Saiba como implementar",
@@ -61,10 +61,10 @@ const strategicPackages: StrategyPackage[] = [
     title: "Lançamento pago + Evento Presencial + High Ticket",
     subtitle: "Impacto imediato e relacionamento profundo",
     description: [
-      "Lançamento pago capta leads qualificados",
-      "Evento presencial para relacionamento",
-      "Oferta high ticket após o evento",
-      "Ciclo de vendas curto com ticket médio alto"
+      "🎪 Lançamento que já gera receita desde o primeiro dia",
+      "🤝 Evento presencial para fortalecer relacionamentos",
+      "💸 High ticket vendido com alta conversão pós-evento",
+      "⏰ Ciclo de vendas rápido com resultados garantidos"
     ],
     benefit: "geração de receita antes do evento e maior taxa de conversão no high ticket devido ao envolvimento presencial.",
     cta: "Fale com um estrategista",
@@ -75,10 +75,10 @@ const strategicPackages: StrategyPackage[] = [
     title: "Evento Presencial + High Ticket",
     subtitle: "Experiência intensa e conversão máxima",
     description: [
-      "Evento presencial exclusivo",
-      "Venda direta do high ticket",
-      "Foco em imersão e networking",
-      "Suporte completo para lotes e check-in"
+      "🔥 Evento presencial de alto impacto e exclusividade",
+      "💯 Venda direta com taxa de conversão premium",
+      "🌟 Experiência imersiva que gera transformação real",
+      "🎪 Suporte completo: do planejamento à execução"
     ],
     benefit: "conversão elevada pela experiência presencial e percepção de valor premium.",
     cta: "Converse com nosso gerente",
@@ -127,8 +127,10 @@ const StrategicPackagesSection = () => {
                             <IconComponent className="w-6 h-6 text-primary" />
                           </div>
                           <div className="flex-1">
-                            <CardTitle className="text-lg font-bold text-foreground mb-2 leading-tight">
-                              {pkg.title}
+                            <CardTitle className="text-lg font-bold mb-2 leading-tight">
+                              <span className="bg-gradient-to-r from-brand-blue to-brand-yellow bg-clip-text text-transparent">
+                                {pkg.title}
+                              </span>
                             </CardTitle>
                             <p className="text-sm font-medium text-primary">
                               {pkg.subtitle}
