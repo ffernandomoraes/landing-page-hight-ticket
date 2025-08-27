@@ -90,7 +90,7 @@ const strategicPackages: StrategyPackage[] = [
   },
   {
     id: 3,
-    title: "Lançamento pago + Evento Presencial\n+ High Ticket",
+    title: "Lançamento pago + Evento Presencial + High Ticket",
     subtitle: "Lançamento que gera receita desde o primeiro dia",
     description: [
       { text: "Lançamento com receita imediata", icon: Rocket },
