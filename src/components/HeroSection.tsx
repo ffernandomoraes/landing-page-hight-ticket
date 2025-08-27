@@ -48,7 +48,7 @@ const HeroSection = () => {
                 Crie sua conta
               </Button>
               <Button 
-                variant="outline"
+                variant="white"
                 size="lg"
               >
                 Cases de Sucesso
