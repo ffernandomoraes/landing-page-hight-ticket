@@ -27,15 +27,15 @@ const HeroSection = () => {
   return (
     <section className="min-h-screen bg-gradient-to-br from-[hsl(210_95%_20%)] to-[hsl(210_95%_10%)] flex items-center pt-24">
       <div className="container mx-auto px-4 py-20">
-        <div className="grid lg:grid-cols-[1fr,2fr,1fr] gap-12 items-center">
+        <div className="grid lg:grid-cols-[2fr,1fr] gap-12 items-center">
           
           {/* Hero Content */}
-          <div className="text-white space-y-8 animate-fade-in max-w-md">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
+          <div className="text-white space-y-8 animate-fade-in">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
               Eleve seu negócio digital com a Eduzz
             </h1>
             
-            <p className="text-lg md:text-xl text-white/80 leading-relaxed">
+            <p className="text-xl md:text-2xl text-white/80 leading-relaxed max-w-lg">
               Estratégias exclusivas para produtos de alto valor, eventos e cursos.
             </p>
             
@@ -67,9 +67,6 @@ const HeroSection = () => {
               </div>
             </div>
           </div>
-
-          {/* Center space for background image */}
-          <div className="hidden lg:block"></div>
           
           {/* Sign Up Form */}
           <div className="bg-white rounded-2xl p-8 shadow-2xl animate-slide-up">
