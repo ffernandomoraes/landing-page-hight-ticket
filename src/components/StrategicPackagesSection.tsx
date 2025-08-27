@@ -98,7 +98,7 @@ const StrategicPackagesSection = () => {
               High Ticket
             </Badge>
           </div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 leading-tight">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-1 leading-tight">
             Pacotes Estratégicos:
           </h2>
           <p className="text-[28px] md:text-[34px] lg:text-[40px] font-thin text-brand-blue leading-tight">
