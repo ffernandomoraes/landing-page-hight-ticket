@@ -25,8 +25,24 @@ declare global {
   }
 }
 
-const LordIcon = ({ src, trigger = "hover", stroke = "light", colors, style, className }: LordIconProps) => {
+const LordIcon = ({ src, trigger = "hover", stroke = "regular", colors, style, className }: LordIconProps) => {
   const iconRef = useRef<HTMLElement>(null);
+
+  const handleCardHover = () => {
+    if (iconRef.current && trigger === "manual") {
+      (iconRef.current as any).playerInstance?.playFromBeginning();
+    }
+  };
+
+  useEffect(() => {
+    if (trigger === "manual") {
+      const card = iconRef.current?.closest('.group');
+      if (card) {
+        card.addEventListener('mouseenter', handleCardHover);
+        return () => card.removeEventListener('mouseenter', handleCardHover);
+      }
+    }
+  }, [trigger]);
 
   return (
     <lord-icon

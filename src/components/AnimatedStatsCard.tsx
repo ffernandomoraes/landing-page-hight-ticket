@@ -34,12 +34,12 @@ const AnimatedStatsCard = ({ number, unit, description, icon: Icon, lordIcon, su
         {lordIcon ? (
           <LordIcon
             src={lordIcon.src}
-            trigger="hover"
-            stroke="light"
+            trigger="manual"
+            stroke="regular"
             colors="primary:#2878e0,secondary:#012445"
             style={{
-              width: `${lordIcon.size || 60}px`,
-              height: `${lordIcon.size || 60}px`
+              width: `${lordIcon.size || 50}px`,
+              height: `${lordIcon.size || 50}px`
             }}
           />
         ) : Icon ? (

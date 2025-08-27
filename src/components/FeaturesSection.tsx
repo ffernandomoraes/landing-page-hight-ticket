@@ -38,7 +38,7 @@ const FeaturesSection = () => {
                 description="De reais em vendas"
                 lordIcon={{
                   src: "https://cdn.lordicon.com/ihkpbcjb.json",
-                  size: 60
+                  size: 50
                 }}
                 suffix="Bilhões"
                 colorClass="text-blue-900"
@@ -49,7 +49,7 @@ const FeaturesSection = () => {
                 description="De compradores"
                 lordIcon={{
                   src: "https://cdn.lordicon.com/ipkvjmpu.json",
-                  size: 60
+                  size: 50
                 }}
                 suffix="Milhões"
                 colorClass="text-blue-700"
@@ -60,7 +60,7 @@ const FeaturesSection = () => {
                 description="Produtores vendendo aqui"
                 lordIcon={{
                   src: "https://cdn.lordicon.com/jdnoclpe.json",
-                  size: 60
+                  size: 50
                 }}
                 suffix="Mil"
                 colorClass="text-blue-500"
