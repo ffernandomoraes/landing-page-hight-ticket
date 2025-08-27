@@ -45,6 +45,7 @@ interface StrategyPackage {
   titleGradient: string;
   borderGradient: string;
   benefitBg: string;
+  buttonHover: string;
 }
 
 const strategicPackages: StrategyPackage[] = [
@@ -66,7 +67,8 @@ const strategicPackages: StrategyPackage[] = [
     },
     titleGradient: "from-brand-blue to-brand-yellow",
     borderGradient: "from-brand-yellow to-brand-blue",
-    benefitBg: "bg-brand-yellow/10"
+    benefitBg: "bg-brand-yellow/10",
+    buttonHover: "hover:bg-brand-yellow hover:text-white"
   },
   {
     id: 2,
@@ -86,7 +88,8 @@ const strategicPackages: StrategyPackage[] = [
     },
     titleGradient: "from-brand-blue to-emerald-400",
     borderGradient: "from-emerald-400 to-brand-blue",
-    benefitBg: "bg-emerald-400/10"
+    benefitBg: "bg-emerald-400/10",
+    buttonHover: "hover:bg-emerald-400 hover:text-white"
   },
   {
     id: 3,
@@ -106,7 +109,8 @@ const strategicPackages: StrategyPackage[] = [
     },
     titleGradient: "from-brand-blue to-sky-300",
     borderGradient: "from-sky-300 to-brand-blue",
-    benefitBg: "bg-sky-300/10"
+    benefitBg: "bg-sky-300/10",
+    buttonHover: "hover:bg-sky-300 hover:text-white"
   },
   {
     id: 4,
@@ -126,7 +130,8 @@ const strategicPackages: StrategyPackage[] = [
     },
     titleGradient: "from-brand-blue to-purple-400",
     borderGradient: "from-purple-400 to-brand-blue",
-    benefitBg: "bg-purple-400/10"
+    benefitBg: "bg-purple-400/10",
+    buttonHover: "hover:bg-purple-400 hover:text-white"
   }
 ];
 
@@ -218,7 +223,7 @@ const StrategicPackagesSection = () => {
                           <Button 
                             variant="outline" 
                             size="sm" 
-                            className="w-full text-xs hover:bg-primary hover:text-primary-foreground transition-colors"
+                            className={`w-full text-xs transition-colors ${pkg.buttonHover}`}
                           >
                             <Target className="w-3 h-3 mr-2" />
                             {pkg.cta}
