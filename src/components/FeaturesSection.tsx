@@ -1,5 +1,6 @@
 import AnimatedStatsCard from "@/components/AnimatedStatsCard";
 import { TrendingUp, Users, Store } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const FeaturesSection = () => {
   return (
@@ -18,6 +19,13 @@ const FeaturesSection = () => {
             <p className="text-lg md:text-xl text-white/80 leading-relaxed">
               Gestão completa de cursos, eventos e consultorias, com pagamentos flexíveis e área de membros premium
             </p>
+            
+            <Button 
+              size="lg"
+              className="bg-white text-blue-900 hover:bg-white/90 font-semibold transition-all transform hover:scale-105"
+            >
+              Fale com um Gerente de Contas da Eduzz
+            </Button>
           </div>
           
           {/* Second Column - Stats and Details */}
