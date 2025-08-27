@@ -20,18 +20,18 @@ const FeaturesSection = () => {
           {/* Second Column - Stats and Details */}
           <div className="space-y-8">
             {/* Stats Cards */}
-            <div className="grid grid-cols-1 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6">
-                <div className="text-3xl md:text-4xl font-bold text-white">+ 50 Bilhões</div>
-                <div className="text-white/70 text-sm">De reais em vendas</div>
+                <div className="text-2xl md:text-3xl font-bold text-white">+ 50 Bilhões</div>
+                <div className="text-white/70 text-xs">De reais em vendas</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6">
-                <div className="text-3xl md:text-4xl font-bold text-white">+ 25 Milhões</div>
-                <div className="text-white/70 text-sm">De compradores</div>
+                <div className="text-2xl md:text-3xl font-bold text-white">+ 25 Milhões</div>
+                <div className="text-white/70 text-xs">De compradores</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6">
-                <div className="text-3xl md:text-4xl font-bold text-white">+ 200 Mil</div>
-                <div className="text-white/70 text-sm">Produtores vendendo aqui</div>
+                <div className="text-2xl md:text-3xl font-bold text-white">+ 200 Mil</div>
+                <div className="text-white/70 text-xs">Produtores vendendo aqui</div>
               </div>
             </div>
             
