@@ -98,7 +98,7 @@ const StrategicPackagesSection = () => {
         </div>
 
         {/* Carousel */}
-        <div className="relative max-w-7xl mx-auto py-8">
+        <div className="relative max-w-7xl mx-auto">
           <Carousel
             opts={{
               align: "start",
@@ -107,18 +107,17 @@ const StrategicPackagesSection = () => {
             className="w-full"
           >
             <CarouselContent className="-ml-2 md:-ml-4">
-              {strategicPackages.map((pkg, index) => {
+              {strategicPackages.map((pkg) => {
                 const IconComponent = pkg.icon;
-                const cardIndex = index + 1;
                 return (
                   <CarouselItem key={pkg.id} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
-                    <Card className={`h-full group transition-all duration-300 hover:-translate-y-2 border-gradient-${cardIndex} card-shadow-${cardIndex} flex flex-col min-h-[500px]`}>
-                      <CardHeader className="pb-4 flex-shrink-0">
+                    <Card className="h-full group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-border flex flex-col">
+                      <CardHeader className="pb-4">
                         <div className="flex items-start gap-4 mb-4">
-                          <div className="bg-primary/10 p-3 rounded-lg group-hover:bg-primary/20 transition-colors flex-shrink-0">
+                          <div className="bg-primary/10 p-3 rounded-lg group-hover:bg-primary/20 transition-colors">
                             <IconComponent className="w-6 h-6 text-primary" />
                           </div>
-                          <div className="flex-1 min-w-0">
+                          <div className="flex-1">
                             <CardTitle className="text-lg font-bold text-foreground mb-2 leading-tight">
                               {pkg.title}
                             </CardTitle>
@@ -129,28 +128,29 @@ const StrategicPackagesSection = () => {
                         </div>
                       </CardHeader>
                       
-                      <CardContent className="pt-0 flex flex-col flex-1">
-                        <div className="space-y-4 flex-1 flex flex-col">
-                          <ul className="text-sm text-muted-foreground space-y-2 flex-1">
-                            {pkg.description.map((item, itemIndex) => (
-                              <li key={itemIndex} className="flex items-start gap-2">
+                      <CardContent className="pt-0 flex flex-col h-full">
+                        <div className="space-y-4 flex-1">
+                          <ul className="text-sm text-muted-foreground space-y-2">
+                            {pkg.description.map((item, index) => (
+                              <li key={index} className="flex items-start gap-2">
                                 <span className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></span>
                                 <span className="leading-relaxed">{item}</span>
                               </li>
                             ))}
                           </ul>
                           
-                          <div className="bg-accent/50 p-3 rounded-lg flex-shrink-0">
+                          <div className="bg-accent/50 p-3 rounded-lg mt-auto">
                             <p className="text-xs text-foreground leading-tight">
                               <span className="font-semibold">Benefício exclusivo:</span> {pkg.benefit}
                             </p>
                           </div>
                           
                           <Button 
-                            className={`w-full text-xs text-gray-700 transition-all duration-300 flex-shrink-0 btn-gradient-${cardIndex} hover:text-blue-900`}
-                            size="sm"
+                            variant="outline" 
+                            size="sm" 
+                            className="w-full text-xs hover:bg-primary hover:text-primary-foreground transition-colors mt-auto"
                           >
-                            <Target className="w-3 h-3 mr-2 text-blue-600" />
+                            <Target className="w-3 h-3 mr-2" />
                             {pkg.cta}
                           </Button>
                         </div>
