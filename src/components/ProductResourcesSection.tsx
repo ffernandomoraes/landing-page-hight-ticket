@@ -1,4 +1,10 @@
 import { Calendar, Users, School, CreditCard, Presentation, Shield, Check, Clock } from "lucide-react";
+import saasEventManagement from "@/assets/saas-event-management.jpg";
+import saasEducationPlatform from "@/assets/saas-education-platform.jpg";
+import saasPaymentSystem from "@/assets/saas-payment-system.jpg";
+import saasPresentationTools from "@/assets/saas-presentation-tools.jpg";
+import saasSecurityDashboard from "@/assets/saas-security-dashboard.jpg";
+import saasTeamManagement from "@/assets/saas-team-management.jpg";
 
 const ProductResourcesSection = () => {
   const resources = [
@@ -7,7 +13,7 @@ const ProductResourcesSection = () => {
       title: "Gestão de eventos",
       description: "Tudo para seu produto digital com ferramentas completas de gestão de eventos",
       icon: Calendar,
-      imageUrl: "/lovable-uploads/professional-1.jpg",
+      imageUrl: saasEventManagement,
       features: [
         "Crie seu evento",
         "Personalize a venda de lotes e ingressos", 
@@ -21,7 +27,7 @@ const ProductResourcesSection = () => {
       title: "Área de membro white label",
       description: "Crie a escola com a sua marca e engaje seus alunos",
       icon: School,
-      imageUrl: "/lovable-uploads/professional-2.jpg",
+      imageUrl: saasEducationPlatform,
       features: [
         "Crie a escola com a sua marca",
         "Utilize gamificação para engajar os alunos",
@@ -33,7 +39,7 @@ const ProductResourcesSection = () => {
       title: "Diversas possibilidades de pagamento",
       description: "Múltiplas formas de pagamento para maximizar suas vendas",
       icon: CreditCard,
-      imageUrl: "/lovable-uploads/professional-3.jpg",
+      imageUrl: saasPaymentSystem,
       features: [
         "Pix",
         "Pagamento combinado Pix + Cartão de crédito",
@@ -46,7 +52,7 @@ const ProductResourcesSection = () => {
       title: "Performance para pitch nos eventos",
       description: "Produtos físicos, parceiros, recorrência e muito mais",
       icon: Presentation,
-      imageUrl: "/lovable-uploads/professional-4.jpg",
+      imageUrl: saasPresentationTools,
       features: [
         "Gere o qr code do checkout",
         "Vitrine com todas as ofertas dos pitchs",
@@ -59,7 +65,7 @@ const ProductResourcesSection = () => {
       title: "Segurança e credibilidade",
       description: "Máxima segurança e confiabilidade para seu negócio",
       icon: Shield,
-      imageUrl: "/lovable-uploads/professional-5.jpg",
+      imageUrl: saasSecurityDashboard,
       features: [
         "Estabilidade",
         "Suporte humanizado",
@@ -72,7 +78,7 @@ const ProductResourcesSection = () => {
       title: "Gestão para a sua equipe de vendas",
       description: "Controle completo da sua equipe e processos de venda",
       icon: Users,
-      imageUrl: "/lovable-uploads/professional-6.jpg",
+      imageUrl: saasTeamManagement,
       features: [
         "Controle de acesso",
         "Criação de links de pagamentos"
@@ -120,7 +126,7 @@ const ProductResourcesSection = () => {
                 
                 {/* Icon Overlay */}
                 <div className="absolute top-8 right-8 w-16 h-16 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg">
-                  <IconComponent className="w-8 h-8 text-stone-700" />
+                  <IconComponent className="w-8 h-8 text-stone-700" strokeWidth={1} />
                 </div>
               </div>
 
@@ -143,7 +149,7 @@ const ProductResourcesSection = () => {
                           className="flex items-start gap-4 group"
                         >
                           <div className="mt-1 w-6 h-6 bg-stone-200 rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-stone-300 transition-colors duration-200">
-                            <Check className="w-4 h-4 text-stone-700" />
+                            <Check className="w-4 h-4 text-stone-700" strokeWidth={1} />
                           </div>
                           <span className="text-stone-700 text-lg leading-relaxed">
                             {feature}
@@ -158,7 +164,7 @@ const ProductResourcesSection = () => {
                           className="flex items-start gap-4 group"
                         >
                           <div className="mt-1 w-6 h-6 bg-amber-100 rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-amber-200 transition-colors duration-200">
-                            <Clock className="w-4 h-4 text-amber-600" />
+                            <Clock className="w-4 h-4 text-amber-600" strokeWidth={1} />
                           </div>
                           <span className="text-stone-600 text-lg leading-relaxed">
                             {feature}
