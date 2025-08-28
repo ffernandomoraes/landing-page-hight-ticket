@@ -118,21 +118,21 @@ const SuccessCasesSection = () => {
                 <CarouselItem key={case_.id} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
                   <Card className="group overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300">
                     <CardContent className="p-0">
-                      <div className="relative h-96 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 overflow-hidden">
+                      <div className="relative h-[500px] bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 overflow-hidden">
                         {/* Background Image */}
                         <div className="absolute inset-0">
                           <img
                             src={case_.image}
                             alt={case_.name}
-                            className="w-full h-full object-cover opacity-40"
+                            className="w-full h-full object-cover object-top"
                           />
-                          <div className="absolute inset-0 bg-gradient-to-br from-slate-900/60 via-slate-800/40 to-slate-900/80" />
+                          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/20 to-slate-900" />
                         </div>
                         
                         {/* Content */}
                         <div className="relative z-10 p-6 h-full flex flex-col justify-end text-white">
                           {/* Top Space for Photo */}
-                          <div className="flex-1 min-h-[120px]"></div>
+                          <div className="flex-1 min-h-[200px]"></div>
 
                           {/* Bottom Content */}
                           <div className="space-y-4">
