@@ -4,6 +4,7 @@ import FeaturesSection from "@/components/FeaturesSection";
 import StrategicPackagesSection from "@/components/StrategicPackagesSection";
 import ConversionResourcesSection from "@/components/ConversionResourcesSection";
 import SuccessCasesSection from "@/components/SuccessCasesSection";
+import ProductResourcesSection from "@/components/ProductResourcesSection";
 
 const Index = () => {
   return (
@@ -14,6 +15,7 @@ const Index = () => {
       <StrategicPackagesSection />
       <ConversionResourcesSection />
       <SuccessCasesSection />
+      <ProductResourcesSection />
     </div>
   );
 };
