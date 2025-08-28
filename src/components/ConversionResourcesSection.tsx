@@ -86,8 +86,8 @@ const ConversionResourcesSection = () => {
                         stroke="regular"
                         colors={resource.lordIcon.colors}
                         style={{
-                          width: "48px",
-                          height: "48px"
+                          width: "63px",
+                          height: "63px"
                         }}
                       />
                     </div>
