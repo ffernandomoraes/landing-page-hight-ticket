@@ -8,6 +8,7 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import NewsletterSection from "@/components/NewsletterSection";
 import FinalCTASection from "@/components/FinalCTASection";
 import ContactSection from "@/components/ContactSection";
+import Footer from "@/components/Footer";
 import SuccessCasesSection from "@/components/SuccessCasesSection";
 
 const Index = () => {
@@ -24,6 +25,7 @@ const Index = () => {
       <NewsletterSection />
       <FinalCTASection />
       <ContactSection />
+      <Footer />
     </div>
   );
 };
