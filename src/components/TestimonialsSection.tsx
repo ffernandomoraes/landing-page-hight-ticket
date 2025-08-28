@@ -77,8 +77,12 @@ const testimonials: Testimonial[] = [
 
 const TestimonialsSection = () => {
   return (
-    <section className="py-20 bg-stone-50">
-      <div className="container mx-auto px-4">
+    <section className="py-20 bg-gradient-to-br from-[hsl(210_95%_20%)] via-stone-100 to-stone-50 relative overflow-hidden">
+      {/* Background Effects */}
+      <div className="absolute inset-0 bg-gradient-to-r from-[hsl(210_95%_20%)]/10 via-transparent to-stone-50/50"></div>
+      <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-[hsl(210_95%_20%)]/5 to-transparent"></div>
+      
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-stone-800 mb-6">
             O que nossos clientes dizem

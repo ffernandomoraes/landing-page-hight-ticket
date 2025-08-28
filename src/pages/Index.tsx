@@ -5,6 +5,9 @@ import StrategicPackagesSection from "@/components/StrategicPackagesSection";
 import ConversionResourcesSection from "@/components/ConversionResourcesSection";
 import ProductResourcesSection from "@/components/ProductResourcesSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
+import NewsletterSection from "@/components/NewsletterSection";
+import FinalCTASection from "@/components/FinalCTASection";
+import ContactSection from "@/components/ContactSection";
 import SuccessCasesSection from "@/components/SuccessCasesSection";
 
 const Index = () => {
@@ -18,6 +21,9 @@ const Index = () => {
       <SuccessCasesSection />
       <ProductResourcesSection />
       <TestimonialsSection />
+      <NewsletterSection />
+      <FinalCTASection />
+      <ContactSection />
     </div>
   );
 };
