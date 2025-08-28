@@ -1,10 +1,23 @@
 import { Button } from "@/components/ui/button";
+import { useState, useEffect } from "react";
 
 const edu22Logo = "/lovable-uploads/67f13901-3e61-4b23-afdb-64e96b3c0eb7.png";
 
 const Header = () => {
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="fixed top-4 left-4 right-4 z-50">
+    <>
+      {/* Blur overlay that affects content passing under header */}
+      <div className="fixed top-0 left-0 right-0 h-24 z-40 pointer-events-none backdrop-blur-md bg-white/10" />
+      
+      <header className="fixed top-4 left-4 right-4 z-50">
       <div className="bg-background/90 backdrop-blur-lg rounded-xl shadow-lg border border-white/10">
         <div className="container mx-auto px-6 h-16 flex items-center justify-between">
           {/* Logo */}
@@ -40,6 +53,7 @@ const Header = () => {
         </div>
       </div>
     </header>
+    </>
   );
 };
 
