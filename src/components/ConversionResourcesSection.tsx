@@ -82,12 +82,12 @@ const ConversionResourcesSection = () => {
                     <div className="absolute top-4 left-4">
                       <LordIcon
                         src={resource.lordIcon.src}
-                        trigger="hover"
+                        trigger="manual"
                         stroke="regular"
                         colors={resource.lordIcon.colors}
                         style={{
-                          width: "40px",
-                          height: "40px"
+                          width: "48px",
+                          height: "48px"
                         }}
                       />
                     </div>
