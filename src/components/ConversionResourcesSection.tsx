@@ -1,21 +1,20 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { 
-  CreditCard,
-  BarChart3,
-  Users,
-  ArrowRight
-} from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import conversionImage from "@/assets/conversion-resources.jpg";
 import managementImage from "@/assets/business-management.jpg";
 import engagementImage from "@/assets/student-engagement.jpg";
+import LordIcon from "@/components/LordIcon";
 
 interface Resource {
   id: number;
   title: string;
   description: string;
   cta: string;
-  icon: React.ComponentType<any>;
+  lordIcon: {
+    src: string;
+    colors: string;
+  };
   image: string;
 }
 
@@ -25,7 +24,10 @@ const resources: Resource[] = [
     title: "Recursos para aumentar a conversão",
     description: "Integração com redes de afiliados e influenciadores para potencializar alcance e reduzir abandono.",
     cta: "Falar com gerente",
-    icon: CreditCard,
+    lordIcon: {
+      src: "https://cdn.lordicon.com/lnpwcryl.json",
+      colors: "primary:#2878e0,secondary:#ffbc00"
+    },
     image: conversionImage
   },
   {
@@ -33,7 +35,10 @@ const resources: Resource[] = [
     title: "Gestão completa do seu negócio",
     description: "Centralize cursos, eventos e assinaturas em um só lugar. Relatórios em tempo real e acompanhamento 360° com especialistas.",
     cta: "Saiba mais",
-    icon: BarChart3,
+    lordIcon: {
+      src: "https://cdn.lordicon.com/oarboftc.json",
+      colors: "primary:#2878e0,secondary:#ffbc00"
+    },
     image: managementImage
   },
   {
@@ -41,7 +46,10 @@ const resources: Resource[] = [
     title: "Mais engajamento e retenção",
     description: "Área de membros white-label com gamificação e app móvel. Experiências exclusivas que fidelizam e aumentam permanência.",
     cta: "Converse com especialista",
-    icon: Users,
+    lordIcon: {
+      src: "https://cdn.lordicon.com/gsqvcbfd.json",
+      colors: "primary:#2878e0,secondary:#ffbc00"
+    },
     image: engagementImage
   }
 ];
@@ -60,7 +68,6 @@ const ConversionResourcesSection = () => {
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {resources.map((resource) => {
-              const IconComponent = resource.icon;
               return (
                 <Card key={resource.id} className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl group min-h-[520px] flex flex-col">
                   <div className="relative overflow-hidden rounded-t-lg">
@@ -70,17 +77,23 @@ const ConversionResourcesSection = () => {
                       className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                    
+                    {/* LordIcon positioned over image */}
+                    <div className="absolute top-4 left-4">
+                      <LordIcon
+                        src={resource.lordIcon.src}
+                        trigger="hover"
+                        stroke="regular"
+                        colors={resource.lordIcon.colors}
+                        style={{
+                          width: "40px",
+                          height: "40px"
+                        }}
+                      />
+                    </div>
                   </div>
                   
                   <CardHeader className="pb-4 pt-6">
-                    <div className="flex items-start gap-3 mb-3">
-                      <div className="p-2 rounded-lg bg-white/10 group-hover:bg-white/20 transition-colors duration-300">
-                        <IconComponent 
-                          className="w-5 h-5 text-white" 
-                          strokeWidth={1.5}
-                        />
-                      </div>
-                    </div>
                     <CardTitle className="text-lg font-bold text-white leading-tight">
                       {resource.title}
                     </CardTitle>
