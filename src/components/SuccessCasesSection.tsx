@@ -111,12 +111,18 @@ const SuccessCasesSection = () => {
           </p>
         </div>
 
-        <div className="relative">
-          <Carousel className="w-full">
-            <CarouselContent className="-ml-2 md:-ml-4">
+        <div className="relative max-w-7xl mx-auto py-8">
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full"
+          >
+            <CarouselContent className="-ml-2 md:-ml-4 py-8">
               {successCases.map((case_) => (
-                <CarouselItem key={case_.id} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
-                  <Card className="group overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300">
+                <CarouselItem key={case_.id} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3 py-2">
+                  <Card className="group overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-full">
                     <CardContent className="p-0">
                       <div className="relative h-[500px] bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 overflow-hidden">
                         {/* Background Image */}
@@ -124,9 +130,11 @@ const SuccessCasesSection = () => {
                           <img
                             src={case_.image}
                             alt={case_.name}
-                            className="w-full h-full object-cover object-top"
+                            className="w-full h-full object-cover object-top transition-all duration-300"
                           />
                           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/20 to-slate-900" />
+                          {/* Blue overlay that disappears on hover */}
+                          <div className="absolute inset-0 bg-slate-900/40 group-hover:bg-slate-900/10 transition-all duration-300" />
                         </div>
                         
                         {/* Content */}
@@ -170,8 +178,9 @@ const SuccessCasesSection = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="hidden md:flex -left-12" />
-            <CarouselNext className="hidden md:flex -right-12" />
+            
+            <CarouselPrevious className="hidden md:flex -left-16 w-12 h-12 rounded-full" />
+            <CarouselNext className="hidden md:flex -right-16 w-12 h-12 rounded-full" />
           </Carousel>
         </div>
       </div>
