@@ -130,19 +130,11 @@ const SuccessCasesSection = () => {
                         </div>
                         
                         {/* Content */}
-                        <div className="relative z-10 p-6 h-full flex flex-col justify-between text-white">
-                          {/* Top Metrics */}
-                          <div className="space-y-3">
-                            {case_.metrics.map((metric, index) => (
-                              <div key={index} className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-lg px-3 py-2">
-                                <metric.icon className="w-4 h-4 text-slate-300" />
-                                <span className="text-sm font-medium">{metric.label}:</span>
-                                <span className="text-sm font-bold text-white">{metric.value}</span>
-                              </div>
-                            ))}
-                          </div>
+                        <div className="relative z-10 p-6 h-full flex flex-col justify-end text-white">
+                          {/* Top Space for Photo */}
+                          <div className="flex-1"></div>
 
-                          {/* Bottom Info */}
+                          {/* Bottom Content */}
                           <div className="space-y-4">
                             <div className="space-y-2">
                               <h3 className="text-xl font-bold">{case_.name}</h3>
@@ -156,9 +148,20 @@ const SuccessCasesSection = () => {
                               </div>
                             </div>
                             
-                            <p className="text-xs text-slate-200 leading-relaxed">
+                            <p className="text-xs text-slate-200 leading-relaxed mb-4">
                               {case_.strategy}
                             </p>
+
+                            {/* Bottom Metrics */}
+                            <div className="space-y-2">
+                              {case_.metrics.map((metric, index) => (
+                                <div key={index} className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-lg px-3 py-2">
+                                  <metric.icon className="w-4 h-4 text-slate-300" />
+                                  <span className="text-sm font-medium">{metric.label}:</span>
+                                  <span className="text-sm font-bold text-white">{metric.value}</span>
+                                </div>
+                              ))}
+                            </div>
                           </div>
                         </div>
                       </div>
