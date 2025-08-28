@@ -14,8 +14,8 @@ const Index = () => {
       <FeaturesSection />
       <StrategicPackagesSection />
       <ConversionResourcesSection />
-      <ProductResourcesSection />
       <SuccessCasesSection />
+      <ProductResourcesSection />
     </div>
   );
 };
