@@ -21,27 +21,6 @@ const ContactSection = () => {
     setConsultationEmail("");
   };
 
-  const socialLinks = [
-    {
-      name: "Instagram",
-      icon: Instagram,
-      url: "https://instagram.com/eduzz",
-      description: "Siga-nos para mais conteúdos high ticket"
-    },
-    {
-      name: "YouTube",
-      icon: Youtube,
-      url: "https://youtube.com/eduzz",
-      description: "Assista aos bastidores dos eventos"
-    },
-    {
-      name: "LinkedIn",
-      icon: Linkedin,
-      url: "https://linkedin.com/company/eduzz",
-      description: "Conecte-se com nossa comunidade profissional"
-    }
-  ];
-
   return (
     <section className="py-20 bg-gradient-to-br from-stone-50 to-white">
       <div className="container mx-auto px-4">
@@ -84,27 +63,43 @@ const ContactSection = () => {
                 Siga-nos nas redes sociais
               </h3>
               
-              {socialLinks.map((social) => {
-                const IconComponent = social.icon;
-                return (
-                  <a
-                    key={social.name}
-                    href={social.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-4 p-4 bg-white border border-stone-200 rounded-2xl hover:border-primary transition-colors duration-200 group"
-                  >
-                    <div className="w-10 h-10 bg-stone-100 rounded-full flex items-center justify-center group-hover:bg-primary/10 transition-colors">
-                      <IconComponent className="w-5 h-5 text-stone-600 group-hover:text-primary transition-colors" strokeWidth={1} />
-                    </div>
-                    <div className="flex-1">
-                      <h4 className="font-medium text-foreground">{social.name}</h4>
-                      <p className="text-muted-foreground text-sm">{social.description}</p>
-                    </div>
-                    <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" strokeWidth={1} />
-                  </a>
-                );
-              })}
+              <div className="grid grid-cols-3 gap-4">
+                <a
+                  href="https://www.instagram.com/eduzzoficial/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex flex-col items-center gap-3 p-4 bg-white border border-stone-200 rounded-2xl hover:border-primary transition-colors duration-200 group text-center"
+                >
+                  <div className="w-10 h-10 bg-stone-100 rounded-full flex items-center justify-center group-hover:bg-primary/10 transition-colors">
+                    <Instagram className="w-5 h-5 text-stone-600 group-hover:text-primary transition-colors" strokeWidth={1} />
+                  </div>
+                  <span className="font-medium text-foreground text-sm">Instagram</span>
+                </a>
+
+                <a
+                  href="https://www.youtube.com/channel/UCiHqhLhTbg8E127CDzs7MYw"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex flex-col items-center gap-3 p-4 bg-white border border-stone-200 rounded-2xl hover:border-primary transition-colors duration-200 group text-center"
+                >
+                  <div className="w-10 h-10 bg-stone-100 rounded-full flex items-center justify-center group-hover:bg-primary/10 transition-colors">
+                    <Youtube className="w-5 h-5 text-stone-600 group-hover:text-primary transition-colors" strokeWidth={1} />
+                  </div>
+                  <span className="font-medium text-foreground text-sm">YouTube</span>
+                </a>
+
+                <a
+                  href="https://www.linkedin.com/company/eduzz"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex flex-col items-center gap-3 p-4 bg-white border border-stone-200 rounded-2xl hover:border-primary transition-colors duration-200 group text-center"
+                >
+                  <div className="w-10 h-10 bg-stone-100 rounded-full flex items-center justify-center group-hover:bg-primary/10 transition-colors">
+                    <Linkedin className="w-5 h-5 text-stone-600 group-hover:text-primary transition-colors" strokeWidth={1} />
+                  </div>
+                  <span className="font-medium text-foreground text-sm">LinkedIn</span>
+                </a>
+              </div>
             </div>
           </div>
 
