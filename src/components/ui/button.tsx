@@ -19,10 +19,10 @@ const buttonVariants = cva(
         hero: "bg-gradient-cta text-primary-foreground hover:opacity-90 transition-opacity shadow-lg",
       },
       size: {
-        default: "min-h-[42px] px-6 py-3",
-        sm: "min-h-[42px] px-4 py-2 text-sm",
-        lg: "min-h-[42px] px-8 py-4 text-base",
-        icon: "min-h-[42px] w-[42px]",
+        default: "min-h-[40px] px-6 py-3",
+        sm: "min-h-[40px] px-4 py-2 text-sm",
+        lg: "min-h-[40px] px-8 py-4 text-base",
+        icon: "min-h-[40px] w-[40px]",
       },
     },
     defaultVariants: {
