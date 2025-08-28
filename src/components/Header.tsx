@@ -1,30 +1,10 @@
 import { Button } from "@/components/ui/button";
-import { useState, useEffect } from "react";
 
 const edu22Logo = "/lovable-uploads/67f13901-3e61-4b23-afdb-64e96b3c0eb7.png";
 
 const Header = () => {
-  const [showGlassEffect, setShowGlassEffect] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      // Show glass effect after scrolling past the hero section (approximately)
-      const scrolled = window.scrollY > window.innerHeight * 0.8;
-      setShowGlassEffect(scrolled);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   return (
-    <>
-      {/* Glass effect for top space - only show after scrolling */}
-      {showGlassEffect && (
-        <div className="fixed top-0 left-0 right-0 h-4 bg-white/20 backdrop-blur-md z-50"></div>
-      )}
-      
-      <header className="fixed top-4 left-4 right-4 z-50">
+    <header className="fixed top-4 left-4 right-4 z-50">
       <div className="bg-background/90 backdrop-blur-lg rounded-xl shadow-lg border border-white/10">
         <div className="container mx-auto px-6 h-16 flex items-center justify-between">
           {/* Logo */}
@@ -60,7 +40,6 @@ const Header = () => {
         </div>
       </div>
     </header>
-    </>
   );
 };
 
