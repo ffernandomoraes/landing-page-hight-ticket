@@ -1,5 +1,4 @@
 import { Instagram, Youtube, Linkedin, ExternalLink } from "lucide-react";
-import eduzzLogo from "@/assets/edu22-logo.png";
 
 const Footer = () => {
   const footerLinks = {
@@ -59,7 +58,7 @@ const Footer = () => {
             <div className="lg:col-span-2">
               <div className="mb-6">
                 <img 
-                  src={eduzzLogo} 
+                  src="/lovable-uploads/6a9d9601-13d8-4365-b63f-8f72195857ec.png" 
                   alt="Eduzz" 
                   className="h-8"
                 />
