@@ -15,7 +15,7 @@ const Header = () => {
   return (
     <>
       {/* Blur overlay that affects content passing under header */}
-      <div className="fixed top-0 left-0 right-0 h-24 z-40 pointer-events-none backdrop-blur-md bg-gradient-to-b from-white/20 to-transparent" 
+      <div className="fixed top-0 left-0 right-0 h-24 z-40 pointer-events-none backdrop-blur-md" 
            style={{
              maskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 50%, rgba(0,0,0,0) 100%)',
              WebkitMaskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 50%, rgba(0,0,0,0) 100%)'
