@@ -22,7 +22,7 @@ const FeaturesSection = () => {
             
             <Button 
               variant="outline"
-              size="lg"
+              size="default"
             >
               Fale com um Gerente de Contas da Eduzz
             </Button>
