@@ -1,9 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowRight } from "lucide-react";
-import conversionImage from "@/assets/conversion-resources.jpg";
-import managementImage from "@/assets/business-management.jpg";
-import engagementImage from "@/assets/student-engagement.jpg";
+import checkoutImage from "/lovable-uploads/49db7150-2d16-4b59-af8a-6e6be12f8df8.png";
+import dashboardImage from "/lovable-uploads/1fe8623b-e221-4876-955e-adac3af32256.png";
+import learningImage from "/lovable-uploads/8f95db36-a8a6-45a9-9a22-5f9b8bea8cdd.png";
 import LordIcon from "@/components/LordIcon";
 
 interface Resource {
@@ -26,9 +26,9 @@ const resources: Resource[] = [
     cta: "Falar com gerente",
     lordIcon: {
       src: "https://cdn.lordicon.com/lnpwcryl.json",
-      colors: "primary:#2878e0,secondary:#ffbc00"
+      colors: "primary:#2c2c2c,secondary:#2c2c2c"
     },
-    image: conversionImage
+    image: checkoutImage
   },
   {
     id: 2,
@@ -37,9 +37,9 @@ const resources: Resource[] = [
     cta: "Saiba mais",
     lordIcon: {
       src: "https://cdn.lordicon.com/oarboftc.json",
-      colors: "primary:#2878e0,secondary:#ffbc00"
+      colors: "primary:#2c2c2c,secondary:#2c2c2c"
     },
-    image: managementImage
+    image: dashboardImage
   },
   {
     id: 3,
@@ -48,9 +48,9 @@ const resources: Resource[] = [
     cta: "Converse com especialista",
     lordIcon: {
       src: "https://cdn.lordicon.com/gsqvcbfd.json",
-      colors: "primary:#2878e0,secondary:#ffbc00"
+      colors: "primary:#2c2c2c,secondary:#2c2c2c"
     },
-    image: engagementImage
+    image: learningImage
   }
 ];
 
