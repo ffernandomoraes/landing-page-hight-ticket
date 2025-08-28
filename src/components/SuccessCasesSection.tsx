@@ -132,7 +132,7 @@ const SuccessCasesSection = () => {
                         {/* Content */}
                         <div className="relative z-10 p-6 h-full flex flex-col justify-end text-white">
                           {/* Top Space for Photo */}
-                          <div className="flex-1"></div>
+                          <div className="flex-1 min-h-[120px]"></div>
 
                           {/* Bottom Content */}
                           <div className="space-y-4">
