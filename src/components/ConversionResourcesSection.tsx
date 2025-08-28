@@ -69,7 +69,7 @@ const ConversionResourcesSection = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {resources.map((resource) => {
               return (
-                <Card key={resource.id} className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl group min-h-[520px] flex flex-col">
+                <Card key={resource.id} className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl group min-h-[420px] flex flex-col">
                   <div className="relative overflow-hidden rounded-t-lg">
                     <img 
                       src={resource.image} 
@@ -100,8 +100,8 @@ const ConversionResourcesSection = () => {
                   </CardHeader>
                   
                   <CardContent className="pt-0 pb-6 flex-1 flex flex-col">
-                    <div className="space-y-4 flex-1">
-                      <p className="text-white/80 leading-relaxed text-sm">
+                    <div className="flex-1">
+                      <p className="text-white/80 leading-relaxed text-sm mb-6">
                         {resource.description}
                       </p>
                     </div>
