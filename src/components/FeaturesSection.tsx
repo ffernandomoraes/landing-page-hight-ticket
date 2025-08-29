@@ -4,25 +4,26 @@ import { Button } from "@/components/ui/button";
 
 const FeaturesSection = () => {
   return (
-    <section className="bg-gradient-to-r from-[#FFBC00] to-[#FFD700] py-20">
+    <section className="bg-gradient-to-r from-stone-900 to-stone-800 py-20">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           
           {/* First Column - Main Content */}
           <div className="text-white space-y-8 animate-fade-in">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
-              <span className="bg-gradient-to-r from-blue-900 to-blue-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-white to-stone-300 bg-clip-text text-transparent">
                 Tudo o que você precisa para criar, vender e escalar
-              </span> <span className="text-brand-blue">infoprodutos de alto valor</span>
+              </span> <span className="text-stone-200">infoprodutos de alto valor</span>
             </h2>
             
-            <p className="text-lg md:text-xl text-foreground leading-relaxed">
+            <p className="text-lg md:text-xl text-stone-300 leading-relaxed">
               Gestão completa de cursos, eventos e consultorias, com pagamentos flexíveis e área de membros premium
             </p>
             
             <Button 
               variant="outline"
               size="default"
+              className="border-white text-white hover:bg-white hover:text-stone-900"
             >
               Fale com um Gerente de Contas da Eduzz
             </Button>
@@ -41,7 +42,7 @@ const FeaturesSection = () => {
                   size: 50
                 }}
                 suffix="Bilhões"
-                colorClass="text-blue-900"
+                colorClass="text-white"
               />
               <AnimatedStatsCard
                 number={25}
@@ -52,7 +53,7 @@ const FeaturesSection = () => {
                   size: 50
                 }}
                 suffix="Milhões"
-                colorClass="text-blue-700"
+                colorClass="text-stone-200"
               />
               <AnimatedStatsCard
                 number={200}
@@ -63,11 +64,11 @@ const FeaturesSection = () => {
                   size: 50
                 }}
                 suffix="Mil"
-                colorClass="text-blue-500"
+                colorClass="text-stone-300"
               />
             </div>
             
-            <p className="text-base text-gray-800 leading-relaxed">
+            <p className="text-base text-stone-300 leading-relaxed">
               Na Eduzz, você reúne em um único lugar a gestão de cursos online e eventos presenciais, com opções de pagamento via Pix ou cartão (parcelado em até 18 x) e uma área de membros white‑label com a sua marca. Tenha relatórios detalhados de desempenho e escale negócios de alto valor com segurança e praticidade.
             </p>
           </div>
