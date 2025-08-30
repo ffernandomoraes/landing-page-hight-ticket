@@ -1,5 +1,7 @@
+import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Users, TrendingUp, Award, Target, Calendar, DollarSign, Play } from "lucide-react";
 
 interface SuccessCase {
@@ -115,56 +117,73 @@ const SuccessCasesSection = () => {
         <div className="max-w-7xl mx-auto mb-12">
           <Card className="overflow-hidden border-0 shadow-2xl">
             <CardContent className="p-0">
-              <div className="relative h-[300px] md:h-[400px] bg-gradient-to-r from-slate-900 to-slate-700">
-                <div className="grid md:grid-cols-2 h-full">
+              <div className="relative bg-gradient-to-r from-slate-900 to-slate-700">
+                <div className="flex flex-col md:flex-row min-h-[400px]">
                   {/* Lado do Vídeo */}
-                  <div className="relative group cursor-pointer">
-                    <div className="absolute inset-0 bg-gradient-to-br from-slate-800/50 to-slate-900/50 z-10" />
-                    <img
-                      src="/lovable-uploads/professional-1.jpg"
-                      alt="Case de Sucesso Principal"
-                      className="w-full h-full object-cover"
-                    />
-                    <div className="absolute inset-0 z-20 flex items-center justify-center">
-                      <div className="w-16 h-16 md:w-20 md:h-20 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:bg-white/30 transition-all duration-300">
-                        <Play className="w-8 h-8 md:w-10 md:h-10 text-white ml-1" />
+                  <Dialog>
+                    <DialogTrigger asChild>
+                      <div className="relative group cursor-pointer flex-1 md:flex-none md:w-1/2">
+                        <div className="absolute inset-0 bg-gradient-to-br from-slate-800/50 to-slate-900/50 z-10" />
+                        <img
+                          src="/lovable-uploads/professional-1.jpg"
+                          alt="Case de Sucesso Principal"
+                          className="w-full h-full min-h-[250px] md:min-h-[400px] object-cover"
+                        />
+                        <div className="absolute inset-0 z-20 flex items-center justify-center">
+                          <div className="w-16 h-16 md:w-20 md:h-20 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:bg-white/30 transition-all duration-300">
+                            <Play className="w-8 h-8 md:w-10 md:h-10 text-white ml-1" />
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                  </div>
+                    </DialogTrigger>
+                    
+                    <DialogContent className="max-w-4xl w-full p-0 bg-black">
+                      <div className="relative w-full h-0 pb-[56.25%]"> {/* 16:9 Aspect Ratio */}
+                        <iframe
+                          className="absolute top-0 left-0 w-full h-full"
+                          src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
+                          title="Case de Sucesso - Carlos Mendes"
+                          frameBorder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                        />
+                      </div>
+                    </DialogContent>
+                  </Dialog>
 
                   {/* Lado do Conteúdo */}
-                  <div className="p-6 md:p-8 flex flex-col justify-center text-white">
+                  <div className="flex-1 p-6 md:p-8 flex flex-col justify-center text-white">
                     <div className="space-y-4">
                       <div>
-                        <h3 className="text-2xl md:text-3xl font-bold mb-2">Carlos Mendes</h3>
-                        <p className="text-slate-300 text-lg">Marketing Digital • 45K seguidores</p>
+                        <h3 className="text-xl md:text-2xl lg:text-3xl font-bold mb-2">Carlos Mendes</h3>
+                        <p className="text-slate-300 text-sm md:text-base lg:text-lg">Marketing Digital • 45K seguidores</p>
                       </div>
                       
-                      <p className="text-slate-200 leading-relaxed">
+                      <p className="text-slate-200 leading-relaxed text-sm md:text-base">
                         "Com a metodologia da EDU22, consegui estruturar meu funil de vendas e aumentar 
                         minhas conversões em 400%. Hoje faturamos mais de R$ 2,5M por ano."
                       </p>
 
-                      <div className="grid grid-cols-3 gap-4 pt-4">
+                      <div className="grid grid-cols-3 gap-2 md:gap-4 pt-4">
                         <div className="text-center">
                           <div className="flex items-center justify-center gap-1 mb-1">
-                            <Calendar className="w-4 h-4 text-slate-300" />
+                            <Calendar className="w-3 h-3 md:w-4 md:h-4 text-slate-300" />
                           </div>
-                          <p className="text-sm font-bold">500</p>
+                          <p className="text-xs md:text-sm font-bold">500</p>
                           <p className="text-xs text-slate-300">Participantes</p>
                         </div>
                         <div className="text-center">
                           <div className="flex items-center justify-center gap-1 mb-1">
-                            <DollarSign className="w-4 h-4 text-slate-300" />
+                            <DollarSign className="w-3 h-3 md:w-4 md:h-4 text-slate-300" />
                           </div>
-                          <p className="text-sm font-bold">R$ 2.5M</p>
+                          <p className="text-xs md:text-sm font-bold">R$ 2.5M</p>
                           <p className="text-xs text-slate-300">Vendas</p>
                         </div>
                         <div className="text-center">
                           <div className="flex items-center justify-center gap-1 mb-1">
-                            <Users className="w-4 h-4 text-slate-300" />
+                            <Users className="w-3 h-3 md:w-4 md:h-4 text-slate-300" />
                           </div>
-                          <p className="text-sm font-bold">+3.000</p>
+                          <p className="text-xs md:text-sm font-bold">+3.000</p>
                           <p className="text-xs text-slate-300">Formados</p>
                         </div>
                       </div>
@@ -174,6 +193,16 @@ const SuccessCasesSection = () => {
               </div>
             </CardContent>
           </Card>
+        </div>
+
+        {/* Seção do Slider */}
+        <div className="text-center mb-8">
+          <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-2">
+            Mais Cases de Sucesso
+          </h3>
+          <p className="text-muted-foreground max-w-xl mx-auto">
+            Veja outros profissionais que transformaram suas carreiras com nossa metodologia
+          </p>
         </div>
 
         <div className="relative max-w-7xl mx-auto py-8">
