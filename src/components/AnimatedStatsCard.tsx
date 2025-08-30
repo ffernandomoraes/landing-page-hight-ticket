@@ -28,7 +28,7 @@ const AnimatedStatsCard = ({ number, unit, description, icon: Icon, lordIcon, su
   return (
     <div 
       ref={ref}
-      className="bg-white/20 backdrop-blur-sm border border-white/30 rounded-xl p-3 md:p-6 transition-all duration-300 shadow-gradient-hover hover:bg-white/25 hover:scale-105 cursor-pointer group relative overflow-hidden w-full h-[220px] md:h-[240px] flex flex-col"
+      className="bg-white/20 backdrop-blur-sm border border-white/30 rounded-xl p-3 md:p-6 transition-all duration-300 shadow-gradient-hover hover:bg-white/25 hover:scale-105 cursor-pointer group relative overflow-hidden w-full h-[260px] flex flex-col"
     >
       <div className="flex items-start justify-between mb-2 md:mb-4 flex-shrink-0">
         {lordIcon ? (
