@@ -174,23 +174,37 @@ const StrategicPackagesSection = () => {
               {strategicPackages.map((pkg) => {
                 return (
                   <CarouselItem key={pkg.id} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3 py-2">
-                    <div className={`h-full p-[1px] rounded-lg bg-gradient-to-b ${pkg.borderGradient} group hover:shadow-lg transition-all duration-300 hover:-translate-y-1`}>
+                    <div className={`h-full p-[1px] rounded-lg bg-gradient-to-b from-slate-200/30 to-brand-blue/30 hover:${pkg.borderGradient.replace('from-', 'from-').replace('to-', 'to-')} group hover:shadow-lg transition-all duration-300 hover:-translate-y-1`}>
                       <Card className="h-full bg-card rounded-lg flex flex-col border-0">
                       <CardHeader className="pb-6 pt-8">
                         <div className="flex items-start gap-4 mb-4">
-                          <LordIcon
-                            src={pkg.lordIcon.src}
-                            trigger="manual"
-                            stroke="regular"
-                            colors={pkg.lordIcon.colors}
-                            style={{
-                              width: "49px",
-                              height: "49px"
-                            }}
-                          />
+                          <div className="group-hover:animate-pulse transition-all duration-300">
+                            <LordIcon
+                              src={pkg.lordIcon.src}
+                              trigger="manual"
+                              stroke="regular"
+                              colors="primary:#64748b,secondary:#64748b"
+                              style={{
+                                width: "49px",
+                                height: "49px"
+                              }}
+                              className="group-hover:hidden"
+                            />
+                            <LordIcon
+                              src={pkg.lordIcon.src}
+                              trigger="hover"
+                              stroke="regular"
+                              colors={pkg.lordIcon.colors}
+                              style={{
+                                width: "49px",
+                                height: "49px"
+                              }}
+                              className="hidden group-hover:block"
+                            />
+                          </div>
                           <div className="flex-1">
                             <CardTitle className="text-lg font-bold mb-2 leading-tight whitespace-pre-line">
-                              <span className={`bg-gradient-to-r ${pkg.titleGradient} bg-clip-text text-transparent`}>
+                              <span className={`bg-gradient-to-r from-slate-600 to-brand-blue group-hover:${pkg.titleGradient} bg-clip-text text-transparent transition-all duration-300`}>
                                 {pkg.title}
                               </span>
                             </CardTitle>
@@ -209,18 +223,18 @@ const StrategicPackagesSection = () => {
                               return (
                                 <div key={index}>
                                   <li className="flex items-start gap-3">
-                                    <IconComponent className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" strokeWidth={1.5} />
+                                    <IconComponent className="w-4 h-4 text-slate-500 group-hover:text-primary mt-0.5 flex-shrink-0 transition-colors duration-300" strokeWidth={1.5} />
                                     <span className="leading-relaxed">{item.text}</span>
                                   </li>
                                    {index < pkg.description.length - 1 && (
-                                     <hr className={`${pkg.dividerColor} mt-3`} />
+                                     <hr className={`border-slate-200 group-hover:${pkg.dividerColor} mt-3 transition-colors duration-300`} />
                                    )}
                                 </div>
                               );
                             })}
                           </ul>
                           
-                          <div className={`${pkg.benefitBg} p-3 rounded-lg mb-6 mt-auto`}>
+                          <div className={`bg-slate-50 group-hover:${pkg.benefitBg} p-3 rounded-lg mb-6 mt-auto transition-colors duration-300`}>
                             <p className="text-xs text-foreground leading-tight">
                               <span className="font-semibold">Benefício exclusivo:</span> {pkg.benefit}
                             </p>
@@ -229,7 +243,7 @@ const StrategicPackagesSection = () => {
                           <Button 
                             variant="outline" 
                             size="sm" 
-                            className={`w-full text-xs transition-colors ${pkg.buttonClasses}`}
+                            className={`w-full text-xs transition-all duration-300 border-slate-300 text-slate-600 hover:border-transparent group-hover:${pkg.buttonClasses.replace('bg-', 'bg-').replace('text-', 'text-').replace('border-', 'border-')}`}
                           >
                             {pkg.cta}
                             <ArrowRight className="w-3 h-3 ml-2" />
