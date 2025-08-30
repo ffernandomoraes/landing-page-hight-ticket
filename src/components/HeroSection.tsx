@@ -1,22 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Eye, EyeOff, CirclePlus } from "lucide-react";
-
-// Declare global type for Eduzz Accounts
-declare global {
-  interface Window {
-    Accounts?: {
-      initAccountsEmbed: (config: {
-        partnerId: string;
-        targetId: string;
-        redirectTo: string;
-        width: number;
-        onAccountCreated: (redirectTo: string) => void;
-      }) => void;
-    };
-  }
-}
 
 const HeroSection = () => {
   const [formData, setFormData] = useState({
@@ -38,21 +23,6 @@ const HeroSection = () => {
       [e.target.name]: e.target.value
     });
   };
-
-  useEffect(() => {
-    // Initialize Eduzz Accounts Embed
-    if (window.Accounts) {
-      window.Accounts.initAccountsEmbed({
-        partnerId: '53124931-1a7a-424b-aca7-a2eb91fd5b20',
-        targetId: 'formtarget',
-        redirectTo: 'https://orbita.eduzz.com/',
-        width: 500,
-        onAccountCreated: function (redirectTo) {
-          window.location.href = redirectTo;
-        }
-      });
-    }
-  }, []);
 
   return (
     <section className="min-h-screen bg-gradient-to-br from-[hsl(210_95%_20%)] to-[hsl(210_95%_10%)] flex items-center pt-12">
@@ -127,8 +97,67 @@ const HeroSection = () => {
               </div>
             </div>
             
-            {/* Eduzz Accounts Embed Target */}
-            <div id="formtarget"></div>
+            {/* Registration Form */}
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <div>
+                <Input
+                  id="name"
+                  name="name"
+                  type="text"
+                  value={formData.name}
+                  onChange={handleChange}
+                  className="h-12 bg-gray-50 border-gray-200 rounded-2xl placeholder:text-gray-500"
+                  placeholder="Seu nome completo"
+                  required
+                />
+              </div>
+              
+              <div>
+                <Input
+                  id="email"
+                  name="email"
+                  type="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  className="h-12 bg-gray-50 border-gray-200 rounded-2xl placeholder:text-gray-500"
+                  placeholder="Seu e-mail"
+                  required
+                />
+              </div>
+              
+              <div className="relative">
+                <Input
+                  id="password"
+                  name="password"
+                  type={showPassword ? "text" : "password"}
+                  value={formData.password}
+                  onChange={handleChange}
+                  className="h-12 bg-gray-50 border-gray-200 rounded-2xl placeholder:text-gray-500 pr-12"
+                  placeholder="Digite uma senha"
+                  required
+                />
+                <button
+                  type="button"
+                  onClick={() => setShowPassword(!showPassword)}
+                  className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-gray-700"
+                >
+                  {showPassword ? <EyeOff className="h-5 w-5" /> : <Eye className="h-5 w-5" />}
+                </button>
+              </div>
+              
+              <p className="text-xs text-muted-foreground mt-4">
+                Ao me cadastrar, declaro que sou maior de idade, li e concordo 
+                com os <a href="#" className="underline">Termos e as Políticas</a> da plataforma.
+              </p>
+              
+              <Button 
+                variant="secondary"
+                type="submit" 
+                className="w-full"
+              >
+                Cadastre-se agora
+              </Button>
+            </form>
           </div>
         </div>
       </div>
