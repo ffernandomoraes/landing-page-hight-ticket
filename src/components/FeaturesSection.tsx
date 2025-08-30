@@ -35,7 +35,7 @@ const FeaturesSection = () => {
               <AnimatedStatsCard
                 number={50}
                 unit="Bilhões"
-                description="De reais em vendas"
+                description="Em vendas utilizando as estratégias"
                 lordIcon={{
                   src: "https://cdn.lordicon.com/ihkpbcjb.json",
                   size: 50
@@ -46,7 +46,7 @@ const FeaturesSection = () => {
               <AnimatedStatsCard
                 number={25}
                 unit="Milhões"
-                description="De compradores"
+                description="De pessoas impactadas pelos nossos Produtores"
                 lordIcon={{
                   src: "https://cdn.lordicon.com/ipkvjmpu.json",
                   size: 50
