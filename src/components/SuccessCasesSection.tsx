@@ -1,7 +1,9 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Button } from "@/components/ui/button";
-import { Users, TrendingUp, Award, Target, Calendar, DollarSign, PlayCircle, Star } from "lucide-react";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { Users, TrendingUp, Award, Target, Calendar, DollarSign, PlayCircle, Star, X } from "lucide-react";
+import { useState } from "react";
 
 interface SuccessCase {
   id: number;
@@ -99,8 +101,10 @@ const successCases: SuccessCase[] = [
 ];
 
 const SuccessCasesSection = () => {
+  const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
+
   return (
-    <section className="py-12 bg-background">
+    <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-8">
           <h2 className="text-4xl font-bold text-foreground mb-4">
@@ -113,18 +117,39 @@ const SuccessCasesSection = () => {
         </div>
 
         {/* Card de Destaque com Vídeo */}
-        <div className="max-w-4xl mx-auto mb-12">
+        <div className="max-w-7xl mx-auto mb-16">
           <Card className="overflow-hidden border-0 shadow-xl bg-gradient-to-r from-primary/10 to-secondary/10">
             <CardContent className="p-0">
               <div className="grid md:grid-cols-2 gap-0">
                 {/* Lado do Vídeo */}
-                <div className="relative aspect-video md:aspect-auto bg-slate-900 flex items-center justify-center">
-                  <div className="absolute inset-0 bg-gradient-to-br from-slate-800 to-slate-900"></div>
-                  <div className="relative z-10 text-center text-white">
-                    <PlayCircle className="w-20 h-20 mx-auto mb-4 text-primary hover:text-primary/80 transition-colors cursor-pointer" />
-                    <p className="text-sm text-slate-300">Assista ao depoimento completo</p>
-                  </div>
-                </div>
+                <Dialog open={isVideoModalOpen} onOpenChange={setIsVideoModalOpen}>
+                  <DialogTrigger asChild>
+                    <div className="relative aspect-video md:aspect-auto bg-slate-900 flex items-center justify-center cursor-pointer group">
+                      <div className="absolute inset-0 bg-gradient-to-br from-slate-800 to-slate-900"></div>
+                      <div className="relative z-10 text-center text-white">
+                        <PlayCircle className="w-20 h-20 mx-auto mb-4 text-primary group-hover:text-primary/80 transition-colors" />
+                        <p className="text-sm text-slate-300">Assista ao depoimento completo</p>
+                      </div>
+                    </div>
+                  </DialogTrigger>
+                  <DialogContent className="max-w-4xl w-full p-0 bg-black border-0">
+                    <div className="relative aspect-video w-full bg-black">
+                      <button
+                        onClick={() => setIsVideoModalOpen(false)}
+                        className="absolute top-4 right-4 z-50 p-2 rounded-full bg-black/50 text-white hover:bg-black/70 transition-colors"
+                      >
+                        <X className="w-6 h-6" />
+                      </button>
+                      <iframe
+                        src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&controls=1&showinfo=0&rel=0"
+                        title="Case de Sucesso - Carlos Mendes"
+                        className="w-full h-full"
+                        allowFullScreen
+                        allow="autoplay; encrypted-media"
+                      />
+                    </div>
+                  </DialogContent>
+                </Dialog>
 
                 {/* Lado do Conteúdo */}
                 <div className="p-8 bg-background">
@@ -178,6 +203,16 @@ const SuccessCasesSection = () => {
               </div>
             </CardContent>
           </Card>
+        </div>
+
+        {/* Seção do Slider com Subtítulo */}
+        <div className="text-center mb-8">
+          <h3 className="text-2xl font-semibold text-foreground mb-2">
+            Mais Cases de Sucesso
+          </h3>
+          <p className="text-muted-foreground">
+            Descubra como outros profissionais transformaram seus negócios
+          </p>
         </div>
 
         <div className="relative max-w-7xl mx-auto py-4">
