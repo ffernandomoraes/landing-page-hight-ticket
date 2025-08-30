@@ -51,7 +51,7 @@ const AnimatedStatsCard = ({ number, unit, description, icon: Icon, lordIcon, su
       </div>
       
       <div className="space-y-2 flex-1 flex flex-col justify-center">
-        <div className={`text-lg md:text-2xl lg:text-3xl font-bold ${colorClass} h-8 md:h-10 flex items-center justify-start`}>
+        <div className={`text-lg md:text-2xl lg:text-3xl font-bold ${colorClass} h-8 md:h-10 flex items-center justify-start whitespace-nowrap`}>
           {formatNumber(count)} {unit}
         </div>
         
