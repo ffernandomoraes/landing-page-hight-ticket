@@ -10,58 +10,54 @@ const ProductResourcesSection = () => {
   const resources = [
     {
       id: 1,
-      title: "Gestão de eventos",
-      description: "Tudo para seu produto digital com ferramentas completas de gestão de eventos",
-      icon: Calendar,
-      imageUrl: saasEventManagement,
-      features: [
-        "Crie seu evento",
-        "Personalize a venda de lotes e ingressos", 
-        "Gerenciamento de participantes",
-        "Check-in próprio",
-        "Integrações"
-      ]
-    },
-    {
-      id: 2,
-      title: "Área de membro white label",
+      title: "Área de membros white label",
       description: "Crie a escola com a sua marca e engaje seus alunos",
       icon: School,
       imageUrl: saasEducationPlatform,
       features: [
         "Crie a escola com a sua marca",
-        "Utilize gamificação para engajar os alunos",
-        "Vitrine pública para vender mais"
+        "Gamificação e Ranking",
+        "Vitrine pública para vender mais",
+        "Relatórios de engajamento",
+        "Múltiplas escolas, um acesso"
       ]
     },
     {
-      id: 3,
+      id: 2,
       title: "Diversas possibilidades de pagamento",
-      description: "Múltiplas formas de pagamento para maximizar suas vendas",
+      description: "Métodos de pagamento que maximizam suas vendas",
       icon: CreditCard,
       imageUrl: saasPaymentSystem,
       features: [
         "Pix",
-        "Pagamento combinado Pix + Cartão de crédito",
-        "Cartão de crédito parcelado (à vista e parcelado em até 18x*)"
+        "Pix + Cartão de crédito",
+        "Cartão de crédito à vista",
+        "Cartão de crédito parcelado em até 18x*",
+        "Boleto"
       ],
-      comingSoon: ["TMB parcelado (em breve)"]
+      comingSoon: [
+        "TMB parcelado (em breve)",
+        "Pix Automático (em breve)",
+        "Pix Parcelado (em breve)"
+      ]
     },
     {
-      id: 4,
+      id: 3,
       title: "Performance para pitch nos eventos",
       description: "Produtos físicos, parceiros, recorrência e muito mais",
       icon: Presentation,
       imageUrl: saasPresentationTools,
       features: [
-        "Gere o qr code do checkout",
-        "Vitrine com todas as ofertas dos pitchs",
+        "QR code do seu checkout",
         "Maquininha (PagLive)",
-        "Comissione seus parceiros"
+        "Split para parceiros automático"
+      ],
+      comingSoon: [
+        "Vitrine com todas as ofertas dos pitchs (em breve)"
       ]
     },
     {
-      id: 5,
+      id: 4,
       title: "Segurança e credibilidade",
       description: "Máxima segurança e confiabilidade para seu negócio",
       icon: Shield,
@@ -69,21 +65,26 @@ const ProductResourcesSection = () => {
       features: [
         "Estabilidade",
         "Suporte humanizado",
+        "Grupo de WhatsApp exclusivo",
         "Derrubada de checkouts e páginas falsas*"
       ],
-      comingSoon: ["Verificação de links e rastreamento em grupos de lançamento (em breve)"]
+      comingSoon: [
+        "Verificação de links e rastreamento em grupos de lançamento (em breve)"
+      ]
     },
     {
-      id: 6,
+      id: 5,
       title: "Gestão para a sua equipe de vendas",
       description: "Controle completo da sua equipe e processos de venda",
       icon: Users,
       imageUrl: saasTeamManagement,
       features: [
         "Controle de acesso",
-        "Criação de links de pagamentos"
-      ],
-      comingSoon: ["Gestão de leads (em breve)"]
+        "Criação de links de pagamentos via App",
+        "Gestão de leads",
+        "Relatórios completos",
+        "Taxa diferenciada por volume de vendas*"
+      ]
     }
   ];
 
@@ -93,10 +94,10 @@ const ProductResourcesSection = () => {
       <div className="bg-stone-50 py-20">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-stone-800 mb-6">
-            Recursos do Produto
+            Recursos para cada Estratégia
           </h2>
           <p className="text-xl text-stone-600 max-w-3xl mx-auto">
-            Tudo para seu produto digital com ferramentas completas e integradas
+            Ferramentas especializadas para potencializar cada estratégia do seu negócio
           </p>
         </div>
       </div>
@@ -110,11 +111,11 @@ const ProductResourcesSection = () => {
           return (
             <div 
               key={resource.id}
-              className={`min-h-screen flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} animate-fade-in`}
+              className={`flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} animate-fade-in`}
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              {/* Image Side - Full Height */}
-              <div className="flex-1 relative overflow-hidden">
+              {/* Image Side */}
+              <div className="flex-1 relative overflow-hidden h-96 lg:h-auto">
                 <div className="absolute inset-0 bg-gradient-to-br from-stone-100 to-stone-200">
                   <img 
                     src={resource.imageUrl}
@@ -130,8 +131,8 @@ const ProductResourcesSection = () => {
                 </div>
               </div>
 
-              {/* Content Side - Full Height */}
-              <div className="flex-1 bg-stone-50 flex items-center">
+              {/* Content Side */}
+              <div className="flex-1 bg-stone-50 flex items-center py-16 lg:py-20">
                 <div className="w-full px-8 lg:px-16 py-16">
                   <div className="max-w-2xl">
                     <h3 className="text-4xl md:text-5xl font-bold text-stone-800 mb-6 leading-tight">
