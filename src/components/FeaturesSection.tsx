@@ -12,13 +12,9 @@ const FeaturesSection = () => {
           <div className="text-white space-y-8 animate-fade-in">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
               <span className="bg-gradient-to-r from-blue-900 to-blue-400 bg-clip-text text-transparent">
-                Tudo o que você precisa para criar, vender e escalar
-              </span> <span className="text-brand-blue">infoprodutos de alto valor</span>
+                Tudo o que você precisa para criar, vender e escalar infoprodutos de alto valor
+              </span>
             </h2>
-            
-            <p className="text-lg md:text-xl text-foreground leading-relaxed">
-              Gestão completa de cursos, eventos e consultorias, com pagamentos flexíveis e área de membros premium
-            </p>
             
             <Button 
               variant="outline"
