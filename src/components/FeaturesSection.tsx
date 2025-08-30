@@ -55,14 +55,14 @@ const FeaturesSection = () => {
                 colorClass="text-blue-700"
               />
               <AnimatedStatsCard
-                number={200}
-                unit="Mil"
-                description="Produtores vendendo aqui"
+                number={345}
+                unit=""
+                description="Produtores utilizando nossas estratégias"
                 lordIcon={{
                   src: "https://cdn.lordicon.com/jdnoclpe.json",
                   size: 50
                 }}
-                suffix="Mil"
+                suffix=""
                 colorClass="text-blue-500"
               />
             </div>
