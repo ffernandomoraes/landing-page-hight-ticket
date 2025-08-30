@@ -207,7 +207,7 @@ const SuccessCasesSection = () => {
                   </DialogTrigger>
 
                   {/* Lado do Conteúdo */}
-                  <div className="p-8 bg-background">
+                  <div className="p-8 bg-gradient-to-b from-gray-100 to-white">
                     <div className="space-y-6">
                       <div className="flex items-center gap-4">
                         <div className="w-16 h-16 rounded-full overflow-hidden">
