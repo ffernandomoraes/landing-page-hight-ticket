@@ -116,16 +116,6 @@ const SuccessCasesSection = () => {
           </p>
         </div>
 
-        {/* Seção do Slider com Subtítulo */}
-        <div className="text-center mb-4">
-          <h3 className="text-2xl font-semibold text-foreground mb-2">
-            Mais Cases de Sucesso
-          </h3>
-          <p className="text-muted-foreground">
-            Descubra como outros profissionais transformaram seus negócios
-          </p>
-        </div>
-
         <div className="relative max-w-7xl mx-auto py-2 mb-16">
           <Carousel
             opts={{
@@ -278,9 +268,11 @@ const SuccessCasesSection = () => {
                       </div>
                     </div>
 
-                    <Button className="w-full">
-                      Ver Case Completo
-                    </Button>
+                    <DialogTrigger asChild>
+                      <Button className="w-full">
+                        Ver Case Completo
+                      </Button>
+                    </DialogTrigger>
                   </div>
                 </div>
               </div>
