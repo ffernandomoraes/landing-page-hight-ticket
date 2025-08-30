@@ -101,132 +101,133 @@ const ProductResourcesSection = () => {
   const activeResource = resources.find(r => r.id === activeTab);
 
   return (
-    <section className="py-0">
+    <section className="py-20 bg-gradient-to-br from-stone-50 to-white">
       {/* Section Header */}
-      <div className="bg-stone-50 py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-stone-800 mb-6">
-            Recursos para cada Estratégia
-          </h2>
-          <p className="text-xl text-stone-600 max-w-3xl mx-auto">
-            Ferramentas especializadas para potencializar cada estratégia do seu negócio
-          </p>
-        </div>
+      <div className="container mx-auto px-4 text-center mb-16">
+        <h2 className="text-4xl md:text-5xl font-bold text-stone-800 mb-6">
+          Recursos para cada Estratégia
+        </h2>
+        <p className="text-xl text-stone-600 max-w-3xl mx-auto">
+          Ferramentas especializadas para potencializar cada estratégia do seu negócio
+        </p>
       </div>
 
       {/* Tabs Section */}
-      <div className="relative">
+      <div className="container mx-auto px-4">
         <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
           {/* Tabs Navigation */}
-          <div className="bg-white border-b">
-            <div className="container mx-auto px-4">
-              <TabsList className="grid w-full grid-cols-2 md:grid-cols-3 lg:grid-cols-5 h-auto bg-transparent p-0">
-                {resources.map((resource) => {
-                  const IconComponent = resource.icon;
-                  return (
-                    <TabsTrigger
-                      key={resource.id}
-                      value={resource.id}
-                      className="flex flex-col items-center gap-2 p-6 rounded-none border-b-2 border-transparent data-[state=active]:border-brand-blue data-[state=active]:bg-brand-blue/5 data-[state=active]:text-brand-blue transition-all duration-300 hover:bg-stone-50"
-                    >
-                      <IconComponent className="w-6 h-6" strokeWidth={1.5} />
-                      <span className="text-sm font-medium text-center leading-tight">
-                        {resource.tabLabel}
-                      </span>
-                    </TabsTrigger>
-                  );
-                })}
-              </TabsList>
-            </div>
+          <div className="mb-12">
+            <TabsList className="grid w-full grid-cols-2 md:grid-cols-3 lg:grid-cols-5 h-auto bg-white rounded-lg p-2 shadow-sm border">
+              {resources.map((resource) => {
+                const IconComponent = resource.icon;
+                return (
+                  <TabsTrigger
+                    key={resource.id}
+                    value={resource.id}
+                    className="flex flex-col items-center gap-2 p-4 rounded-md data-[state=active]:bg-brand-blue data-[state=active]:text-white data-[state=active]:shadow-md transition-all duration-300 hover:bg-stone-50 data-[state=active]:hover:bg-brand-blue/90"
+                  >
+                    <IconComponent className="w-5 h-5" strokeWidth={1.5} />
+                    <span className="text-xs font-medium text-center leading-tight">
+                      {resource.tabLabel}
+                    </span>
+                  </TabsTrigger>
+                );
+              })}
+            </TabsList>
           </div>
 
           {/* Tab Content */}
-          {resources.map((resource) => {
-            const IconComponent = resource.icon;
-            
-            return (
-              <TabsContent key={resource.id} value={resource.id} className="mt-0">
-                <div className="relative min-h-screen flex items-center">
-                  {/* Full Background Image */}
-                  <div className="absolute inset-0 z-0">
-                    <img 
-                      src={resource.imageUrl}
-                      alt={resource.title}
-                      className="w-full h-full object-cover"
-                    />
-                    <div className="absolute inset-0 bg-stone-900/60"></div>
-                  </div>
-
-                  {/* Content Overlay */}
-                  <div className="relative z-10 container mx-auto px-4 py-20">
-                    <div className="max-w-4xl mx-auto">
-                      <Card className="bg-white/95 backdrop-blur-sm border-0 shadow-2xl">
-                        <CardContent className="p-8 lg:p-12">
-                          <div className="flex items-start gap-6 mb-8">
-                            <div className="w-16 h-16 bg-brand-blue/10 rounded-full flex items-center justify-center flex-shrink-0">
-                              <IconComponent className="w-8 h-8 text-brand-blue" strokeWidth={1.5} />
-                            </div>
-                            <div className="flex-1">
-                              <h3 className="text-3xl lg:text-4xl font-bold text-stone-800 mb-4 leading-tight">
-                                {resource.title}
-                              </h3>
-                              <p className="text-lg text-stone-600 leading-relaxed">
-                                {resource.description}
-                              </p>
-                            </div>
-                          </div>
-
-                          {/* Features Grid */}
-                          <div className="grid md:grid-cols-2 gap-x-8 gap-y-4 mb-8">
-                            {resource.features.map((feature, featureIndex) => (
-                              <div 
-                                key={featureIndex}
-                                className="flex items-start gap-3 group"
-                              >
-                                <div className="mt-1 w-5 h-5 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-green-200 transition-colors duration-200">
-                                  <Check className="w-3 h-3 text-green-600" strokeWidth={2} />
-                                </div>
-                                <span className="text-stone-700 leading-relaxed">
-                                  {feature}
-                                </span>
+          <div className="relative">
+            {resources.map((resource) => {
+              const IconComponent = resource.icon;
+              
+              return (
+                <TabsContent key={resource.id} value={resource.id} className="mt-0">
+                  <div className="animate-fade-in">
+                    <Card className="bg-white border-0 shadow-lg rounded-2xl overflow-hidden">
+                      <CardContent className="p-0">
+                        <div className="grid lg:grid-cols-2 gap-0">
+                          {/* Content Column */}
+                          <div className="p-8 lg:p-12 flex flex-col justify-center">
+                            <div className="flex items-center gap-4 mb-6">
+                              <div className="w-12 h-12 bg-brand-blue/10 rounded-xl flex items-center justify-center">
+                                <IconComponent className="w-6 h-6 text-brand-blue" strokeWidth={1.5} />
                               </div>
-                            ))}
+                              <div>
+                                <h3 className="text-2xl lg:text-3xl font-bold text-stone-800 leading-tight">
+                                  {resource.title}
+                                </h3>
+                              </div>
+                            </div>
+                            
+                            <p className="text-lg text-stone-600 leading-relaxed mb-8">
+                              {resource.description}
+                            </p>
 
-                            {/* Coming Soon Features */}
-                            {resource.comingSoon?.map((feature, featureIndex) => (
-                              <div 
-                                key={`coming-${featureIndex}`}
-                                className="flex items-start gap-3 group"
-                              >
-                                <div className="mt-1 w-5 h-5 bg-amber-100 rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-amber-200 transition-colors duration-200">
-                                  <Clock className="w-3 h-3 text-amber-600" strokeWidth={2} />
-                                </div>
-                                <div className="flex items-center gap-2 flex-wrap">
-                                  <span className="text-stone-600 leading-relaxed">
-                                    {feature.replace(" (em breve)", "")}
-                                  </span>
-                                  <span className="px-2 py-1 bg-amber-100 text-amber-700 text-xs rounded-full font-medium">
-                                    Em breve
+                            {/* Features List */}
+                            <div className="space-y-3 mb-8">
+                              {resource.features.map((feature, featureIndex) => (
+                                <div 
+                                  key={featureIndex}
+                                  className="flex items-start gap-3 group"
+                                >
+                                  <div className="mt-1 w-5 h-5 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-green-200 transition-colors duration-200">
+                                    <Check className="w-3 h-3 text-green-600" strokeWidth={2} />
+                                  </div>
+                                  <span className="text-stone-700 leading-relaxed">
+                                    {feature}
                                   </span>
                                 </div>
-                              </div>
-                            ))}
-                          </div>
+                              ))}
 
-                          {/* CTA Button */}
-                          <div className="text-center">
-                            <Button size="lg" className="bg-brand-blue hover:bg-brand-blue/90 text-white px-8 py-3">
-                              Saiba mais sobre {resource.tabLabel}
+                              {/* Coming Soon Features */}
+                              {resource.comingSoon?.map((feature, featureIndex) => (
+                                <div 
+                                  key={`coming-${featureIndex}`}
+                                  className="flex items-start gap-3 group"
+                                >
+                                  <div className="mt-1 w-5 h-5 bg-amber-100 rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-amber-200 transition-colors duration-200">
+                                    <Clock className="w-3 h-3 text-amber-600" strokeWidth={2} />
+                                  </div>
+                                  <div className="flex items-center gap-2 flex-wrap">
+                                    <span className="text-stone-600 leading-relaxed">
+                                      {feature.replace(" (em breve)", "")}
+                                    </span>
+                                    <span className="px-2 py-1 bg-amber-100 text-amber-700 text-xs rounded-full font-medium">
+                                      Em breve
+                                    </span>
+                                  </div>
+                                </div>
+                              ))}
+                            </div>
+
+                            {/* CTA Button */}
+                            <Button size="lg" className="bg-brand-blue hover:bg-brand-blue/90 text-white w-fit">
+                              Explorar {resource.tabLabel}
                             </Button>
                           </div>
-                        </CardContent>
-                      </Card>
-                    </div>
+
+                          {/* Image Column */}
+                          <div className="relative bg-gradient-to-br from-stone-100 to-stone-200 flex items-center justify-center p-8">
+                            <div className="relative w-full max-w-md mx-auto">
+                              <img 
+                                src={resource.imageUrl}
+                                alt={resource.title}
+                                className="w-full h-auto rounded-xl shadow-2xl transform transition-transform duration-500 hover:scale-105"
+                              />
+                              <div className="absolute -top-4 -right-4 w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg">
+                                <IconComponent className="w-6 h-6 text-brand-blue" strokeWidth={1.5} />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </CardContent>
+                    </Card>
                   </div>
-                </div>
-              </TabsContent>
-            );
-          })}
+                </TabsContent>
+              );
+            })}
+          </div>
         </Tabs>
       </div>
     </section>
