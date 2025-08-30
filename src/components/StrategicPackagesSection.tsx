@@ -28,6 +28,7 @@ import {
   ArrowRight
 } from "lucide-react";
 import LordIcon from "./LordIcon";
+import { useRef } from "react";
 
 interface StrategyPackage {
   id: number;
@@ -174,7 +175,15 @@ const StrategicPackagesSection = () => {
               {strategicPackages.map((pkg) => {
                 return (
                   <CarouselItem key={pkg.id} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3 py-2">
-                    <div className={`h-full p-[1px] rounded-lg bg-gradient-to-b from-slate-200/30 to-brand-blue/30 hover:${pkg.borderGradient.replace('from-', 'from-').replace('to-', 'to-')} group hover:shadow-lg transition-all duration-300 hover:-translate-y-1`}>
+                    <div 
+                      className={`h-full p-[1px] rounded-lg bg-gradient-to-b from-slate-200/30 to-brand-blue/30 hover:${pkg.borderGradient.replace('from-', 'from-').replace('to-', 'to-')} group hover:shadow-lg transition-all duration-300 hover:-translate-y-1`}
+                      onMouseEnter={(e) => {
+                        const lordIcon = e.currentTarget.querySelector('lord-icon') as any;
+                        if (lordIcon && lordIcon.playFromBeginning) {
+                          lordIcon.playFromBeginning();
+                        }
+                      }}
+                    >
                       <Card className="h-full bg-card rounded-lg flex flex-col border-0">
                       <CardHeader className="pb-6 pt-8">
                         <div className="flex items-start gap-4 mb-4">
