@@ -116,8 +116,91 @@ const SuccessCasesSection = () => {
           </p>
         </div>
 
+        {/* Seção do Slider com Subtítulo */}
+        <div className="text-center mb-4">
+          <h3 className="text-2xl font-semibold text-foreground mb-2">
+            Mais Cases de Sucesso
+          </h3>
+          <p className="text-muted-foreground">
+            Descubra como outros profissionais transformaram seus negócios
+          </p>
+        </div>
+
+        <div className="relative max-w-7xl mx-auto py-2 mb-16">
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full"
+          >
+            <CarouselContent className="-ml-2 md:-ml-4 py-8">
+              {successCases.map((case_) => (
+                <CarouselItem key={case_.id} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3 py-2">
+                  <Card className="group overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 h-full">
+                    <CardContent className="p-0">
+                      <div className="relative h-[500px] bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 overflow-hidden">
+                        {/* Background Image */}
+                        <div className="absolute inset-0">
+                          <img
+                            src={case_.image}
+                            alt={case_.name}
+                            className="w-full h-full object-cover object-top transition-all duration-300"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/20 to-slate-900" />
+                          {/* Blue overlay that disappears on hover */}
+                          <div className="absolute inset-0 bg-slate-900/40 group-hover:bg-slate-900/10 transition-all duration-300" />
+                        </div>
+                        
+                        {/* Content */}
+                        <div className="relative z-10 p-6 h-full flex flex-col justify-end text-white">
+                          {/* Top Space for Photo */}
+                          <div className="flex-1 min-h-[200px]"></div>
+
+                          {/* Bottom Content */}
+                          <div className="space-y-4">
+                            <div className="space-y-2">
+                              <h3 className="text-xl font-bold">{case_.name}</h3>
+                              <div className="flex items-center gap-2 text-slate-300">
+                                <span className="text-sm">{case_.area}</span>
+                                <span className="text-xs">•</span>
+                                <div className="flex items-center gap-1">
+                                  <Users className="w-3 h-3" />
+                                  <span className="text-xs">{case_.followers} seguidores</span>
+                                </div>
+                              </div>
+                            </div>
+                            
+                            <p className="text-xs text-slate-200 leading-relaxed mb-4">
+                              {case_.strategy}
+                            </p>
+
+                            {/* Bottom Metrics */}
+                            <div className="space-y-2">
+                              {case_.metrics.map((metric, index) => (
+                                <div key={index} className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-lg px-3 py-2">
+                                  <metric.icon className="w-4 h-4 text-slate-300" />
+                                  <span className="text-sm font-medium">{metric.label}:</span>
+                                  <span className="text-sm font-bold text-white">{metric.value}</span>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            
+            <CarouselPrevious className="hidden md:flex -left-16 w-12 h-12 rounded-full" />
+            <CarouselNext className="hidden md:flex -right-16 w-12 h-12 rounded-full" />
+          </Carousel>
+        </div>
+
         {/* Card de Destaque com Vídeo */}
-        <div className="max-w-7xl mx-auto mb-16">
+        <div className="max-w-7xl mx-auto">
           <Card className="overflow-hidden border-0 shadow-xl bg-gradient-to-r from-primary/10 to-secondary/10">
             <CardContent className="p-0">
               <div className="grid md:grid-cols-2 gap-0">
@@ -203,89 +286,6 @@ const SuccessCasesSection = () => {
               </div>
             </CardContent>
           </Card>
-        </div>
-
-        {/* Seção do Slider com Subtítulo */}
-        <div className="text-center mb-4">
-          <h3 className="text-2xl font-semibold text-foreground mb-2">
-            Mais Cases de Sucesso
-          </h3>
-          <p className="text-muted-foreground">
-            Descubra como outros profissionais transformaram seus negócios
-          </p>
-        </div>
-
-        <div className="relative max-w-7xl mx-auto py-2">
-          <Carousel
-            opts={{
-              align: "start",
-              loop: true,
-            }}
-            className="w-full"
-          >
-            <CarouselContent className="-ml-2 md:-ml-4 py-8">
-              {successCases.map((case_) => (
-                <CarouselItem key={case_.id} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3 py-2">
-                  <Card className="group overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 h-full">
-                    <CardContent className="p-0">
-                      <div className="relative h-[500px] bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 overflow-hidden">
-                        {/* Background Image */}
-                        <div className="absolute inset-0">
-                          <img
-                            src={case_.image}
-                            alt={case_.name}
-                            className="w-full h-full object-cover object-top transition-all duration-300"
-                          />
-                          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/20 to-slate-900" />
-                          {/* Blue overlay that disappears on hover */}
-                          <div className="absolute inset-0 bg-slate-900/40 group-hover:bg-slate-900/10 transition-all duration-300" />
-                        </div>
-                        
-                        {/* Content */}
-                        <div className="relative z-10 p-6 h-full flex flex-col justify-end text-white">
-                          {/* Top Space for Photo */}
-                          <div className="flex-1 min-h-[200px]"></div>
-
-                          {/* Bottom Content */}
-                          <div className="space-y-4">
-                            <div className="space-y-2">
-                              <h3 className="text-xl font-bold">{case_.name}</h3>
-                              <div className="flex items-center gap-2 text-slate-300">
-                                <span className="text-sm">{case_.area}</span>
-                                <span className="text-xs">•</span>
-                                <div className="flex items-center gap-1">
-                                  <Users className="w-3 h-3" />
-                                  <span className="text-xs">{case_.followers} seguidores</span>
-                                </div>
-                              </div>
-                            </div>
-                            
-                            <p className="text-xs text-slate-200 leading-relaxed mb-4">
-                              {case_.strategy}
-                            </p>
-
-                            {/* Bottom Metrics */}
-                            <div className="space-y-2">
-                              {case_.metrics.map((metric, index) => (
-                                <div key={index} className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-lg px-3 py-2">
-                                  <metric.icon className="w-4 h-4 text-slate-300" />
-                                  <span className="text-sm font-medium">{metric.label}:</span>
-                                  <span className="text-sm font-bold text-white">{metric.value}</span>
-                                </div>
-                              ))}
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            
-            <CarouselPrevious className="hidden md:flex -left-16 w-12 h-12 rounded-full" />
-            <CarouselNext className="hidden md:flex -right-16 w-12 h-12 rounded-full" />
-          </Carousel>
         </div>
       </div>
     </section>
