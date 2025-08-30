@@ -11,7 +11,7 @@ const FeaturesSection = () => {
           {/* First Column - Main Content */}
           <div className="text-white space-y-8 animate-fade-in">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
-              <span className="bg-gradient-to-r from-blue-900 to-blue-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-950 to-blue-800 bg-clip-text text-transparent">
                 Escale infoprodutos com estratégias validadas
               </span>
             </h2>
@@ -41,7 +41,7 @@ const FeaturesSection = () => {
                   size: 50
                 }}
                 suffix="Bilhões"
-                colorClass="text-blue-900"
+                colorClass="text-blue-950"
               />
               <AnimatedStatsCard
                 number={25}
@@ -52,7 +52,7 @@ const FeaturesSection = () => {
                   size: 50
                 }}
                 suffix="Milhões"
-                colorClass="text-blue-700"
+                colorClass="text-blue-900"
               />
               <AnimatedStatsCard
                 number={345}
@@ -63,7 +63,7 @@ const FeaturesSection = () => {
                   size: 50
                 }}
                 suffix=""
-                colorClass="text-blue-500"
+                colorClass="text-blue-800"
               />
             </div>
           </div>
