@@ -32,7 +32,7 @@ const HeroSection = () => {
           {/* Hero Content */}
           <div className="text-white space-y-8 animate-fade-in max-w-md">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-              Eleve seu negócio digital com a <span className="text-secondary">Eduzz</span>
+              Tudo o que você precisa para criar, vender e escalar <span className="text-secondary">infoprodutos de alto valor</span>.
             </h1>
             
             <p className="text-xl md:text-2xl text-white/80 leading-relaxed max-w-lg">
@@ -56,16 +56,6 @@ const HeroSection = () => {
               </Button>
             </div>
             
-            <div className="flex items-center space-x-8 text-white/70 text-sm">
-              <div className="flex items-center space-x-2">
-                <span className="w-2 h-2 bg-white rounded-full"></span>
-                <span>Grátis para começar</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <span className="w-2 h-2 bg-white rounded-full"></span>
-                <span>Suporte 24/7</span>
-              </div>
-            </div>
           </div>
           
           {/* Center space for background image */}
