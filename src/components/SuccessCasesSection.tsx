@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { Users, TrendingUp, Award, Target, Calendar, DollarSign } from "lucide-react";
+import { Users, TrendingUp, Award, Target, Calendar, DollarSign, Play } from "lucide-react";
 
 interface SuccessCase {
   id: number;
@@ -109,6 +109,71 @@ const SuccessCasesSection = () => {
             Conheça alguns dos nossos cases de sucesso e como ajudamos profissionais 
             a alcançarem resultados extraordinários em seus negócios
           </p>
+        </div>
+
+        {/* Card de Destaque com Vídeo */}
+        <div className="max-w-7xl mx-auto mb-12">
+          <Card className="overflow-hidden border-0 shadow-2xl">
+            <CardContent className="p-0">
+              <div className="relative h-[300px] md:h-[400px] bg-gradient-to-r from-slate-900 to-slate-700">
+                <div className="grid md:grid-cols-2 h-full">
+                  {/* Lado do Vídeo */}
+                  <div className="relative group cursor-pointer">
+                    <div className="absolute inset-0 bg-gradient-to-br from-slate-800/50 to-slate-900/50 z-10" />
+                    <img
+                      src="/lovable-uploads/professional-1.jpg"
+                      alt="Case de Sucesso Principal"
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 z-20 flex items-center justify-center">
+                      <div className="w-16 h-16 md:w-20 md:h-20 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:bg-white/30 transition-all duration-300">
+                        <Play className="w-8 h-8 md:w-10 md:h-10 text-white ml-1" />
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Lado do Conteúdo */}
+                  <div className="p-6 md:p-8 flex flex-col justify-center text-white">
+                    <div className="space-y-4">
+                      <div>
+                        <h3 className="text-2xl md:text-3xl font-bold mb-2">Carlos Mendes</h3>
+                        <p className="text-slate-300 text-lg">Marketing Digital • 45K seguidores</p>
+                      </div>
+                      
+                      <p className="text-slate-200 leading-relaxed">
+                        "Com a metodologia da EDU22, consegui estruturar meu funil de vendas e aumentar 
+                        minhas conversões em 400%. Hoje faturamos mais de R$ 2,5M por ano."
+                      </p>
+
+                      <div className="grid grid-cols-3 gap-4 pt-4">
+                        <div className="text-center">
+                          <div className="flex items-center justify-center gap-1 mb-1">
+                            <Calendar className="w-4 h-4 text-slate-300" />
+                          </div>
+                          <p className="text-sm font-bold">500</p>
+                          <p className="text-xs text-slate-300">Participantes</p>
+                        </div>
+                        <div className="text-center">
+                          <div className="flex items-center justify-center gap-1 mb-1">
+                            <DollarSign className="w-4 h-4 text-slate-300" />
+                          </div>
+                          <p className="text-sm font-bold">R$ 2.5M</p>
+                          <p className="text-xs text-slate-300">Vendas</p>
+                        </div>
+                        <div className="text-center">
+                          <div className="flex items-center justify-center gap-1 mb-1">
+                            <Users className="w-4 h-4 text-slate-300" />
+                          </div>
+                          <p className="text-sm font-bold">+3.000</p>
+                          <p className="text-xs text-slate-300">Formados</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </div>
 
         <div className="relative max-w-7xl mx-auto py-8">
