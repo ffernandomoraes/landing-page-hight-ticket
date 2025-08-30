@@ -28,9 +28,9 @@ const AnimatedStatsCard = ({ number, unit, description, icon: Icon, lordIcon, su
   return (
     <div 
       ref={ref}
-      className="bg-white/20 backdrop-blur-sm border border-white/30 rounded-xl p-3 md:p-6 transition-all duration-300 shadow-gradient-hover hover:bg-white/25 hover:scale-105 cursor-pointer group relative overflow-hidden"
+      className="bg-white/20 backdrop-blur-sm border border-white/30 rounded-xl p-3 md:p-6 transition-all duration-300 shadow-gradient-hover hover:bg-white/25 hover:scale-105 cursor-pointer group relative overflow-hidden w-full h-[140px] md:h-[160px] flex flex-col"
     >
-      <div className="flex items-start justify-between mb-2 md:mb-4">
+      <div className="flex items-start justify-between mb-2 md:mb-4 flex-shrink-0">
         {lordIcon ? (
           <LordIcon
             src={lordIcon.src}
@@ -50,12 +50,12 @@ const AnimatedStatsCard = ({ number, unit, description, icon: Icon, lordIcon, su
         ) : null}
       </div>
       
-      <div className="space-y-2">
-        <div className={`text-lg md:text-2xl lg:text-3xl font-bold ${colorClass}`}>
+      <div className="space-y-2 flex-1 flex flex-col justify-center">
+        <div className={`text-lg md:text-2xl lg:text-3xl font-bold ${colorClass} h-8 md:h-10 flex items-center justify-start`}>
           {formatNumber(count)} {unit}
         </div>
         
-        <div className="text-gray-800 text-xs md:text-sm leading-relaxed">
+        <div className="text-gray-800 text-xs md:text-sm leading-relaxed h-8 md:h-10 flex items-start">
           {description}
         </div>
       </div>
