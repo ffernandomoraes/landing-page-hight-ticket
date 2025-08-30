@@ -178,16 +178,18 @@ const StrategicPackagesSection = () => {
                       <Card className="h-full bg-card rounded-lg flex flex-col border-0">
                       <CardHeader className="pb-6 pt-8">
                         <div className="flex items-start gap-4 mb-4">
-                          <LordIcon
-                            src={pkg.lordIcon.src}
-                            trigger="hover"
-                            stroke="regular"
-                            colors={pkg.lordIcon.colors}
-                            style={{
-                              width: "49px",
-                              height: "49px"
-                            }}
-                          />
+                          <div className="group-hover:[&>lord-icon]:animate-bounce">
+                            <LordIcon
+                              src={pkg.lordIcon.src}
+                              trigger="loop"
+                              stroke="regular"
+                              colors={pkg.lordIcon.colors}
+                              style={{
+                                width: "49px",
+                                height: "49px"
+                              }}
+                            />
+                          </div>
                           <div className="flex-1">
                             <CardTitle className="text-lg font-bold mb-2 leading-tight whitespace-pre-line">
                               <span className={`bg-gradient-to-r from-slate-600 to-brand-blue group-hover:${pkg.titleGradient} bg-clip-text text-transparent transition-all duration-300`}>
@@ -228,7 +230,7 @@ const StrategicPackagesSection = () => {
                           
                           <Button 
                             size="sm" 
-                            className={`w-full text-xs transition-all duration-300 bg-brand-blue text-white border border-brand-blue hover:shadow-lg group-hover:${pkg.buttonClasses}`}
+                            className={`w-full text-xs transition-all duration-300 bg-brand-blue text-white hover:shadow-lg group-hover:${pkg.buttonClasses.replace('border-brand-yellow', '').replace('border-emerald-400', '').replace('border-sky-300', '').replace('border-purple-400', '')}`}
                           >
                             {pkg.cta}
                             <ArrowRight className="w-3 h-3 ml-2" />
