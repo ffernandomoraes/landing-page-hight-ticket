@@ -35,7 +35,7 @@ const FeaturesSection = () => {
               <AnimatedStatsCard
                 number={50}
                 unit="Bilhões"
-                description="Em vendas utilizando as estratégias"
+                description="Em vendas que cresceram com estratégia"
                 lordIcon={{
                   src: "https://cdn.lordicon.com/ihkpbcjb.json",
                   size: 50
@@ -46,7 +46,7 @@ const FeaturesSection = () => {
               <AnimatedStatsCard
                 number={25}
                 unit="Milhões"
-                description="De pessoas impactadas por nossas Estrategicas."
+                description="Pessoas impactadas por nossas estratégias"
                 lordIcon={{
                   src: "https://cdn.lordicon.com/ipkvjmpu.json",
                   size: 50
@@ -57,7 +57,7 @@ const FeaturesSection = () => {
               <AnimatedStatsCard
                 number={345}
                 unit=""
-                description="Produtores utilizando nossas estratégias"
+                description="Produtores que escalam com nossas estratégias"
                 lordIcon={{
                   src: "https://cdn.lordicon.com/jdnoclpe.json",
                   size: 50
