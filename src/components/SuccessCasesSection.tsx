@@ -191,11 +191,11 @@ const SuccessCasesSection = () => {
 
         {/* Card de Destaque com Vídeo */}
         <div className="max-w-7xl mx-auto">
-          <Card className="overflow-hidden border-0 shadow-xl bg-gradient-to-r from-primary/10 to-secondary/10">
-            <CardContent className="p-0">
-              <div className="grid md:grid-cols-2 gap-0">
-                {/* Lado do Vídeo */}
-                <Dialog open={isVideoModalOpen} onOpenChange={setIsVideoModalOpen}>
+          <Dialog open={isVideoModalOpen} onOpenChange={setIsVideoModalOpen}>
+            <Card className="overflow-hidden border-0 shadow-xl bg-gradient-to-r from-primary/10 to-secondary/10">
+              <CardContent className="p-0">
+                <div className="grid md:grid-cols-2 gap-0">
+                  {/* Lado do Vídeo */}
                   <DialogTrigger asChild>
                     <div className="relative aspect-video md:aspect-auto bg-slate-900 flex items-center justify-center cursor-pointer group">
                       <div className="absolute inset-0 bg-gradient-to-br from-slate-800 to-slate-900"></div>
@@ -205,79 +205,80 @@ const SuccessCasesSection = () => {
                       </div>
                     </div>
                   </DialogTrigger>
-                  <DialogContent className="max-w-4xl w-full p-0 bg-black border-0">
-                    <div className="relative aspect-video w-full bg-black">
-                      <button
-                        onClick={() => setIsVideoModalOpen(false)}
-                        className="absolute top-4 right-4 z-50 p-2 rounded-full bg-black/50 text-white hover:bg-black/70 transition-colors"
-                      >
-                        <X className="w-6 h-6" />
-                      </button>
-                      <iframe
-                        src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&controls=1&showinfo=0&rel=0"
-                        title="Case de Sucesso - Carlos Mendes"
-                        className="w-full h-full"
-                        allowFullScreen
-                        allow="autoplay; encrypted-media"
-                      />
-                    </div>
-                  </DialogContent>
-                </Dialog>
 
-                {/* Lado do Conteúdo */}
-                <div className="p-8 bg-background">
-                  <div className="space-y-6">
-                    <div className="flex items-center gap-4">
-                      <div className="w-16 h-16 rounded-full overflow-hidden">
-                        <img
-                          src="/lovable-uploads/professional-1.jpg"
-                          alt="Carlos Mendes"
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                      <div>
-                        <h3 className="text-2xl font-bold text-foreground">Carlos Mendes</h3>
-                        <p className="text-muted-foreground">Marketing Digital</p>
-                        <div className="flex items-center gap-2 text-primary">
-                          <div className="flex">
-                            {[1,2,3,4,5].map((i) => (
-                              <Star key={i} className="w-4 h-4 fill-current" />
-                            ))}
+                  {/* Lado do Conteúdo */}
+                  <div className="p-8 bg-background">
+                    <div className="space-y-6">
+                      <div className="flex items-center gap-4">
+                        <div className="w-16 h-16 rounded-full overflow-hidden">
+                          <img
+                            src="/lovable-uploads/professional-1.jpg"
+                            alt="Carlos Mendes"
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                        <div>
+                          <h3 className="text-2xl font-bold text-foreground">Carlos Mendes</h3>
+                          <p className="text-muted-foreground">Marketing Digital</p>
+                          <div className="flex items-center gap-2 text-primary">
+                            <div className="flex">
+                              {[1,2,3,4,5].map((i) => (
+                                <Star key={i} className="w-4 h-4 fill-current" />
+                              ))}
+                            </div>
+                            <span className="text-sm">45K seguidores</span>
                           </div>
-                          <span className="text-sm">45K seguidores</span>
                         </div>
                       </div>
+
+                      <blockquote className="text-lg text-foreground italic border-l-4 border-primary pl-4">
+                        "Com as estratégias da Eduzz, consegui escalar meu negócio de R$ 50K para R$ 2.5M em 18 meses. O suporte foi fundamental em cada etapa."
+                      </blockquote>
+
+                      <div className="grid grid-cols-3 gap-4 pt-4">
+                        <div className="text-center">
+                          <div className="text-2xl font-bold text-primary">2.5M</div>
+                          <div className="text-sm text-muted-foreground">Faturamento</div>
+                        </div>
+                        <div className="text-center">
+                          <div className="text-2xl font-bold text-primary">500</div>
+                          <div className="text-sm text-muted-foreground">Participantes</div>
+                        </div>
+                        <div className="text-center">
+                          <div className="text-2xl font-bold text-primary">3K+</div>
+                          <div className="text-sm text-muted-foreground">Alunos</div>
+                        </div>
+                      </div>
+
+                      <DialogTrigger asChild>
+                        <Button className="w-full">
+                          Ver Case Completo
+                        </Button>
+                      </DialogTrigger>
                     </div>
-
-                    <blockquote className="text-lg text-foreground italic border-l-4 border-primary pl-4">
-                      "Com as estratégias da Eduzz, consegui escalar meu negócio de R$ 50K para R$ 2.5M em 18 meses. O suporte foi fundamental em cada etapa."
-                    </blockquote>
-
-                    <div className="grid grid-cols-3 gap-4 pt-4">
-                      <div className="text-center">
-                        <div className="text-2xl font-bold text-primary">2.5M</div>
-                        <div className="text-sm text-muted-foreground">Faturamento</div>
-                      </div>
-                      <div className="text-center">
-                        <div className="text-2xl font-bold text-primary">500</div>
-                        <div className="text-sm text-muted-foreground">Participantes</div>
-                      </div>
-                      <div className="text-center">
-                        <div className="text-2xl font-bold text-primary">3K+</div>
-                        <div className="text-sm text-muted-foreground">Alunos</div>
-                      </div>
-                    </div>
-
-                    <DialogTrigger asChild>
-                      <Button className="w-full">
-                        Ver Case Completo
-                      </Button>
-                    </DialogTrigger>
                   </div>
                 </div>
+              </CardContent>
+            </Card>
+            
+            <DialogContent className="max-w-4xl w-full p-0 bg-black border-0">
+              <div className="relative aspect-video w-full bg-black">
+                <button
+                  onClick={() => setIsVideoModalOpen(false)}
+                  className="absolute top-4 right-4 z-50 p-2 rounded-full bg-black/50 text-white hover:bg-black/70 transition-colors"
+                >
+                  <X className="w-6 h-6" />
+                </button>
+                <iframe
+                  src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&controls=1&showinfo=0&rel=0"
+                  title="Case de Sucesso - Carlos Mendes"
+                  className="w-full h-full"
+                  allowFullScreen
+                  allow="autoplay; encrypted-media"
+                />
               </div>
-            </CardContent>
-          </Card>
+            </DialogContent>
+          </Dialog>
         </div>
       </div>
     </section>
