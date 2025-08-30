@@ -64,7 +64,7 @@ const FeaturesSection = () => {
             </div>
             
             <p className="text-base text-gray-800 leading-relaxed">
-              Na Eduzz, você reúne em um único lugar a gestão de cursos online e eventos presenciais, com opções de pagamento via Pix ou cartão (parcelado em até 18 x) e uma área de membros white‑label com a sua marca. Tenha relatórios detalhados de desempenho e escale negócios de alto valor com segurança e praticidade.
+              Aplicamos táticas dos principais Players. Eventos, pitch de alta conversão, engajamento e construção de audiência fiel para ampliar suas margens e gerar crescimento previsível. E você conta com atendimento humano, próximo e consultivo em cada etapa.
             </p>
           </div>
         </div>
