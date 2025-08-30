@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { Users, TrendingUp, Award, Target, Calendar, DollarSign } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Users, TrendingUp, Award, Target, Calendar, DollarSign, PlayCircle, Star } from "lucide-react";
 
 interface SuccessCase {
   id: number;
@@ -99,9 +100,9 @@ const successCases: SuccessCase[] = [
 
 const SuccessCasesSection = () => {
   return (
-    <section className="py-20 bg-background">
+    <section className="py-12 bg-background">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className="text-center mb-8">
           <h2 className="text-4xl font-bold text-foreground mb-4">
             Cases de Sucesso
           </h2>
@@ -111,7 +112,75 @@ const SuccessCasesSection = () => {
           </p>
         </div>
 
-        <div className="relative max-w-7xl mx-auto py-8">
+        {/* Card de Destaque com Vídeo */}
+        <div className="max-w-4xl mx-auto mb-12">
+          <Card className="overflow-hidden border-0 shadow-xl bg-gradient-to-r from-primary/10 to-secondary/10">
+            <CardContent className="p-0">
+              <div className="grid md:grid-cols-2 gap-0">
+                {/* Lado do Vídeo */}
+                <div className="relative aspect-video md:aspect-auto bg-slate-900 flex items-center justify-center">
+                  <div className="absolute inset-0 bg-gradient-to-br from-slate-800 to-slate-900"></div>
+                  <div className="relative z-10 text-center text-white">
+                    <PlayCircle className="w-20 h-20 mx-auto mb-4 text-primary hover:text-primary/80 transition-colors cursor-pointer" />
+                    <p className="text-sm text-slate-300">Assista ao depoimento completo</p>
+                  </div>
+                </div>
+
+                {/* Lado do Conteúdo */}
+                <div className="p-8 bg-background">
+                  <div className="space-y-6">
+                    <div className="flex items-center gap-4">
+                      <div className="w-16 h-16 rounded-full overflow-hidden">
+                        <img
+                          src="/lovable-uploads/professional-1.jpg"
+                          alt="Carlos Mendes"
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      <div>
+                        <h3 className="text-2xl font-bold text-foreground">Carlos Mendes</h3>
+                        <p className="text-muted-foreground">Marketing Digital</p>
+                        <div className="flex items-center gap-2 text-primary">
+                          <div className="flex">
+                            {[1,2,3,4,5].map((i) => (
+                              <Star key={i} className="w-4 h-4 fill-current" />
+                            ))}
+                          </div>
+                          <span className="text-sm">45K seguidores</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <blockquote className="text-lg text-foreground italic border-l-4 border-primary pl-4">
+                      "Com as estratégias da Eduzz, consegui escalar meu negócio de R$ 50K para R$ 2.5M em 18 meses. O suporte foi fundamental em cada etapa."
+                    </blockquote>
+
+                    <div className="grid grid-cols-3 gap-4 pt-4">
+                      <div className="text-center">
+                        <div className="text-2xl font-bold text-primary">2.5M</div>
+                        <div className="text-sm text-muted-foreground">Faturamento</div>
+                      </div>
+                      <div className="text-center">
+                        <div className="text-2xl font-bold text-primary">500</div>
+                        <div className="text-sm text-muted-foreground">Participantes</div>
+                      </div>
+                      <div className="text-center">
+                        <div className="text-2xl font-bold text-primary">3K+</div>
+                        <div className="text-sm text-muted-foreground">Alunos</div>
+                      </div>
+                    </div>
+
+                    <Button className="w-full">
+                      Ver Case Completo
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
+        <div className="relative max-w-7xl mx-auto py-4">
           <Carousel
             opts={{
               align: "start",
