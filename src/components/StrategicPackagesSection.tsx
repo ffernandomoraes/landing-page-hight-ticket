@@ -178,30 +178,16 @@ const StrategicPackagesSection = () => {
                       <Card className="h-full bg-card rounded-lg flex flex-col border-0">
                       <CardHeader className="pb-6 pt-8">
                         <div className="flex items-start gap-4 mb-4">
-                          <div className="group-hover:animate-pulse transition-all duration-300">
-                            <LordIcon
-                              src={pkg.lordIcon.src}
-                              trigger="manual"
-                              stroke="regular"
-                              colors="primary:#64748b,secondary:#64748b"
-                              style={{
-                                width: "49px",
-                                height: "49px"
-                              }}
-                              className="group-hover:hidden"
-                            />
-                            <LordIcon
-                              src={pkg.lordIcon.src}
-                              trigger="hover"
-                              stroke="regular"
-                              colors={pkg.lordIcon.colors}
-                              style={{
-                                width: "49px",
-                                height: "49px"
-                              }}
-                              className="hidden group-hover:block"
-                            />
-                          </div>
+                          <LordIcon
+                            src={pkg.lordIcon.src}
+                            trigger="hover"
+                            stroke="regular"
+                            colors={pkg.lordIcon.colors}
+                            style={{
+                              width: "49px",
+                              height: "49px"
+                            }}
+                          />
                           <div className="flex-1">
                             <CardTitle className="text-lg font-bold mb-2 leading-tight whitespace-pre-line">
                               <span className={`bg-gradient-to-r from-slate-600 to-brand-blue group-hover:${pkg.titleGradient} bg-clip-text text-transparent transition-all duration-300`}>
@@ -243,7 +229,7 @@ const StrategicPackagesSection = () => {
                           <Button 
                             variant="outline" 
                             size="sm" 
-                            className={`w-full text-xs transition-all duration-300 border-slate-300 text-slate-600 hover:border-transparent group-hover:${pkg.buttonClasses.replace('bg-', 'bg-').replace('text-', 'text-').replace('border-', 'border-')}`}
+                            className={`w-full text-xs transition-all duration-300 bg-brand-blue text-white border-brand-blue hover:shadow-lg group-hover:${pkg.buttonClasses.replace('bg-', 'bg-').replace('text-', 'text-').replace('border-', 'border-').replace('hover:bg-', 'hover:bg-').replace('hover:shadow-lg', '')}`}
                           >
                             {pkg.cta}
                             <ArrowRight className="w-3 h-3 ml-2" />
