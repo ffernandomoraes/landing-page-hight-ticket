@@ -46,7 +46,7 @@ const FeaturesSection = () => {
               <AnimatedStatsCard
                 number={25}
                 unit="Milhões"
-                description="Pessoas impactadas por nossas estratégias"
+                description="Pessoas impactadas por nossas estratégias validadas"
                 lordIcon={{
                   src: "https://cdn.lordicon.com/ipkvjmpu.json",
                   size: 50
