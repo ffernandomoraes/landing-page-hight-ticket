@@ -206,7 +206,7 @@ const SuccessCasesSection = () => {
         </div>
 
         {/* Seção do Slider com Subtítulo */}
-        <div className="text-center mb-8">
+        <div className="text-center mb-4">
           <h3 className="text-2xl font-semibold text-foreground mb-2">
             Mais Cases de Sucesso
           </h3>
@@ -215,7 +215,7 @@ const SuccessCasesSection = () => {
           </p>
         </div>
 
-        <div className="relative max-w-7xl mx-auto py-4">
+        <div className="relative max-w-7xl mx-auto py-2">
           <Carousel
             opts={{
               align: "start",
