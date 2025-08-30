@@ -16,6 +16,10 @@ const FeaturesSection = () => {
               </span>
             </h2>
             
+            <p className="text-lg md:text-xl text-foreground leading-relaxed">
+              Eventos, pitch de alta conversão, engajamento e construção de audiência fiel para ampliar suas margens e gerar crescimento previsível. E você conta com atendimento humano, próximo e consultivo em cada etapa.
+            </p>
+            
             <Button 
               variant="outline"
               size="default"
@@ -62,10 +66,6 @@ const FeaturesSection = () => {
                 colorClass="text-blue-500"
               />
             </div>
-            
-            <p className="text-base text-gray-800 leading-relaxed">
-              Aplicamos táticas dos principais Players. Eventos, pitch de alta conversão, engajamento e construção de audiência fiel para ampliar suas margens e gerar crescimento previsível. E você conta com atendimento humano, próximo e consultivo em cada etapa.
-            </p>
           </div>
         </div>
       </div>
