@@ -1,15 +1,20 @@
-import { Calendar, Users, School, CreditCard, Presentation, Shield, Check, Clock } from "lucide-react";
-import saasEventManagement from "@/assets/saas-event-management.jpg";
+import { Users, School, CreditCard, Presentation, Shield, Check, Clock } from "lucide-react";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import saasEducationPlatform from "@/assets/saas-education-platform.jpg";
 import saasPaymentSystem from "@/assets/saas-payment-system.jpg";
 import saasPresentationTools from "@/assets/saas-presentation-tools.jpg";
 import saasSecurityDashboard from "@/assets/saas-security-dashboard.jpg";
 import saasTeamManagement from "@/assets/saas-team-management.jpg";
+import { useState } from "react";
 
 const ProductResourcesSection = () => {
+  const [activeTab, setActiveTab] = useState("membros");
+
   const resources = [
     {
-      id: 1,
+      id: "membros",
       title: "Área de membros white label",
       description: "Crie a escola com a sua marca e engaje seus alunos",
       icon: School,
@@ -20,10 +25,11 @@ const ProductResourcesSection = () => {
         "Vitrine pública para vender mais",
         "Relatórios de engajamento",
         "Múltiplas escolas, um acesso"
-      ]
+      ],
+      tabLabel: "Área de Membros"
     },
     {
-      id: 2,
+      id: "pagamento",
       title: "Diversas possibilidades de pagamento",
       description: "Métodos de pagamento que maximizam suas vendas",
       icon: CreditCard,
@@ -39,10 +45,11 @@ const ProductResourcesSection = () => {
         "TMB parcelado (em breve)",
         "Pix Automático (em breve)",
         "Pix Parcelado (em breve)"
-      ]
+      ],
+      tabLabel: "Pagamentos"
     },
     {
-      id: 3,
+      id: "eventos",
       title: "Performance para pitch nos eventos",
       description: "Produtos físicos, parceiros, recorrência e muito mais",
       icon: Presentation,
@@ -54,10 +61,11 @@ const ProductResourcesSection = () => {
       ],
       comingSoon: [
         "Vitrine com todas as ofertas dos pitchs (em breve)"
-      ]
+      ],
+      tabLabel: "Eventos"
     },
     {
-      id: 4,
+      id: "seguranca",
       title: "Segurança e credibilidade",
       description: "Máxima segurança e confiabilidade para seu negócio",
       icon: Shield,
@@ -70,10 +78,11 @@ const ProductResourcesSection = () => {
       ],
       comingSoon: [
         "Verificação de links e rastreamento em grupos de lançamento (em breve)"
-      ]
+      ],
+      tabLabel: "Segurança"
     },
     {
-      id: 5,
+      id: "vendas",
       title: "Gestão para a sua equipe de vendas",
       description: "Controle completo da sua equipe e processos de venda",
       icon: Users,
@@ -84,9 +93,12 @@ const ProductResourcesSection = () => {
         "Gestão de leads",
         "Relatórios completos",
         "Taxa diferenciada por volume de vendas*"
-      ]
+      ],
+      tabLabel: "Equipe de Vendas"
     }
   ];
+
+  const activeResource = resources.find(r => r.id === activeTab);
 
   return (
     <section className="py-0">
@@ -102,86 +114,120 @@ const ProductResourcesSection = () => {
         </div>
       </div>
 
-      {/* Resource Blocks */}
-      <div>
-        {resources.map((resource, index) => {
-          const IconComponent = resource.icon;
-          const isEven = index % 2 === 0;
-          
-          return (
-            <div 
-              key={resource.id}
-              className={`flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} animate-fade-in`}
-              style={{ animationDelay: `${index * 100}ms` }}
-            >
-              {/* Image Side */}
-              <div className="flex-1 relative overflow-hidden h-96 lg:h-auto">
-                <div className="absolute inset-0 bg-gradient-to-br from-stone-100 to-stone-200">
-                  <img 
-                    src={resource.imageUrl}
-                    alt={resource.title}
-                    className="w-full h-full object-cover opacity-90"
-                  />
-                  <div className="absolute inset-0 bg-stone-800/20"></div>
-                </div>
-                
-                {/* Icon Overlay */}
-                <div className="absolute top-8 right-8 w-16 h-16 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg">
-                  <IconComponent className="w-8 h-8 text-stone-700" strokeWidth={1} />
-                </div>
-              </div>
+      {/* Tabs Section */}
+      <div className="relative">
+        <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
+          {/* Tabs Navigation */}
+          <div className="bg-white border-b">
+            <div className="container mx-auto px-4">
+              <TabsList className="grid w-full grid-cols-2 md:grid-cols-3 lg:grid-cols-5 h-auto bg-transparent p-0">
+                {resources.map((resource) => {
+                  const IconComponent = resource.icon;
+                  return (
+                    <TabsTrigger
+                      key={resource.id}
+                      value={resource.id}
+                      className="flex flex-col items-center gap-2 p-6 rounded-none border-b-2 border-transparent data-[state=active]:border-brand-blue data-[state=active]:bg-brand-blue/5 data-[state=active]:text-brand-blue transition-all duration-300 hover:bg-stone-50"
+                    >
+                      <IconComponent className="w-6 h-6" strokeWidth={1.5} />
+                      <span className="text-sm font-medium text-center leading-tight">
+                        {resource.tabLabel}
+                      </span>
+                    </TabsTrigger>
+                  );
+                })}
+              </TabsList>
+            </div>
+          </div>
 
-              {/* Content Side */}
-              <div className="flex-1 bg-stone-50 flex items-center py-16 lg:py-20">
-                <div className="w-full px-8 lg:px-16 py-16">
-                  <div className="max-w-2xl">
-                    <h3 className="text-4xl md:text-5xl font-bold text-stone-800 mb-6 leading-tight">
-                      {resource.title}
-                    </h3>
-                    <p className="text-xl text-stone-600 leading-relaxed mb-8">
-                      {resource.description}
-                    </p>
+          {/* Tab Content */}
+          {resources.map((resource) => {
+            const IconComponent = resource.icon;
+            
+            return (
+              <TabsContent key={resource.id} value={resource.id} className="mt-0">
+                <div className="relative min-h-screen flex items-center">
+                  {/* Full Background Image */}
+                  <div className="absolute inset-0 z-0">
+                    <img 
+                      src={resource.imageUrl}
+                      alt={resource.title}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-stone-900/60"></div>
+                  </div>
 
-                    {/* Features List */}
-                    <div className="space-y-4 mb-8">
-                      {resource.features.map((feature, featureIndex) => (
-                        <div 
-                          key={featureIndex}
-                          className="flex items-start gap-4 group"
-                        >
-                          <div className="mt-1 w-6 h-6 bg-stone-200 rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-stone-300 transition-colors duration-200">
-                            <Check className="w-4 h-4 text-stone-700" strokeWidth={1} />
+                  {/* Content Overlay */}
+                  <div className="relative z-10 container mx-auto px-4 py-20">
+                    <div className="max-w-4xl mx-auto">
+                      <Card className="bg-white/95 backdrop-blur-sm border-0 shadow-2xl">
+                        <CardContent className="p-8 lg:p-12">
+                          <div className="flex items-start gap-6 mb-8">
+                            <div className="w-16 h-16 bg-brand-blue/10 rounded-full flex items-center justify-center flex-shrink-0">
+                              <IconComponent className="w-8 h-8 text-brand-blue" strokeWidth={1.5} />
+                            </div>
+                            <div className="flex-1">
+                              <h3 className="text-3xl lg:text-4xl font-bold text-stone-800 mb-4 leading-tight">
+                                {resource.title}
+                              </h3>
+                              <p className="text-lg text-stone-600 leading-relaxed">
+                                {resource.description}
+                              </p>
+                            </div>
                           </div>
-                          <span className="text-stone-700 text-lg leading-relaxed">
-                            {feature}
-                          </span>
-                        </div>
-                      ))}
 
-                      {/* Coming Soon Features */}
-                      {resource.comingSoon?.map((feature, featureIndex) => (
-                        <div 
-                          key={`coming-${featureIndex}`}
-                          className="flex items-start gap-4 group"
-                        >
-                          <div className="mt-1 w-6 h-6 bg-amber-100 rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-amber-200 transition-colors duration-200">
-                            <Clock className="w-4 h-4 text-amber-600" strokeWidth={1} />
+                          {/* Features Grid */}
+                          <div className="grid md:grid-cols-2 gap-x-8 gap-y-4 mb-8">
+                            {resource.features.map((feature, featureIndex) => (
+                              <div 
+                                key={featureIndex}
+                                className="flex items-start gap-3 group"
+                              >
+                                <div className="mt-1 w-5 h-5 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-green-200 transition-colors duration-200">
+                                  <Check className="w-3 h-3 text-green-600" strokeWidth={2} />
+                                </div>
+                                <span className="text-stone-700 leading-relaxed">
+                                  {feature}
+                                </span>
+                              </div>
+                            ))}
+
+                            {/* Coming Soon Features */}
+                            {resource.comingSoon?.map((feature, featureIndex) => (
+                              <div 
+                                key={`coming-${featureIndex}`}
+                                className="flex items-start gap-3 group"
+                              >
+                                <div className="mt-1 w-5 h-5 bg-amber-100 rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-amber-200 transition-colors duration-200">
+                                  <Clock className="w-3 h-3 text-amber-600" strokeWidth={2} />
+                                </div>
+                                <div className="flex items-center gap-2 flex-wrap">
+                                  <span className="text-stone-600 leading-relaxed">
+                                    {feature.replace(" (em breve)", "")}
+                                  </span>
+                                  <span className="px-2 py-1 bg-amber-100 text-amber-700 text-xs rounded-full font-medium">
+                                    Em breve
+                                  </span>
+                                </div>
+                              </div>
+                            ))}
                           </div>
-                          <span className="text-stone-600 text-lg leading-relaxed">
-                            {feature}
-                          </span>
-                          <span className="ml-2 px-3 py-1 bg-amber-100 text-amber-700 text-sm rounded-full font-medium">
-                            Em breve
-                          </span>
-                        </div>
-                      ))}
+
+                          {/* CTA Button */}
+                          <div className="text-center">
+                            <Button size="lg" className="bg-brand-blue hover:bg-brand-blue/90 text-white px-8 py-3">
+                              Saiba mais sobre {resource.tabLabel}
+                            </Button>
+                          </div>
+                        </CardContent>
+                      </Card>
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          );
-        })}
+              </TabsContent>
+            );
+          })}
+        </Tabs>
       </div>
     </section>
   );
