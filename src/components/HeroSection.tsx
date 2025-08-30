@@ -32,12 +32,9 @@ const HeroSection = () => {
           {/* Hero Content */}
           <div className="text-white space-y-8 animate-fade-in max-w-md">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-              Tudo o que você precisa para criar, vender e escalar <span className="text-secondary">infoprodutos de alto valor</span>.
+              Tudo o que você precisa para criar, vender e escalar <span className="text-secondary">infoprodutos de alto valor</span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-white/80 leading-relaxed max-w-lg">
-              Estratégias exclusivas para produtos de alto valor, eventos e cursos.
-            </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
