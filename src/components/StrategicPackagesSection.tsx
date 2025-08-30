@@ -227,9 +227,8 @@ const StrategicPackagesSection = () => {
                           </div>
                           
                           <Button 
-                            variant="outline" 
                             size="sm" 
-                            className={`w-full text-xs transition-all duration-300 bg-brand-blue text-white border-brand-blue hover:shadow-lg group-hover:${pkg.buttonClasses.replace('bg-', 'bg-').replace('text-', 'text-').replace('border-', 'border-').replace('hover:bg-', 'hover:bg-').replace('hover:shadow-lg', '')}`}
+                            className={`w-full text-xs transition-all duration-300 bg-brand-blue text-white border border-brand-blue hover:shadow-lg group-hover:${pkg.buttonClasses}`}
                           >
                             {pkg.cta}
                             <ArrowRight className="w-3 h-3 ml-2" />
