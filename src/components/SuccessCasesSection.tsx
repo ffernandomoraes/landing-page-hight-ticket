@@ -1,7 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { Button } from "@/components/ui/button";
-import { Users, TrendingUp, Award, Target, Calendar, DollarSign, PlayCircle, Star } from "lucide-react";
+import { Users, TrendingUp, Award, Target, Calendar, DollarSign } from "lucide-react";
 
 interface SuccessCase {
   id: number;
@@ -100,9 +99,9 @@ const successCases: SuccessCase[] = [
 
 const SuccessCasesSection = () => {
   return (
-    <section className="py-12 bg-background">
+    <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-8">
+        <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-foreground mb-4">
             Cases de Sucesso
           </h2>
@@ -112,91 +111,7 @@ const SuccessCasesSection = () => {
           </p>
         </div>
 
-        {/* Card de Destaque com Vídeo */}
-        <div className="w-full mx-auto mb-12">
-          <Card className="overflow-hidden border-0 shadow-xl bg-gradient-to-r from-primary/10 to-secondary/10">
-            <CardContent className="p-0">
-              <div className="grid md:grid-cols-3 gap-0 min-h-[300px]">
-                {/* Lado do Vídeo */}
-                <div className="relative bg-slate-900 flex items-center justify-center">
-                  <div className="absolute inset-0 bg-gradient-to-br from-slate-800 to-slate-900"></div>
-                  <div className="relative z-10 text-center text-white">
-                    <PlayCircle className="w-16 h-16 mx-auto mb-2 text-primary hover:text-primary/80 transition-colors cursor-pointer" />
-                    <p className="text-xs text-slate-300">Assista ao depoimento</p>
-                  </div>
-                </div>
-
-                {/* Lado do Conteúdo */}
-                <div className="md:col-span-2 p-6 bg-background flex items-center">
-                  <div className="w-full">
-                    <div className="grid md:grid-cols-2 gap-6 items-center">
-                      <div className="space-y-4">
-                        <div className="flex items-center gap-4">
-                          <div className="w-12 h-12 rounded-full overflow-hidden flex-shrink-0">
-                            <img
-                              src="/lovable-uploads/professional-1.jpg"
-                              alt="Carlos Mendes"
-                              className="w-full h-full object-cover"
-                            />
-                          </div>
-                          <div>
-                            <h3 className="text-xl font-bold text-foreground">Carlos Mendes</h3>
-                            <p className="text-sm text-muted-foreground">Marketing Digital</p>
-                            <div className="flex items-center gap-2 text-primary">
-                              <div className="flex">
-                                {[1,2,3,4,5].map((i) => (
-                                  <Star key={i} className="w-3 h-3 fill-current" />
-                                ))}
-                              </div>
-                              <span className="text-xs">45K seguidores</span>
-                            </div>
-                          </div>
-                        </div>
-
-                        <blockquote className="text-sm text-foreground italic border-l-4 border-primary pl-3">
-                          "Com as estratégias da Eduzz, consegui escalar meu negócio de R$ 50K para R$ 2.5M em 18 meses."
-                        </blockquote>
-                      </div>
-
-                      <div className="space-y-4">
-                        <div className="grid grid-cols-3 gap-3">
-                          <div className="text-center">
-                            <div className="text-xl font-bold text-primary">2.5M</div>
-                            <div className="text-xs text-muted-foreground">Faturamento</div>
-                          </div>
-                          <div className="text-center">
-                            <div className="text-xl font-bold text-primary">500</div>
-                            <div className="text-xs text-muted-foreground">Participantes</div>
-                          </div>
-                          <div className="text-center">
-                            <div className="text-xl font-bold text-primary">3K+</div>
-                            <div className="text-xs text-muted-foreground">Alunos</div>
-                          </div>
-                        </div>
-
-                        <Button size="sm" className="w-full">
-                          Ver Case Completo
-                        </Button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-
-        {/* Seção do Slider */}
-        <div className="text-center mb-8">
-          <h3 className="text-2xl font-semibold text-foreground mb-2">
-            Mais Cases de Sucesso
-          </h3>
-          <p className="text-muted-foreground">
-            Descubra outros profissionais que transformaram seus negócios conosco
-          </p>
-        </div>
-
-        <div className="relative max-w-7xl mx-auto py-4">
+        <div className="relative max-w-7xl mx-auto py-8">
           <Carousel
             opts={{
               align: "start",
