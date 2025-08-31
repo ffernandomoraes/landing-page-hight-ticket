@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Mail, TrendingUp } from "lucide-react";
+import { TrendingUp } from "lucide-react";
 import { useState } from "react";
+import LordIcon from "@/components/LordIcon";
 
 const NewsletterSection = () => {
   const [email, setEmail] = useState("");
@@ -23,13 +24,18 @@ const NewsletterSection = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-6">
-            <Mail className="w-8 h-8 text-primary" strokeWidth={1} />
+          <div className="inline-flex items-center justify-center mb-6">
+            <LordIcon
+              src="https://cdn.lordicon.com/vpbspaec.json"
+              trigger="hover"
+              style={{ width: "80px", height: "80px" }}
+              colors="primary:#3B82F6,secondary:#60A5FA"
+            />
           </div>
           
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Fique por dentro do mercado{" "}
-            <span className="text-primary">high ticket</span>
+            Fique por dentro do{" "}
+            <span className="text-blue-600">mercado digital</span>
           </h2>
           
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
