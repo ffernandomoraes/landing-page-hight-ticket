@@ -61,7 +61,8 @@ const ConversionResourcesSection = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
-            Soluções que impulsionam cada etapa do seu negócio
+            Soluções que impulsionam<br />
+            cada etapa do seu negócio
           </h2>
         </div>
 
