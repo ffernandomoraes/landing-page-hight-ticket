@@ -30,7 +30,7 @@ const UnifiedCTASection = () => {
               <span className="text-secondary">próximo high ticket</span>
             </h2>
             
-            <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-xl text-white/80 mb-8 max-w-4xl mx-auto leading-relaxed">
               Nossa equipe está pronta para ajudar você a alcançar seus objetivos. 
               Aplique táticas usadas pelos principais players e veja impacto real em conversão e margem.
             </p>
