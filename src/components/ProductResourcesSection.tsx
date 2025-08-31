@@ -67,7 +67,8 @@ const ProductResourcesSection = () => {
       features: [
         "QR code do seu checkout",
         "Maquininha (PagLive)",
-        "Split para parceiros automático"
+        "Split para parceiros automático",
+        "Upsell 1-clique & Order Bump"
       ],
       comingSoon: [
         "Vitrine com todas as ofertas dos pitchs (em breve)"
