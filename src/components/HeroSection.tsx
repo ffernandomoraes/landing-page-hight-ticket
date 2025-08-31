@@ -31,7 +31,7 @@ const HeroSection = () => {
           
           {/* Hero Content */}
           <div className="text-white space-y-8 animate-fade-in max-w-md">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+            <h1 className="text-4xl md:text-5xl font-bold leading-tight">
               Tudo o que você precisa para criar, vender e escalar <span className="text-secondary">infoprodutos de alto valor</span>
             </h1>
             
@@ -63,7 +63,7 @@ const HeroSection = () => {
           {/* Sign Up Form */}
           <div className="bg-white rounded-2xl p-8 shadow-2xl animate-slide-up">
             <div className="text-center mb-6">
-              <h2 className="text-2xl font-bold text-foreground mb-2">
+              <h2 className="text-xl font-bold text-foreground mb-2">
                 Crie sua conta agora.
               </h2>
               <p className="text-muted-foreground">

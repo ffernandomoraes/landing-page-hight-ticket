@@ -10,13 +10,13 @@ const FeaturesSection = () => {
           
           {/* First Column - Main Content */}
           <div className="text-white space-y-8 animate-fade-in">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
+            <h2 className="text-4xl md:text-5xl font-bold leading-tight">
               <span className="bg-gradient-to-r from-blue-950 to-blue-800 bg-clip-text text-transparent">
                 Escale infoprodutos com estratégias validadas
               </span>
             </h2>
             
-            <p className="text-lg md:text-xl text-foreground leading-relaxed">
+            <p className="text-xl text-foreground leading-relaxed">
               Eventos, pitch de alta conversão, engajamento e construção de audiência fiel para ampliar suas margens e gerar crescimento previsível. E você conta com atendimento humano, próximo e consultivo em cada etapa.
             </p>
             

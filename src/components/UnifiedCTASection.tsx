@@ -25,7 +25,7 @@ const UnifiedCTASection = () => {
               <span>Mais de 50.000 empreendedores confiam na Eduzz</span>
             </div>
             
-            <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
               Vamos conversar sobre seu{" "}
               <span className="text-secondary">próximo high ticket</span>
             </h2>

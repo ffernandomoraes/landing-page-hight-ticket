@@ -186,7 +186,7 @@ const ProductResourcesSection = () => {
                                 />
                               </div>
                               <div>
-                                <h3 className="text-2xl lg:text-3xl font-bold text-stone-800 leading-tight">
+                                <h3 className="text-xl font-bold text-stone-800 leading-tight">
                                   {resource.title}
                                 </h3>
                               </div>

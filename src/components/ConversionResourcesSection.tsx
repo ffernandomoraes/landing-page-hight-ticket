@@ -60,7 +60,7 @@ const ConversionResourcesSection = () => {
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
             Soluções que impulsionam cada etapa do seu negócio
           </h2>
         </div>
@@ -94,7 +94,7 @@ const ConversionResourcesSection = () => {
                   </div>
                   
                   <CardHeader className="pb-4 pt-6">
-                    <CardTitle className="text-lg font-bold text-white leading-tight">
+                    <CardTitle className="text-xl font-bold text-white leading-tight">
                       {resource.title}
                     </CardTitle>
                   </CardHeader>

@@ -154,10 +154,10 @@ const StrategicPackagesSection = () => {
               High Ticket
             </Badge>
           </div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-1 leading-tight">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-1 leading-tight">
             Pacotes Estratégicos:
           </h2>
-          <p className="text-[28px] md:text-[34px] lg:text-[40px] font-thin text-brand-blue leading-tight">
+          <p className="text-xl text-brand-blue leading-tight">
             Personalização total para você vender mais
           </p>
         </div>
@@ -198,7 +198,7 @@ const StrategicPackagesSection = () => {
                             }}
                           />
                           <div className="flex-1">
-                            <CardTitle className="text-lg font-bold mb-2 leading-tight whitespace-pre-line">
+                            <CardTitle className="text-xl font-bold mb-2 leading-tight whitespace-pre-line">
                               <span className={`bg-gradient-to-r from-slate-600 to-brand-blue group-hover:${pkg.titleGradient} bg-clip-text text-transparent transition-all duration-300`}>
                                 {pkg.title}
                               </span>

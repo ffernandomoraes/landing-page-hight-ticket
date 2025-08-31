@@ -107,7 +107,7 @@ const SuccessCasesSection = () => {
     <section className="pt-10 pb-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-8">
-          <h2 className="text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             Cases de Sucesso
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -218,7 +218,7 @@ const SuccessCasesSection = () => {
                           />
                         </div>
                         <div>
-                          <h3 className="text-2xl font-bold text-foreground">Carlos Mendes</h3>
+                          <h3 className="text-xl font-bold text-foreground">Carlos Mendes</h3>
                           <p className="text-muted-foreground">Marketing Digital</p>
                           <div className="flex items-center gap-2 text-primary">
                             <div className="flex">
@@ -231,7 +231,7 @@ const SuccessCasesSection = () => {
                         </div>
                       </div>
 
-                      <blockquote className="text-lg text-foreground italic border-l-4 border-primary pl-4">
+                        <blockquote className="text-lg text-foreground italic border-l-4 border-primary pl-4">
                         "Com as estratégias da Eduzz, consegui escalar meu negócio de R$ 50K para R$ 2.5M em 18 meses. O suporte foi fundamental em cada etapa."
                       </blockquote>
 
