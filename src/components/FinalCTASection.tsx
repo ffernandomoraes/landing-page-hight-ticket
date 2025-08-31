@@ -48,33 +48,6 @@ const FinalCTASection = () => {
               Falar com um Gerente
             </Button>
           </div>
-
-          {/* Features Highlight */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
-            <div className="text-center">
-              <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                <CirclePlus className="w-6 h-6" strokeWidth={1} />
-              </div>
-              <h3 className="font-semibold mb-2">Setup em minutos</h3>
-              <p className="text-white/70 text-sm">Configure sua conta e comece a vender hoje mesmo</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                <Star className="w-6 h-6" strokeWidth={1} />
-              </div>
-              <h3 className="font-semibold mb-2">Suporte premium</h3>
-              <p className="text-white/70 text-sm">Atendimento humanizado 24/7 para seu sucesso</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                <ArrowRight className="w-6 h-6" strokeWidth={1} />
-              </div>
-              <h3 className="font-semibold mb-2">Resultados rápidos</h3>
-              <p className="text-white/70 text-sm">Aumente suas vendas desde o primeiro mês</p>
-            </div>
-          </div>
         </div>
       </div>
     </section>
