@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
+import { Trophy, Target, Lightbulb, BookOpen, MessageSquare } from "lucide-react";
 
 const edu22Logo = "/lovable-uploads/67f13901-3e61-4b23-afdb-64e96b3c0eb7.png";
 
@@ -31,23 +32,28 @@ const Header = () => {
           
           {/* Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#casos-sucesso" className="text-foreground/80 hover:text-brand-blue transition-colors text-sm font-medium relative group">
+            <a href="#casos-sucesso" className="text-foreground/80 hover:text-brand-blue transition-colors text-base font-medium relative group flex items-center gap-2">
+              <Trophy size={16} />
               Cases de Sucesso
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-yellow transition-all duration-300 group-hover:w-full"></span>
             </a>
-            <a href="#estrategias" className="text-foreground/80 hover:text-brand-blue transition-colors text-sm font-medium relative group">
+            <a href="#estrategias" className="text-foreground/80 hover:text-brand-blue transition-colors text-base font-medium relative group flex items-center gap-2">
+              <Target size={16} />
               Estratégias
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-yellow transition-all duration-300 group-hover:w-full"></span>
             </a>
-            <a href="#solucoes" className="text-foreground/80 hover:text-brand-blue transition-colors text-sm font-medium relative group">
+            <a href="#solucoes" className="text-foreground/80 hover:text-brand-blue transition-colors text-base font-medium relative group flex items-center gap-2">
+              <Lightbulb size={16} />
               Soluções
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-yellow transition-all duration-300 group-hover:w-full"></span>
             </a>
-            <a href="#recursos" className="text-foreground/80 hover:text-brand-blue transition-colors text-sm font-medium relative group">
+            <a href="#recursos" className="text-foreground/80 hover:text-brand-blue transition-colors text-base font-medium relative group flex items-center gap-2">
+              <BookOpen size={16} />
               Recursos
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-yellow transition-all duration-300 group-hover:w-full"></span>
             </a>
-            <a href="#depoimentos" className="text-foreground/80 hover:text-brand-blue transition-colors text-sm font-medium relative group">
+            <a href="#depoimentos" className="text-foreground/80 hover:text-brand-blue transition-colors text-base font-medium relative group flex items-center gap-2">
+              <MessageSquare size={16} />
               Depoimentos
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-yellow transition-all duration-300 group-hover:w-full"></span>
             </a>
