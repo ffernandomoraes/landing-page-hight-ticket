@@ -28,6 +28,7 @@ const NewsletterSection = () => {
             <LordIcon
               src="https://cdn.lordicon.com/vpbspaec.json"
               trigger="hover"
+              stroke="light"
               style={{ width: "80px", height: "80px" }}
               colors="primary:#3B82F6,secondary:#60A5FA"
             />
@@ -39,12 +40,12 @@ const NewsletterSection = () => {
           </h2>
           
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-            Receba insights e guias para ofertas high ticket – direto no seu e-mail. 
+            Receba insights e guias para ofertas high ticket, direto no seu e-mail. 
             Estratégias exclusivas, cases de sucesso e tendências do mercado.
           </p>
 
           {/* Newsletter Form */}
-          <form onSubmit={handleSubmit} className="max-w-md mx-auto mb-8">
+          <form onSubmit={handleSubmit} className="max-w-lg mx-auto mb-8">
             <div className="flex flex-col sm:flex-row gap-3">
               <Input
                 type="email"
@@ -68,18 +69,9 @@ const NewsletterSection = () => {
 
           {/* Trust Indicators */}
           <div className="flex flex-wrap justify-center items-center gap-6 text-stone-600 text-sm">
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-              <span>100% gratuito</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
-              <span>Conteúdo exclusivo</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
-              <span>Sem spam</span>
-            </div>
+            <span>100% gratuito</span>
+            <span>Conteúdo exclusivo</span>
+            <span>Sem spam</span>
           </div>
         </div>
       </div>
