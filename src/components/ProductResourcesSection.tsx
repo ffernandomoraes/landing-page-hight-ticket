@@ -20,7 +20,8 @@ const ProductResourcesSection = () => {
       description: "Crie a escola com a sua marca e engaje seus alunos",
       lordIcon: {
         src: "https://cdn.lordicon.com/kkwpwktn.json",
-        colors: "primary:#1e40af,secondary:#3b82f6"
+        colors: "primary:#1e40af,secondary:#3b82f6",
+        colorsActive: "primary:#ffffff,secondary:#ffffff"
       },
       imageUrl: saasEducationPlatform,
       features: [
@@ -38,7 +39,8 @@ const ProductResourcesSection = () => {
       description: "Métodos de pagamento que maximizam suas vendas",
       lordIcon: {
         src: "https://cdn.lordicon.com/lnpwcryl.json",
-        colors: "primary:#1e40af,secondary:#3b82f6"
+        colors: "primary:#1e40af,secondary:#3b82f6",
+        colorsActive: "primary:#ffffff,secondary:#ffffff"
       },
       imageUrl: saasPaymentSystem,
       features: [
@@ -61,7 +63,8 @@ const ProductResourcesSection = () => {
       description: "Produtos físicos, parceiros, recorrência e muito mais",
       lordIcon: {
         src: "https://cdn.lordicon.com/orwrebsb.json",
-        colors: "primary:#1e40af,secondary:#3b82f6"
+        colors: "primary:#1e40af,secondary:#3b82f6",
+        colorsActive: "primary:#ffffff,secondary:#ffffff"
       },
       imageUrl: saasPresentationTools,
       features: [
@@ -80,7 +83,8 @@ const ProductResourcesSection = () => {
       description: "Máxima segurança e confiabilidade para seu negócio",
       lordIcon: {
         src: "https://cdn.lordicon.com/pqsiytwi.json",
-        colors: "primary:#1e40af,secondary:#3b82f6"
+        colors: "primary:#1e40af,secondary:#3b82f6",
+        colorsActive: "primary:#ffffff,secondary:#ffffff"
       },
       imageUrl: saasSecurityDashboard,
       features: [
@@ -100,7 +104,8 @@ const ProductResourcesSection = () => {
       description: "Controle completo da sua equipe e processos de venda",
       lordIcon: {
         src: "https://cdn.lordicon.com/jwpaspoo.json",
-        colors: "primary:#1e40af,secondary:#3b82f6"
+        colors: "primary:#1e40af,secondary:#3b82f6",
+        colorsActive: "primary:#ffffff,secondary:#ffffff"
       },
       imageUrl: saasTeamManagement,
       features: [
@@ -144,10 +149,10 @@ const ProductResourcesSection = () => {
                     <LordIcon
                       src={resource.lordIcon.src}
                       trigger="hover"
-                      colors={resource.lordIcon.colors}
+                      colors={activeTab === resource.id ? resource.lordIcon.colorsActive : resource.lordIcon.colors}
                       style={{
-                        width: "20px",
-                        height: "20px"
+                        width: "32px",
+                        height: "32px"
                       }}
                     />
                     <span className="text-xs font-medium text-center leading-tight">
@@ -177,8 +182,8 @@ const ProductResourcesSection = () => {
                                   trigger="hover"
                                   colors={resource.lordIcon.colors}
                                   style={{
-                                    width: "24px",
-                                    height: "24px"
+                                    width: "36px",
+                                    height: "36px"
                                   }}
                                 />
                               </div>
@@ -250,8 +255,8 @@ const ProductResourcesSection = () => {
                                   trigger="hover"
                                   colors={resource.lordIcon.colors}
                                   style={{
-                                    width: "24px",
-                                    height: "24px"
+                                    width: "30px",
+                                    height: "30px"
                                   }}
                                 />
                               </div>
