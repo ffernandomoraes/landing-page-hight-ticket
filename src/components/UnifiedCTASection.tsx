@@ -40,22 +40,21 @@ const UnifiedCTASection = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <Button 
               variant="secondary"
-              size="lg"
-              className="text-lg px-8 py-4 min-h-[56px]"
+              size="default"
+              className="min-h-[48px] px-8"
             >
-              <CirclePlus className="w-5 h-5" />
               Começar teste gratuito
-              <ArrowRight className="w-5 h-5" />
+              <ArrowRight className="w-4 h-4 ml-2" />
             </Button>
             
             <Button 
               variant="white"
-              size="lg"
-              className="text-lg px-8 py-4 min-h-[56px]"
+              size="default"
+              className="min-h-[48px] px-8"
               onClick={handleWhatsAppClick}
             >
-              <MessageCircle className="w-5 h-5" />
               Solicitar consultoria
+              <MessageCircle className="w-4 h-4 ml-2" />
             </Button>
           </div>
         </div>
