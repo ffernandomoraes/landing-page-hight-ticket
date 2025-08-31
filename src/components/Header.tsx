@@ -33,29 +33,29 @@ const Header = () => {
           {/* Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <a href="#casos-sucesso" className="text-foreground/80 hover:text-brand-blue transition-colors text-base font-medium relative group flex items-center gap-2">
-              <Trophy size={16} />
+              <Trophy size={16} strokeWidth={1} className="text-brand-yellow" />
               Cases de Sucesso
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-yellow transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-brand-yellow transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
             </a>
             <a href="#estrategias" className="text-foreground/80 hover:text-brand-blue transition-colors text-base font-medium relative group flex items-center gap-2">
-              <Target size={16} />
+              <Target size={16} strokeWidth={1} className="text-brand-yellow" />
               Estratégias
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-yellow transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-brand-yellow transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
             </a>
             <a href="#solucoes" className="text-foreground/80 hover:text-brand-blue transition-colors text-base font-medium relative group flex items-center gap-2">
-              <Lightbulb size={16} />
+              <Lightbulb size={16} strokeWidth={1} className="text-brand-yellow" />
               Soluções
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-yellow transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-brand-yellow transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
             </a>
             <a href="#recursos" className="text-foreground/80 hover:text-brand-blue transition-colors text-base font-medium relative group flex items-center gap-2">
-              <BookOpen size={16} />
+              <BookOpen size={16} strokeWidth={1} className="text-brand-yellow" />
               Recursos
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-yellow transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-brand-yellow transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
             </a>
             <a href="#depoimentos" className="text-foreground/80 hover:text-brand-blue transition-colors text-base font-medium relative group flex items-center gap-2">
-              <MessageSquare size={16} />
+              <MessageSquare size={16} strokeWidth={1} className="text-brand-yellow" />
               Depoimentos
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-yellow transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-brand-yellow transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
             </a>
           </nav>
           
