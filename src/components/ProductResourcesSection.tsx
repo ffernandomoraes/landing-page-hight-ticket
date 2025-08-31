@@ -1,4 +1,4 @@
-import { Users, School, CreditCard, Presentation, Shield, Check, Clock } from "lucide-react";
+import { Check, Clock } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -7,6 +7,7 @@ import saasPaymentSystem from "@/assets/saas-payment-system.jpg";
 import saasPresentationTools from "@/assets/saas-presentation-tools.jpg";
 import saasSecurityDashboard from "@/assets/saas-security-dashboard.jpg";
 import saasTeamManagement from "@/assets/saas-team-management.jpg";
+import LordIcon from "@/components/LordIcon";
 import { useState } from "react";
 
 const ProductResourcesSection = () => {
@@ -17,7 +18,10 @@ const ProductResourcesSection = () => {
       id: "membros",
       title: "Área de membros white label",
       description: "Crie a escola com a sua marca e engaje seus alunos",
-      icon: School,
+      lordIcon: {
+        src: "https://cdn.lordicon.com/kkwpwktn.json",
+        colors: "primary:#1e40af,secondary:#3b82f6"
+      },
       imageUrl: saasEducationPlatform,
       features: [
         "Crie a escola com a sua marca",
@@ -32,7 +36,10 @@ const ProductResourcesSection = () => {
       id: "pagamento",
       title: "Diversas possibilidades de pagamento",
       description: "Métodos de pagamento que maximizam suas vendas",
-      icon: CreditCard,
+      lordIcon: {
+        src: "https://cdn.lordicon.com/lnpwcryl.json",
+        colors: "primary:#1e40af,secondary:#3b82f6"
+      },
       imageUrl: saasPaymentSystem,
       features: [
         "Pix",
@@ -52,7 +59,10 @@ const ProductResourcesSection = () => {
       id: "eventos",
       title: "Performance para pitch nos eventos",
       description: "Produtos físicos, parceiros, recorrência e muito mais",
-      icon: Presentation,
+      lordIcon: {
+        src: "https://cdn.lordicon.com/orwrebsb.json",
+        colors: "primary:#1e40af,secondary:#3b82f6"
+      },
       imageUrl: saasPresentationTools,
       features: [
         "QR code do seu checkout",
@@ -68,7 +78,10 @@ const ProductResourcesSection = () => {
       id: "seguranca",
       title: "Segurança e credibilidade",
       description: "Máxima segurança e confiabilidade para seu negócio",
-      icon: Shield,
+      lordIcon: {
+        src: "https://cdn.lordicon.com/pqsiytwi.json",
+        colors: "primary:#1e40af,secondary:#3b82f6"
+      },
       imageUrl: saasSecurityDashboard,
       features: [
         "Estabilidade",
@@ -85,7 +98,10 @@ const ProductResourcesSection = () => {
       id: "vendas",
       title: "Gestão para a sua equipe de vendas",
       description: "Controle completo da sua equipe e processos de venda",
-      icon: Users,
+      lordIcon: {
+        src: "https://cdn.lordicon.com/jwpaspoo.json",
+        colors: "primary:#1e40af,secondary:#3b82f6"
+      },
       imageUrl: saasTeamManagement,
       features: [
         "Controle de acesso",
@@ -119,14 +135,21 @@ const ProductResourcesSection = () => {
           <div className="mb-12">
             <TabsList className="grid w-full grid-cols-2 md:grid-cols-3 lg:grid-cols-5 h-auto bg-white rounded-lg p-2 shadow-sm border">
               {resources.map((resource) => {
-                const IconComponent = resource.icon;
                 return (
                   <TabsTrigger
                     key={resource.id}
                     value={resource.id}
-                    className="flex flex-col items-center gap-2 p-4 rounded-md data-[state=active]:bg-brand-blue data-[state=active]:text-white data-[state=active]:shadow-md transition-all duration-300 hover:bg-stone-50 data-[state=active]:hover:bg-brand-blue/90"
+                    className="flex flex-col items-center gap-2 p-4 rounded-md data-[state=active]:bg-brand-blue data-[state=active]:text-white data-[state=active]:shadow-md transition-all duration-300 hover:bg-stone-50 data-[state=active]:hover:bg-brand-blue/90 group"
                   >
-                    <IconComponent className="w-5 h-5" strokeWidth={1.5} />
+                    <LordIcon
+                      src={resource.lordIcon.src}
+                      trigger="hover"
+                      colors={resource.lordIcon.colors}
+                      style={{
+                        width: "20px",
+                        height: "20px"
+                      }}
+                    />
                     <span className="text-xs font-medium text-center leading-tight">
                       {resource.tabLabel}
                     </span>
@@ -139,8 +162,6 @@ const ProductResourcesSection = () => {
           {/* Tab Content */}
           <div className="relative">
             {resources.map((resource) => {
-              const IconComponent = resource.icon;
-              
               return (
                 <TabsContent key={resource.id} value={resource.id} className="mt-0">
                   <div className="animate-fade-in">
@@ -151,7 +172,15 @@ const ProductResourcesSection = () => {
                           <div className="p-8 lg:p-12 flex flex-col justify-center">
                             <div className="flex items-center gap-4 mb-6">
                               <div className="w-12 h-12 bg-brand-blue/10 rounded-xl flex items-center justify-center">
-                                <IconComponent className="w-6 h-6 text-brand-blue" strokeWidth={1.5} />
+                                <LordIcon
+                                  src={resource.lordIcon.src}
+                                  trigger="hover"
+                                  colors={resource.lordIcon.colors}
+                                  style={{
+                                    width: "24px",
+                                    height: "24px"
+                                  }}
+                                />
                               </div>
                               <div>
                                 <h3 className="text-2xl lg:text-3xl font-bold text-stone-800 leading-tight">
@@ -216,7 +245,15 @@ const ProductResourcesSection = () => {
                                 className="w-full h-auto rounded-xl shadow-2xl transform transition-transform duration-500 hover:scale-105"
                               />
                               <div className="absolute -top-4 -right-4 w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg">
-                                <IconComponent className="w-6 h-6 text-brand-blue" strokeWidth={1.5} />
+                                <LordIcon
+                                  src={resource.lordIcon.src}
+                                  trigger="hover"
+                                  colors={resource.lordIcon.colors}
+                                  style={{
+                                    width: "24px",
+                                    height: "24px"
+                                  }}
+                                />
                               </div>
                             </div>
                           </div>
