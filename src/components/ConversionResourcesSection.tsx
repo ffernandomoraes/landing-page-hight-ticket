@@ -66,7 +66,7 @@ const ConversionResourcesSection = () => {
         </div>
 
         <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {resources.map((resource) => {
               return (
                 <Card key={resource.id} className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl group min-h-[420px] flex flex-col">
