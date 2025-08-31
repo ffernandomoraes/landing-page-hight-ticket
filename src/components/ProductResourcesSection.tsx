@@ -213,27 +213,34 @@ const ProductResourcesSection = () => {
                                   </span>
                                 </div>
                               ))}
+                            </div>
 
-                              {/* Coming Soon Features */}
-                              {resource.comingSoon?.map((feature, featureIndex) => (
-                                <div 
-                                  key={`coming-${featureIndex}`}
-                                  className="flex items-start gap-3 group"
-                                >
-                                  <div className="mt-1 w-5 h-5 bg-amber-100 rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-amber-200 transition-colors duration-200">
-                                    <Clock className="w-3 h-3 text-amber-600" strokeWidth={2} />
+                            {/* Coming Soon Section */}
+                            {resource.comingSoon && resource.comingSoon.length > 0 && (
+                              <div className="mb-8">
+                                <div className="bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-200 rounded-xl p-6">
+                                  <div className="flex items-center gap-2 mb-4">
+                                    <Clock className="w-5 h-5 text-amber-600" strokeWidth={2} />
+                                    <h4 className="text-lg font-semibold text-amber-800">Em Breve</h4>
                                   </div>
-                                  <div className="flex items-center gap-2 flex-wrap">
-                                    <span className="text-stone-600 leading-relaxed">
-                                      {feature.replace(" (em breve)", "")}
-                                    </span>
-                                    <span className="px-2 py-1 bg-amber-100 text-amber-700 text-xs rounded-full font-medium">
-                                      Em breve
-                                    </span>
+                                  <div className="grid grid-cols-1 gap-3">
+                                    {resource.comingSoon.map((feature, featureIndex) => (
+                                      <div 
+                                        key={`coming-${featureIndex}`}
+                                        className="flex items-center justify-between bg-white/60 backdrop-blur-sm rounded-lg p-3 border border-amber-100 hover:bg-white/80 transition-all duration-200"
+                                      >
+                                        <span className="text-stone-700 font-medium">
+                                          {feature.replace(" (em breve)", "")}
+                                        </span>
+                                        <span className="px-3 py-1 bg-amber-100 text-amber-700 text-xs rounded-full font-medium">
+                                          Em breve
+                                        </span>
+                                      </div>
+                                    ))}
                                   </div>
                                 </div>
-                              ))}
-                            </div>
+                              </div>
+                            )}
 
                             {/* CTA Button */}
                             <Button size="lg" className="bg-brand-blue hover:bg-brand-blue/90 text-white w-fit">
