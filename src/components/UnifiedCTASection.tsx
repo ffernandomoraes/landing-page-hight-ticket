@@ -1,7 +1,14 @@
 import { Button } from "@/components/ui/button";
-import { CirclePlus, ArrowRight, Star } from "lucide-react";
+import { CirclePlus, ArrowRight, Star, MessageCircle } from "lucide-react";
 
-const FinalCTASection = () => {
+const UnifiedCTASection = () => {
+  const handleWhatsAppClick = () => {
+    const phoneNumber = "5511999999999"; // Replace with actual WhatsApp number
+    const message = "Olá! Gostaria de solicitar uma consultoria sobre high ticket.";
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+  };
+
   return (
     <section className="py-20 bg-gradient-to-br from-[hsl(210_95%_20%)] to-[hsl(210_95%_10%)] relative overflow-hidden">
       {/* Background Effects */}
@@ -19,11 +26,12 @@ const FinalCTASection = () => {
             </div>
             
             <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-              Experimente estratégias validadas e{" "}
-              <span className="text-secondary">eleve seu high ticket</span>
+              Vamos conversar sobre seu{" "}
+              <span className="text-secondary">próximo high ticket</span>
             </h2>
             
             <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto leading-relaxed">
+              Nossa equipe está pronta para ajudar você a alcançar seus objetivos. 
               Aplique táticas usadas pelos principais players e veja impacto real em conversão e margem.
             </p>
           </div>
@@ -44,8 +52,10 @@ const FinalCTASection = () => {
               variant="white"
               size="lg"
               className="text-lg px-8 py-4 min-h-[56px]"
+              onClick={handleWhatsAppClick}
             >
-              Falar com um Gerente
+              <MessageCircle className="w-5 h-5" />
+              Solicitar consultoria
             </Button>
           </div>
         </div>
@@ -54,4 +64,4 @@ const FinalCTASection = () => {
   );
 };
 
-export default FinalCTASection;
+export default UnifiedCTASection;

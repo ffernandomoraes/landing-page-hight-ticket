@@ -6,8 +6,7 @@ import ConversionResourcesSection from "@/components/ConversionResourcesSection"
 import ProductResourcesSection from "@/components/ProductResourcesSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import NewsletterSection from "@/components/NewsletterSection";
-import FinalCTASection from "@/components/FinalCTASection";
-import ContactSection from "@/components/ContactSection";
+import UnifiedCTASection from "@/components/UnifiedCTASection";
 import Footer from "@/components/Footer";
 import SuccessCasesSection from "@/components/SuccessCasesSection";
 
@@ -23,8 +22,7 @@ const Index = () => {
       <ProductResourcesSection />
       <TestimonialsSection />
       <NewsletterSection />
-      <FinalCTASection />
-      <ContactSection />
+      <UnifiedCTASection />
       <Footer />
     </div>
   );
