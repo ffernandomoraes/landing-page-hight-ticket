@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Mail, TrendingUp } from "lucide-react";
+import { TrendingUp } from "lucide-react";
 import { useState } from "react";
+import LordIcon from "@/components/LordIcon";
 
 const NewsletterSection = () => {
   const [email, setEmail] = useState("");
@@ -24,17 +25,28 @@ const NewsletterSection = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-6">
-            <Mail className="w-8 h-8 text-primary" strokeWidth={1} />
+            <LordIcon
+              src="https://cdn.lordicon.com/vpbspaec.json"
+              trigger="hover"
+              colors="primary:#1e40af,secondary:#3b82f6"
+              style={{
+                width: "32px",
+                height: "32px"
+              }}
+            />
           </div>
           
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Fique por dentro do mercado{" "}
-            <span className="text-primary">high ticket</span>
+            Fique por dentro do{" "}
+            <span className="text-primary">mercado digital</span>
           </h2>
           
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-            Receba insights e guias para ofertas high ticket – direto no seu e-mail. 
-            Estratégias exclusivas, cases de sucesso e tendências do mercado.
+            Experimente estratégias validadas e eleve seu high ticket
+          </p>
+          
+          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
+            Aplique táticas usadas pelos principais players e veja impacto real em conversão e margem — com suporte humano.
           </p>
 
           {/* Newsletter Form */}
@@ -55,7 +67,7 @@ const NewsletterSection = () => {
                 className="whitespace-nowrap"
               >
                 <TrendingUp className="w-4 h-4" />
-                Quero receber
+                Começar teste gratuito
               </Button>
             </div>
           </form>
