@@ -150,8 +150,8 @@ const TestimonialsSection = () => {
               ))}
             </CarouselContent>
 
-            <CarouselPrevious className="hidden md:flex -left-12 bg-white border-stone-200 hover:bg-stone-50" />
-            <CarouselNext className="hidden md:flex -right-12 bg-white border-stone-200 hover:bg-stone-50" />
+            <CarouselPrevious className="hidden md:flex -left-16 w-12 h-12 rounded-full" />
+            <CarouselNext className="hidden md:flex -right-16 w-12 h-12 rounded-full" />
           </Carousel>
         </div>
 
