@@ -49,7 +49,7 @@ const ProductResourcesSection = () => {
         "Cartão de crédito parcelado em até 18x*"
       ],
       comingSoon: [
-        "TMB parcelado (em breve)",
+        "Boleto parcelado (TMB) (em breve)",
         "Pix Automático e Pix Parcelado (em breve)"
       ],
       tabLabel: "Pagamentos"
@@ -173,7 +173,7 @@ const ProductResourcesSection = () => {
                           {/* Content Column */}
                           <div className="p-8 lg:p-12 flex flex-col justify-center">
                             <div className="flex items-center gap-4 mb-6">
-                              <div className="w-12 h-12 bg-brand-blue/10 rounded-xl flex items-center justify-center">
+                              <div className="w-12 h-12 rounded-xl flex items-center justify-center">
                                 <LordIcon
                                   src={resource.lordIcon.src}
                                   trigger="hover"
