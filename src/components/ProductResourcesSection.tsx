@@ -136,24 +136,24 @@ const ProductResourcesSection = () => {
         <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
           {/* Tabs Navigation */}
           <div className="mb-12">
-            <TabsList className="grid w-full grid-cols-2 md:grid-cols-3 lg:grid-cols-5 h-auto bg-white rounded-lg p-2 shadow-sm border">
+            <TabsList className="grid w-full grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 h-auto bg-white rounded-lg p-2 shadow-sm border">
               {resources.map((resource) => {
                 return (
-                  <TabsTrigger
-                    key={resource.id}
-                    value={resource.id}
-                    className="flex flex-col items-center gap-2 p-4 rounded-md data-[state=active]:bg-brand-blue data-[state=active]:text-white data-[state=active]:shadow-md transition-all duration-300 hover:bg-stone-50 data-[state=active]:hover:bg-brand-blue/90 group"
-                  >
+                    <TabsTrigger
+                      key={resource.id}
+                      value={resource.id}
+                      className="flex flex-col sm:flex-row lg:flex-col items-center gap-2 p-3 lg:p-4 rounded-md data-[state=active]:bg-brand-blue data-[state=active]:text-white data-[state=active]:shadow-md transition-all duration-300 hover:bg-stone-50 data-[state=active]:hover:bg-brand-blue/90 group"
+                    >
                     <LordIcon
                       src={resource.lordIcon.src}
                       trigger="manual"
                       colors={activeTab === resource.id ? resource.lordIcon.colorsActive : resource.lordIcon.colors}
                       style={{
-                        width: "40px",
-                        height: "40px"
+                        width: "32px",
+                        height: "32px"
                       }}
                     />
-                    <span className="text-xs font-medium text-center leading-tight">
+                    <span className="text-xs sm:text-sm lg:text-xs font-medium text-center leading-tight">
                       {resource.tabLabel}
                     </span>
                   </TabsTrigger>
@@ -172,7 +172,7 @@ const ProductResourcesSection = () => {
                       <CardContent className="p-0">
                         <div className="grid lg:grid-cols-2 gap-0">
                           {/* Content Column */}
-                          <div className="p-8 lg:p-12 flex flex-col justify-center">
+                          <div className="p-6 md:p-8 lg:p-12 flex flex-col justify-center">
                             <div className="flex items-center gap-4 mb-6">
                               <div className="w-12 h-12 rounded-xl flex items-center justify-center">
                                 <LordIcon
@@ -241,7 +241,7 @@ const ProductResourcesSection = () => {
                           </div>
 
                           {/* Image Column */}
-                          <div className="relative bg-gradient-to-br from-stone-100 to-stone-200 flex items-center justify-center p-8">
+                          <div className="relative bg-gradient-to-br from-stone-100 to-stone-200 flex items-center justify-center p-6 md:p-8">
                             <div className="relative w-full max-w-md mx-auto">
                               <img 
                                 src={resource.imageUrl}

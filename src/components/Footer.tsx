@@ -51,11 +51,11 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         
         {/* Main Footer Content */}
-        <div className="py-16">
-          <div className="grid lg:grid-cols-6 gap-8">
+        <div className="py-8 md:py-16">
+          <div className="grid md:grid-cols-2 lg:grid-cols-6 gap-8">
             
             {/* Brand Column */}
-            <div className="lg:col-span-2">
+            <div className="md:col-span-2 lg:col-span-2">
               <div className="mb-6">
                 <img 
                   src="/lovable-uploads/6a9d9601-13d8-4365-b63f-8f72195857ec.png" 
@@ -88,8 +88,9 @@ const Footer = () => {
               </div>
             </div>
 
-            {/* Links Columns */}
-            <div className="lg:col-span-4 grid grid-cols-2 md:grid-cols-4 gap-8">
+            {/* Links Columns - Hidden on mobile, shown as simplified version */}
+            <div className="hidden md:block lg:col-span-4 md:col-span-2">
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
               
               {/* Produto */}
               <div>
@@ -159,6 +160,29 @@ const Footer = () => {
                     </li>
                   ))}
                 </ul>
+              </div>
+              </div>
+            </div>
+
+            {/* Mobile simplified links */}
+            <div className="md:hidden space-y-4">
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <h3 className="font-semibold text-foreground mb-3">Links</h3>
+                  <ul className="space-y-2">
+                    <li><a href="#recursos" className="text-stone-600 hover:text-primary transition-colors text-sm">Recursos</a></li>
+                    <li><a href="#cases" className="text-stone-600 hover:text-primary transition-colors text-sm">Cases</a></li>
+                    <li><a href="#depoimentos" className="text-stone-600 hover:text-primary transition-colors text-sm">Depoimentos</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-foreground mb-3">Suporte</h3>
+                  <ul className="space-y-2">
+                    <li><a href="https://ajuda.eduzz.com/hc/pt-br" target="_blank" rel="noopener noreferrer" className="text-stone-600 hover:text-primary transition-colors text-sm">Ajuda</a></li>
+                    <li><a href="#contato" className="text-stone-600 hover:text-primary transition-colors text-sm">Contato</a></li>
+                    <li><a href="#termos" className="text-stone-600 hover:text-primary transition-colors text-sm">Termos</a></li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>

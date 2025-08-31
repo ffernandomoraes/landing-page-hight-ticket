@@ -1,11 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
-import { Trophy, Target, Lightbulb, BookOpen, MessageSquare } from "lucide-react";
+import { Trophy, Target, Lightbulb, BookOpen, MessageSquare, Menu, X } from "lucide-react";
 
 const edu22Logo = "/lovable-uploads/67f13901-3e61-4b23-afdb-64e96b3c0eb7.png";
 
 const Header = () => {
   const [scrollY, setScrollY] = useState(0);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
@@ -30,7 +31,7 @@ const Header = () => {
             <img src={edu22Logo} alt="edu22" className="h-8 w-auto" />
           </div>
           
-          {/* Navigation */}
+          {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <a href="#casos-sucesso" className="text-foreground/80 hover:text-brand-blue transition-colors text-base font-medium relative group flex items-center gap-2">
               <Trophy size={16} strokeWidth={1} className="text-brand-blue group-hover:text-[#1158af] transition-colors" />
@@ -58,9 +59,18 @@ const Header = () => {
               <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-brand-yellow transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
             </a>
           </nav>
+
+          {/* Mobile Menu Button */}
+          <button 
+            className="md:hidden p-2 text-foreground/80 hover:text-brand-blue transition-colors"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle mobile menu"
+          >
+            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
           
-          {/* CTA Button */}
-          <div className="flex items-center">
+          {/* Desktop CTA Button */}
+          <div className="hidden md:flex items-center">
             <Button variant="primary">
               Fale com um Especialista
             </Button>
@@ -68,6 +78,70 @@ const Header = () => {
         </div>
       </div>
     </header>
+
+    {/* Mobile Menu */}
+    {isMobileMenuOpen && (
+      <div className="fixed inset-0 z-40 md:hidden">
+        {/* Backdrop */}
+        <div 
+          className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+          onClick={() => setIsMobileMenuOpen(false)}
+        />
+        
+        {/* Menu Panel */}
+        <div className="absolute top-20 left-4 right-4 bg-background/95 backdrop-blur-lg rounded-xl shadow-lg border border-white/10 p-6">
+          <nav className="space-y-4">
+            <a 
+              href="#casos-sucesso" 
+              className="flex items-center gap-3 p-3 text-foreground/80 hover:text-brand-blue hover:bg-brand-blue/5 rounded-lg transition-all"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              <Trophy size={20} strokeWidth={1} className="text-brand-blue" />
+              Cases de Sucesso
+            </a>
+            <a 
+              href="#estrategias" 
+              className="flex items-center gap-3 p-3 text-foreground/80 hover:text-brand-blue hover:bg-brand-blue/5 rounded-lg transition-all"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              <Target size={20} strokeWidth={1} className="text-brand-blue" />
+              Estratégias
+            </a>
+            <a 
+              href="#solucoes" 
+              className="flex items-center gap-3 p-3 text-foreground/80 hover:text-brand-blue hover:bg-brand-blue/5 rounded-lg transition-all"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              <Lightbulb size={20} strokeWidth={1} className="text-brand-blue" />
+              Soluções
+            </a>
+            <a 
+              href="#recursos" 
+              className="flex items-center gap-3 p-3 text-foreground/80 hover:text-brand-blue hover:bg-brand-blue/5 rounded-lg transition-all"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              <BookOpen size={20} strokeWidth={1} className="text-brand-blue" />
+              Recursos
+            </a>
+            <a 
+              href="#depoimentos" 
+              className="flex items-center gap-3 p-3 text-foreground/80 hover:text-brand-blue hover:bg-brand-blue/5 rounded-lg transition-all"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              <MessageSquare size={20} strokeWidth={1} className="text-brand-blue" />
+              Depoimentos
+            </a>
+            
+            {/* Mobile CTA */}
+            <div className="pt-4 border-t border-border">
+              <Button variant="primary" className="w-full" onClick={() => setIsMobileMenuOpen(false)}>
+                Fale com um Especialista
+              </Button>
+            </div>
+          </nav>
+        </div>
+      </div>
+    )}
     </>
   );
 };
