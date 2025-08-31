@@ -31,14 +31,14 @@ const Header = () => {
           
           {/* Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#solucoes" className="text-foreground/80 hover:text-brand-blue transition-colors text-sm font-medium">
-              Soluções
+            <a href="#casos-sucesso" className="text-foreground/80 hover:text-brand-blue transition-colors text-sm font-medium">
+              Cases de Sucesso
             </a>
             <a href="#estrategias" className="text-foreground/80 hover:text-brand-blue transition-colors text-sm font-medium">
               Estratégias
             </a>
-            <a href="#casos-sucesso" className="text-foreground/80 hover:text-brand-blue transition-colors text-sm font-medium">
-              Casos de Sucesso
+            <a href="#solucoes" className="text-foreground/80 hover:text-brand-blue transition-colors text-sm font-medium">
+              Soluções
             </a>
             <a href="#recursos" className="text-foreground/80 hover:text-brand-blue transition-colors text-sm font-medium">
               Recursos
