@@ -27,10 +27,10 @@ const HeroSection = () => {
   return (
     <section className="min-h-screen bg-gradient-to-br from-[hsl(210_95%_20%)] to-[hsl(210_95%_10%)] flex items-center pt-16 md:pt-20">
       <div className="container mx-auto px-4 py-8 md:py-16">
-        <div className="grid lg:grid-cols-3 gap-8 md:gap-12 items-center">
+        <div className="grid lg:grid-cols-[1fr,1fr,400px] gap-8 md:gap-12 items-center">
           
           {/* Hero Content */}
-          <div className="text-white space-y-6 md:space-y-8 animate-fade-in order-2 lg:order-1 text-center lg:text-left">
+          <div className="text-white space-y-6 md:space-y-8 animate-fade-in max-w-lg order-2 lg:order-1 text-center lg:text-left">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
               Tudo o que você precisa para criar, vender e escalar <span className="text-secondary">infoprodutos de alto valor</span>
             </h1>
