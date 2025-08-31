@@ -33,27 +33,27 @@ const Header = () => {
           {/* Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <a href="#casos-sucesso" className="text-foreground/80 hover:text-brand-blue transition-colors text-base font-medium relative group flex items-center gap-2">
-              <Trophy size={16} strokeWidth={1} className="text-brand-blue group-hover:text-brand-yellow transition-colors" />
+              <Trophy size={16} strokeWidth={1} className="text-brand-blue group-hover:text-[#1158af] transition-colors" />
               Cases de Sucesso
               <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-brand-yellow transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
             </a>
             <a href="#estrategias" className="text-foreground/80 hover:text-brand-blue transition-colors text-base font-medium relative group flex items-center gap-2">
-              <Target size={16} strokeWidth={1} className="text-brand-blue group-hover:text-brand-yellow transition-colors" />
+              <Target size={16} strokeWidth={1} className="text-brand-blue group-hover:text-[#1158af] transition-colors" />
               Estratégias
               <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-brand-yellow transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
             </a>
             <a href="#solucoes" className="text-foreground/80 hover:text-brand-blue transition-colors text-base font-medium relative group flex items-center gap-2">
-              <Lightbulb size={16} strokeWidth={1} className="text-brand-blue group-hover:text-brand-yellow transition-colors" />
+              <Lightbulb size={16} strokeWidth={1} className="text-brand-blue group-hover:text-[#1158af] transition-colors" />
               Soluções
               <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-brand-yellow transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
             </a>
             <a href="#recursos" className="text-foreground/80 hover:text-brand-blue transition-colors text-base font-medium relative group flex items-center gap-2">
-              <BookOpen size={16} strokeWidth={1} className="text-brand-blue group-hover:text-brand-yellow transition-colors" />
+              <BookOpen size={16} strokeWidth={1} className="text-brand-blue group-hover:text-[#1158af] transition-colors" />
               Recursos
               <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-brand-yellow transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
             </a>
             <a href="#depoimentos" className="text-foreground/80 hover:text-brand-blue transition-colors text-base font-medium relative group flex items-center gap-2">
-              <MessageSquare size={16} strokeWidth={1} className="text-brand-blue group-hover:text-brand-yellow transition-colors" />
+              <MessageSquare size={16} strokeWidth={1} className="text-brand-blue group-hover:text-[#1158af] transition-colors" />
               Depoimentos
               <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-brand-yellow transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
             </a>
