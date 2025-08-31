@@ -148,11 +148,11 @@ const ProductResourcesSection = () => {
                   >
                     <LordIcon
                       src={resource.lordIcon.src}
-                      trigger="hover"
+                      trigger="manual"
                       colors={activeTab === resource.id ? resource.lordIcon.colorsActive : resource.lordIcon.colors}
                       style={{
-                        width: "32px",
-                        height: "32px"
+                        width: "40px",
+                        height: "40px"
                       }}
                     />
                     <span className="text-xs font-medium text-center leading-tight">
@@ -182,8 +182,8 @@ const ProductResourcesSection = () => {
                                   trigger="hover"
                                   colors={resource.lordIcon.colors}
                                   style={{
-                                    width: "36px",
-                                    height: "36px"
+                                    width: "48px",
+                                    height: "48px"
                                   }}
                                 />
                               </div>
@@ -249,17 +249,6 @@ const ProductResourcesSection = () => {
                                 alt={resource.title}
                                 className="w-full h-auto rounded-xl shadow-2xl transform transition-transform duration-500 hover:scale-105"
                               />
-                              <div className="absolute -top-4 -right-4 w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg">
-                                <LordIcon
-                                  src={resource.lordIcon.src}
-                                  trigger="hover"
-                                  colors={resource.lordIcon.colors}
-                                  style={{
-                                    width: "30px",
-                                    height: "30px"
-                                  }}
-                                />
-                              </div>
                             </div>
                           </div>
                         </div>
