@@ -31,27 +31,24 @@ const Header = () => {
           
           {/* Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#solucoes" className="text-foreground hover:text-brand-blue transition-colors">
+            <a href="#solucoes" className="text-foreground/80 hover:text-brand-blue transition-colors text-sm font-medium">
               Soluções
             </a>
-            <a href="#recursos" className="text-foreground hover:text-brand-blue transition-colors">
+            <a href="#casos-sucesso" className="text-foreground/80 hover:text-brand-blue transition-colors text-sm font-medium">
+              Casos de Sucesso
+            </a>
+            <a href="#recursos" className="text-foreground/80 hover:text-brand-blue transition-colors text-sm font-medium">
               Recursos
             </a>
-            <a href="#precos" className="text-foreground hover:text-brand-blue transition-colors">
-              Preços
-            </a>
-            <a href="#contato" className="text-foreground hover:text-brand-blue transition-colors">
-              Contato
+            <a href="#depoimentos" className="text-foreground/80 hover:text-brand-blue transition-colors text-sm font-medium">
+              Depoimentos
             </a>
           </nav>
           
-          {/* CTA Buttons */}
-          <div className="flex items-center space-x-3">
-            <Button variant="tertiary" className="hidden sm:inline-flex">
-              Entrar
-            </Button>
+          {/* CTA Button */}
+          <div className="flex items-center">
             <Button variant="primary">
-              Começar Grátis
+              Fale com um Especialista
             </Button>
           </div>
         </div>

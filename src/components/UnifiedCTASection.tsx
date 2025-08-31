@@ -43,7 +43,7 @@ const UnifiedCTASection = () => {
               size="default"
               className="min-h-[48px] px-8"
             >
-              Começar teste gratuito
+              Fale com um Especialista
               <ArrowRight className="w-4 h-4 ml-2" />
             </Button>
             
