@@ -234,7 +234,7 @@ const ProductResourcesSection = () => {
                             </div>
 
                             {/* CTA Button */}
-                            <Button size="lg" className="bg-brand-blue hover:bg-brand-blue/90 text-white w-fit">
+                            <Button size="default" className="bg-brand-blue hover:bg-brand-blue/90 text-white w-fit">
                               Explorar {resource.tabLabel}
                             </Button>
                           </div>
