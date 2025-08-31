@@ -1,4 +1,4 @@
-import { Check, Clock } from "lucide-react";
+import { Check, Clock, ArrowRight } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -235,7 +235,8 @@ const ProductResourcesSection = () => {
 
                             {/* CTA Button */}
                             <Button size="default" className="bg-brand-blue hover:bg-brand-blue/90 text-white w-fit">
-                              Explorar {resource.tabLabel}
+                              Falar com a Eduzz
+                              <ArrowRight className="w-4 h-4 ml-2" />
                             </Button>
                           </div>
 
