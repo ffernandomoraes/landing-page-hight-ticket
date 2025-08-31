@@ -66,13 +66,6 @@ const NewsletterSection = () => {
               </Button>
             </div>
           </form>
-
-          {/* Trust Indicators */}
-          <div className="flex flex-wrap justify-center items-center gap-6 text-stone-600 text-sm">
-            <span>100% gratuito</span>
-            <span>Conteúdo exclusivo</span>
-            <span>Sem spam</span>
-          </div>
         </div>
       </div>
     </section>
