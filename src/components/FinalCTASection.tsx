@@ -19,15 +19,12 @@ const FinalCTASection = () => {
             </div>
             
             <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-              Crie sua conta{" "}
-              <span className="text-secondary">gratuitamente</span>
-              {" "}e dê o primeiro passo rumo ao seu{" "}
-              <span className="text-secondary">high ticket</span>
+              Experimente estratégias validadas e{" "}
+              <span className="text-secondary">eleve seu high ticket</span>
             </h2>
             
             <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto leading-relaxed">
-              Junte-se aos milhares de empreendedores que já transformaram seus negócios 
-              digitais com nossa plataforma completa e integrada.
+              Aplique táticas usadas pelos principais players e veja impacto real em conversão e margem.
             </p>
           </div>
 
@@ -37,10 +34,9 @@ const FinalCTASection = () => {
               variant="secondary"
               size="lg"
               className="text-lg px-8 py-4 min-h-[56px]"
-              onClick={() => window.open('https://accounts.eduzz.com/', '_blank')}
             >
               <CirclePlus className="w-5 h-5" />
-              Criar conta gratuita
+              Começar teste gratuito
               <ArrowRight className="w-5 h-5" />
             </Button>
             
@@ -49,7 +45,7 @@ const FinalCTASection = () => {
               size="lg"
               className="text-lg px-8 py-4 min-h-[56px]"
             >
-              Ver demonstração
+              Falar com um Gerente
             </Button>
           </div>
 
