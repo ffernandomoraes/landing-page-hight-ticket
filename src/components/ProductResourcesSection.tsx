@@ -44,16 +44,13 @@ const ProductResourcesSection = () => {
       },
       imageUrl: saasPaymentSystem,
       features: [
-        "Pix",
+        "Pix / Cartão de crédito / Boleto",
         "Pix + Cartão de crédito",
-        "Cartão de crédito à vista",
-        "Cartão de crédito parcelado em até 18x*",
-        "Boleto"
+        "Cartão de crédito parcelado em até 18x*"
       ],
       comingSoon: [
         "TMB parcelado (em breve)",
-        "Pix Automático (em breve)",
-        "Pix Parcelado (em breve)"
+        "Pix Automático e Pix Parcelado (em breve)"
       ],
       tabLabel: "Pagamentos"
     },
