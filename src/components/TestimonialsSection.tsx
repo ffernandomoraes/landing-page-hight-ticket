@@ -155,23 +155,6 @@ const TestimonialsSection = () => {
           </Carousel>
         </div>
 
-        {/* Trust Indicators */}
-        <div className="mt-16 text-center">
-          <div className="flex flex-wrap justify-center items-center gap-8 text-stone-600">
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-stone-400 rounded-full"></div>
-              <span className="text-sm">+50.000 empreendedores</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-stone-400 rounded-full"></div>
-              <span className="text-sm">+1 bilhão processado</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-stone-400 rounded-full"></div>
-              <span className="text-sm">Suporte 24/7</span>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
