@@ -15,7 +15,7 @@ const NewsletterSection = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-stone-50 via-white to-stone-100 relative overflow-hidden">
+    <section className="py-16 bg-gradient-to-br from-stone-50 via-white to-stone-100 relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0">
         <div className="absolute top-10 left-10 w-32 h-32 bg-primary/5 rounded-full blur-3xl"></div>

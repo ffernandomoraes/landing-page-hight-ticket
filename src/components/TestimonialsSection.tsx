@@ -77,7 +77,7 @@ const testimonials: Testimonial[] = [
 
 const TestimonialsSection = () => {
   return (
-    <section className="py-20 bg-gradient-to-br from-blue-50 to-stone-100">
+    <section className="py-16 bg-gradient-to-br from-blue-50 to-stone-100">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-stone-800 mb-6">

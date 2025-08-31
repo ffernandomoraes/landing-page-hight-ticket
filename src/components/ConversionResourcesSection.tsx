@@ -56,7 +56,7 @@ const resources: Resource[] = [
 
 const ConversionResourcesSection = () => {
   return (
-    <section className="bg-gradient-to-br from-[hsl(210_95%_20%)] to-[hsl(210_95%_10%)] py-28">
+    <section className="bg-gradient-to-br from-[hsl(210_95%_20%)] to-[hsl(210_95%_10%)] py-16">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16">

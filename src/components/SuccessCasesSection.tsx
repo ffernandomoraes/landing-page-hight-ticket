@@ -104,7 +104,7 @@ const SuccessCasesSection = () => {
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
 
   return (
-    <section className="pt-10 pb-20 bg-background">
+    <section className="py-16 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-8">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">

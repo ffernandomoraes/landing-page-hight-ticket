@@ -120,7 +120,7 @@ const ProductResourcesSection = () => {
   const activeResource = resources.find(r => r.id === activeTab);
 
   return (
-    <section className="py-20 bg-gradient-to-br from-stone-50 to-white">
+    <section className="py-16 bg-gradient-to-br from-stone-50 to-white">
       {/* Section Header */}
       <div className="container mx-auto px-4 text-center mb-16">
         <h2 className="text-4xl md:text-5xl font-bold text-stone-800 mb-6">

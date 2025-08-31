@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 const FeaturesSection = () => {
   return (
-    <section className="bg-gradient-to-r from-[#FFBC00] to-[#FFD700] py-20">
+    <section className="bg-gradient-to-r from-[#FFBC00] to-[#FFD700] py-16">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           

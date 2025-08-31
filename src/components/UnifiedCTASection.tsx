@@ -10,7 +10,7 @@ const UnifiedCTASection = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-[hsl(210_95%_20%)] to-[hsl(210_95%_10%)] relative overflow-hidden">
+    <section className="py-16 bg-gradient-to-br from-[hsl(210_95%_20%)] to-[hsl(210_95%_10%)] relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-1/4 w-72 h-72 bg-secondary/10 rounded-full blur-3xl animate-pulse"></div>
