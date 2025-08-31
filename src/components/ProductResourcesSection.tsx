@@ -35,7 +35,7 @@ const ProductResourcesSection = () => {
     },
     {
       id: "pagamento",
-      title: "Diversas possibilidades de pagamento",
+      title: "Opções de pagamento",
       description: "Métodos de pagamento que maximizam suas vendas",
       lordIcon: {
         src: "https://cdn.lordicon.com/lnpwcryl.json",
