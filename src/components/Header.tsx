@@ -31,20 +31,25 @@ const Header = () => {
           
           {/* Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#casos-sucesso" className="text-foreground/80 hover:text-brand-blue transition-colors text-sm font-medium">
+            <a href="#casos-sucesso" className="text-foreground/80 hover:text-brand-blue transition-colors text-sm font-medium relative group">
               Cases de Sucesso
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-yellow transition-all duration-300 group-hover:w-full"></span>
             </a>
-            <a href="#estrategias" className="text-foreground/80 hover:text-brand-blue transition-colors text-sm font-medium">
+            <a href="#estrategias" className="text-foreground/80 hover:text-brand-blue transition-colors text-sm font-medium relative group">
               Estratégias
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-yellow transition-all duration-300 group-hover:w-full"></span>
             </a>
-            <a href="#solucoes" className="text-foreground/80 hover:text-brand-blue transition-colors text-sm font-medium">
+            <a href="#solucoes" className="text-foreground/80 hover:text-brand-blue transition-colors text-sm font-medium relative group">
               Soluções
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-yellow transition-all duration-300 group-hover:w-full"></span>
             </a>
-            <a href="#recursos" className="text-foreground/80 hover:text-brand-blue transition-colors text-sm font-medium">
+            <a href="#recursos" className="text-foreground/80 hover:text-brand-blue transition-colors text-sm font-medium relative group">
               Recursos
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-yellow transition-all duration-300 group-hover:w-full"></span>
             </a>
-            <a href="#depoimentos" className="text-foreground/80 hover:text-brand-blue transition-colors text-sm font-medium">
+            <a href="#depoimentos" className="text-foreground/80 hover:text-brand-blue transition-colors text-sm font-medium relative group">
               Depoimentos
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-yellow transition-all duration-300 group-hover:w-full"></span>
             </a>
           </nav>
           
