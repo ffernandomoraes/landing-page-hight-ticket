@@ -7,6 +7,8 @@ import {
   CarouselNext,
   CarouselPrevious
 } from "@/components/ui/carousel";
+import CarouselIndicators from "./CarouselIndicators";
+import { useState } from "react";
 
 interface Testimonial {
   id: number;
@@ -76,6 +78,8 @@ const testimonials: Testimonial[] = [
 ];
 
 const TestimonialsSection = () => {
+  const [api, setApi] = useState<any>();
+
   return (
     <section className="py-16 bg-gradient-to-br from-blue-50 to-stone-100">
       <div className="container mx-auto px-4">
@@ -96,10 +100,11 @@ const TestimonialsSection = () => {
               loop: true,
             }}
             className="w-full"
+            setApi={setApi}
           >
-            <CarouselContent className="-ml-2 md:-ml-4">
+            <CarouselContent className="-ml-2 md:-ml-4 py-8">
               {testimonials.map((testimonial) => (
-                <CarouselItem key={testimonial.id} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+                <CarouselItem key={testimonial.id} className="pl-2 md:pl-4 basis-full md:basis-1/2 lg:basis-1/3">
                   <Card className="h-full bg-white shadow-lg hover:shadow-xl transition-shadow duration-300 border-0">
                     <CardContent className="p-8 h-full flex flex-col">
                       {/* Quote Icon */}
@@ -153,6 +158,8 @@ const TestimonialsSection = () => {
             <CarouselPrevious className="hidden md:flex -left-16 w-12 h-12 rounded-full" />
             <CarouselNext className="hidden md:flex -right-16 w-12 h-12 rounded-full" />
           </Carousel>
+
+          <CarouselIndicators api={api} />
         </div>
 
       </div>
