@@ -19,7 +19,7 @@ const ProductResourcesSection = () => {
       title: "Área de membros white label",
       description: "Crie a escola com a sua marca e engaje seus alunos",
       lordIcon: {
-        src: "https://cdn.lordicon.com/kkwpwktn.json",
+        src: "https://cdn.lordicon.com/yisvhhtw.json",
         colors: "primary:#1e40af,secondary:#3b82f6",
         colorsActive: "primary:#ffffff,secondary:#ffffff"
       },
@@ -38,7 +38,7 @@ const ProductResourcesSection = () => {
       title: "Opções de pagamento",
       description: "Métodos de pagamento que maximizam suas vendas",
       lordIcon: {
-        src: "https://cdn.lordicon.com/lnpwcryl.json",
+        src: "https://cdn.lordicon.com/qwoehyvy.json",
         colors: "primary:#1e40af,secondary:#3b82f6",
         colorsActive: "primary:#ffffff,secondary:#ffffff"
       },
@@ -59,7 +59,7 @@ const ProductResourcesSection = () => {
       title: "Performance para pitch nos eventos",
       description: "Produtos físicos, parceiros, recorrência e muito mais",
       lordIcon: {
-        src: "https://cdn.lordicon.com/orwrebsb.json",
+        src: "https://cdn.lordicon.com/gvdzkarq.json",
         colors: "primary:#1e40af,secondary:#3b82f6",
         colorsActive: "primary:#ffffff,secondary:#ffffff"
       },
