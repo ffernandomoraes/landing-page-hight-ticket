@@ -21,7 +21,9 @@ const Index = () => {
       <section id="casos-sucesso">
         <SuccessCasesSection />
       </section>
-      <StrategicPackagesSection />
+      <section id="estrategias">
+        <StrategicPackagesSection />
+      </section>
       <ConversionResourcesSection />
       <section id="recursos">
         <ProductResourcesSection />
