@@ -28,7 +28,9 @@ import {
   ArrowRight
 } from "lucide-react";
 import LordIcon from "./LordIcon";
-import { useRef } from "react";
+import { useRef, useState } from "react";
+import CarouselDots from "@/components/CarouselDots";
+import type { CarouselApi } from "@/components/ui/carousel";
 
 interface StrategyPackage {
   id: number;
@@ -143,6 +145,7 @@ const strategicPackages: StrategyPackage[] = [
 ];
 
 const StrategicPackagesSection = () => {
+  const [carouselApi, setCarouselApi] = useState<CarouselApi>();
   return (
     <section className="bg-background py-16">
       <div className="container mx-auto px-4 py-2">
@@ -170,6 +173,7 @@ const StrategicPackagesSection = () => {
               loop: true,
             }}
             className="w-full"
+            setApi={setCarouselApi}
           >
             <CarouselContent className="-ml-2 md:-ml-4 py-8">
               {strategicPackages.map((pkg) => {
@@ -254,6 +258,11 @@ const StrategicPackagesSection = () => {
             <CarouselPrevious className="hidden md:flex -left-16 w-12 h-12 rounded-full" />
             <CarouselNext className="hidden md:flex -right-16 w-12 h-12 rounded-full" />
           </Carousel>
+
+          {/* Mobile Dots */}
+          <div className="md:hidden">
+            <CarouselDots api={carouselApi} />
+          </div>
         </div>
       </div>
     </section>

@@ -7,6 +7,9 @@ import {
   CarouselNext,
   CarouselPrevious
 } from "@/components/ui/carousel";
+import CarouselDots from "@/components/CarouselDots";
+import { useState } from "react";
+import type { CarouselApi } from "@/components/ui/carousel";
 
 interface Testimonial {
   id: number;
@@ -76,6 +79,7 @@ const testimonials: Testimonial[] = [
 ];
 
 const TestimonialsSection = () => {
+  const [carouselApi, setCarouselApi] = useState<CarouselApi>();
   return (
     <section className="py-16 bg-gradient-to-br from-blue-50 to-stone-100">
       <div className="container mx-auto px-4">
@@ -96,6 +100,7 @@ const TestimonialsSection = () => {
               loop: true,
             }}
             className="w-full"
+            setApi={setCarouselApi}
           >
             <CarouselContent className="-ml-2 md:-ml-4">
               {testimonials.map((testimonial) => (
@@ -153,6 +158,11 @@ const TestimonialsSection = () => {
             <CarouselPrevious className="hidden md:flex -left-16 w-12 h-12 rounded-full" />
             <CarouselNext className="hidden md:flex -right-16 w-12 h-12 rounded-full" />
           </Carousel>
+
+          {/* Mobile Dots */}
+          <div className="md:hidden">
+            <CarouselDots api={carouselApi} />
+          </div>
         </div>
 
       </div>

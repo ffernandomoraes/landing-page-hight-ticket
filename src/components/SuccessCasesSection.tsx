@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Users, TrendingUp, Award, Target, Calendar, DollarSign, PlayCircle, Star, X } from "lucide-react";
 import { useState } from "react";
+import CarouselDots from "@/components/CarouselDots";
+import type { CarouselApi } from "@/components/ui/carousel";
 
 interface SuccessCase {
   id: number;
@@ -102,6 +104,7 @@ const successCases: SuccessCase[] = [
 
 const SuccessCasesSection = () => {
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
+  const [carouselApi, setCarouselApi] = useState<CarouselApi>();
 
   return (
     <section className="py-16 bg-background">
@@ -123,6 +126,7 @@ const SuccessCasesSection = () => {
               loop: true,
             }}
             className="w-full"
+            setApi={setCarouselApi}
           >
             <CarouselContent className="-ml-2 md:-ml-4 py-8">
               {successCases.map((case_) => (
@@ -187,6 +191,11 @@ const SuccessCasesSection = () => {
             <CarouselPrevious className="hidden md:flex -left-16 w-12 h-12 rounded-full" />
             <CarouselNext className="hidden md:flex -right-16 w-12 h-12 rounded-full" />
           </Carousel>
+
+          {/* Mobile Dots */}
+          <div className="md:hidden">
+            <CarouselDots api={carouselApi} />
+          </div>
         </div>
 
         {/* Card de Destaque com Vídeo */}

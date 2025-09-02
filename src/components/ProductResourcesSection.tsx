@@ -273,7 +273,7 @@ const ProductResourcesSection = () => {
                   <TabsTrigger
                     key={resource.id}
                     value={resource.id}
-                    className="flex flex-col items-center justify-center gap-1 p-2 rounded-md data-[state=active]:bg-brand-blue data-[state=active]:text-white transition-all duration-300 min-h-[60px]"
+                    className="flex flex-col items-center justify-center gap-1 p-3 rounded-md data-[state=active]:bg-brand-blue data-[state=active]:text-white transition-all duration-300 aspect-square"
                   >
                     <LordIcon
                       src={resource.lordIcon.src}
@@ -284,9 +284,6 @@ const ProductResourcesSection = () => {
                         height: "20px"
                       }}
                     />
-                    <span className="text-[9px] font-medium text-center leading-tight whitespace-pre-line">
-                      {resource.tabLabel}
-                    </span>
                   </TabsTrigger>
                 );
               })}
