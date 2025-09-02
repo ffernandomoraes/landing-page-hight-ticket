@@ -32,7 +32,7 @@ const ProductResourcesSection = () => {
         "Relatórios de engajamento",
         "Múltiplas escolas, um acesso"
       ],
-      tabLabel: "Área de Membros"
+      tabLabel: "Área de\nMembros"
     },
     {
       id: "pagamento",
@@ -53,7 +53,7 @@ const ProductResourcesSection = () => {
         "Boleto parcelado (TMB) (em breve)",
         "Pix Automático e Pix Parcelado (em breve)"
       ],
-      tabLabel: "Pagamentos"
+      tabLabel: "Checkout e\nConversão"
     },
     {
       id: "eventos",
@@ -74,7 +74,7 @@ const ProductResourcesSection = () => {
       comingSoon: [
         "Vitrine com todas as ofertas dos pitchs (em breve)"
       ],
-      tabLabel: "Eventos"
+      tabLabel: "Eventos\nPresenciais\ne Online"
     },
     {
       id: "seguranca",
@@ -95,7 +95,7 @@ const ProductResourcesSection = () => {
       comingSoon: [
         "Verificação de links e rastreamento em grupos de lançamento (em breve)"
       ],
-      tabLabel: "Segurança"
+      tabLabel: "Segurança e\nCredibilidade"
     },
     {
       id: "vendas",
@@ -114,7 +114,7 @@ const ProductResourcesSection = () => {
         "Relatórios completos",
         "Taxa diferenciada por volume de vendas*"
       ],
-      tabLabel: "Equipe de Vendas"
+      tabLabel: "Gestão de\nvendas"
     }
   ];
 
@@ -273,7 +273,7 @@ const ProductResourcesSection = () => {
                   <TabsTrigger
                     key={resource.id}
                     value={resource.id}
-                    className="flex flex-col items-center gap-1 p-2 rounded-md data-[state=active]:bg-brand-blue data-[state=active]:text-white transition-all duration-300 aspect-square"
+                    className="flex flex-col items-center justify-center gap-1 p-2 rounded-md data-[state=active]:bg-brand-blue data-[state=active]:text-white transition-all duration-300 min-h-[60px]"
                   >
                     <LordIcon
                       src={resource.lordIcon.src}
@@ -284,8 +284,8 @@ const ProductResourcesSection = () => {
                         height: "20px"
                       }}
                     />
-                    <span className="text-[10px] font-medium text-center leading-tight">
-                      {resource.tabLabel.split(' ')[0]}
+                    <span className="text-[9px] font-medium text-center leading-tight whitespace-pre-line">
+                      {resource.tabLabel}
                     </span>
                   </TabsTrigger>
                 );
@@ -378,18 +378,18 @@ const ProductResourcesSection = () => {
                     </Card>
 
                     {/* Mobile CTA Button Carousel */}
-                    <div className="mt-4">
+                    <div className="mt-4 px-4">
                       <Carousel className="w-full">
-                        <CarouselContent>
-                          <CarouselItem className="pl-1">
+                        <CarouselContent className="ml-0">
+                          <CarouselItem className="pl-0 basis-full">
                             <Button size="default" className="bg-brand-blue hover:bg-brand-blue/90 text-white w-full">
                               Falar com a Eduzz
                               <ArrowRight className="w-4 h-4 ml-2" />
                             </Button>
                           </CarouselItem>
-                          <CarouselItem className="pl-1">
+                          <CarouselItem className="pl-0 basis-full">
                             <Button variant="outline" size="default" className="w-full border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white">
-                              Saiba mais sobre {resource.tabLabel}
+                              Saiba mais sobre recursos
                               <ArrowRight className="w-4 h-4 ml-2" />
                             </Button>
                           </CarouselItem>
