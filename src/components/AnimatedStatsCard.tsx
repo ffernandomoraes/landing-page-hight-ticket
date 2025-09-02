@@ -28,9 +28,10 @@ const AnimatedStatsCard = ({ number, unit, description, icon: Icon, lordIcon, su
   return (
     <div 
       ref={ref}
-      className="bg-white/20 backdrop-blur-sm border border-white/30 rounded-xl p-3 md:p-6 transition-all duration-300 shadow-gradient-hover hover:bg-white/25 hover:scale-105 cursor-pointer group relative overflow-hidden w-full h-[260px] flex flex-col"
+      className="bg-white/20 backdrop-blur-sm border border-white/30 rounded-xl p-4 md:p-6 transition-all duration-300 shadow-gradient-hover hover:bg-white/25 hover:scale-105 cursor-pointer group relative overflow-hidden w-full h-auto flex flex-row items-center gap-4"
     >
-      <div className="flex items-start justify-between mb-2 md:mb-4 flex-shrink-0">
+      {/* Column 1: Icon */}
+      <div className="flex-shrink-0">
         {lordIcon ? (
           <LordIcon
             src={lordIcon.src}
@@ -44,18 +45,19 @@ const AnimatedStatsCard = ({ number, unit, description, icon: Icon, lordIcon, su
           />
         ) : Icon ? (
           <Icon 
-            className={`w-6 h-6 md:w-8 md:h-8 ${colorClass} group-hover:opacity-80 transition-colors`}
+            className={`w-8 h-8 md:w-10 md:h-10 ${colorClass} group-hover:opacity-80 transition-colors`}
             strokeWidth={1.5}
           />
         ) : null}
       </div>
       
-      <div className="space-y-2 flex-1 flex flex-col justify-center">
-        <div className={`text-lg md:text-2xl lg:text-3xl font-bold ${colorClass} h-8 md:h-10 flex items-center justify-start whitespace-nowrap`}>
+      {/* Column 2: Title and Subtitle */}
+      <div className="flex-1 space-y-1">
+        <div className={`text-xl md:text-2xl lg:text-3xl font-bold ${colorClass} leading-tight`}>
           {formatNumber(count)} {unit}
         </div>
         
-        <div className="text-gray-800 text-xs md:text-sm leading-relaxed h-8 md:h-10 flex items-start">
+        <div className="text-gray-800 text-sm md:text-base leading-relaxed">
           {description}
         </div>
       </div>
