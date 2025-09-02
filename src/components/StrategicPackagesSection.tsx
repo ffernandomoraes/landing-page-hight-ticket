@@ -120,7 +120,7 @@ const strategicPackages: StrategyPackage[] = [
   },
   {
     id: 4,
-    title: "Evento Presencial\n+ High Ticket",
+    title: "Tour de Eventos\n+ High Ticket",
     subtitle: "Experiência intensa e conversão máxima",
     description: [
       { text: "Evento presencial de alto impacto", icon: Flame },
