@@ -28,9 +28,9 @@ const AnimatedStatsCard = ({ number, unit, description, icon: Icon, lordIcon, su
   return (
     <div 
       ref={ref}
-      className="bg-white/20 backdrop-blur-sm border border-white/30 rounded-xl p-4 md:p-6 transition-all duration-300 shadow-gradient-hover hover:bg-white/25 hover:scale-105 cursor-pointer group relative overflow-hidden w-full h-auto flex flex-row items-center gap-4"
+      className="bg-white/20 backdrop-blur-sm border border-white/30 rounded-xl p-4 md:p-6 transition-all duration-300 shadow-gradient-hover hover:bg-white/25 hover:scale-105 cursor-pointer group relative overflow-hidden w-full h-auto flex flex-row md:flex-col items-center gap-4 md:text-center"
     >
-      {/* Column 1: Icon */}
+      {/* Icon */}
       <div className="flex-shrink-0">
         {lordIcon ? (
           <LordIcon
@@ -51,8 +51,8 @@ const AnimatedStatsCard = ({ number, unit, description, icon: Icon, lordIcon, su
         ) : null}
       </div>
       
-      {/* Column 2: Title and Subtitle */}
-      <div className="flex-1 space-y-1">
+      {/* Title and Subtitle */}
+      <div className="flex-1 md:flex-none space-y-1">
         <div className={`text-xl md:text-2xl lg:text-3xl font-bold ${colorClass} leading-tight`}>
           {formatNumber(count)} {unit}
         </div>
