@@ -2,6 +2,7 @@ import { Check, Clock, ArrowRight } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import saasEducationPlatform from "@/assets/saas-education-platform.jpg";
 import saasPaymentSystem from "@/assets/saas-payment-system.jpg";
 import saasPresentationTools from "@/assets/saas-presentation-tools.jpg";
@@ -131,8 +132,8 @@ const ProductResourcesSection = () => {
         </p>
       </div>
 
-      {/* Tabs Section */}
-      <div className="container mx-auto px-4">
+      {/* Desktop Version */}
+      <div className="container mx-auto px-4 hidden md:block">
         <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
           {/* Tabs Navigation */}
           <div className="mb-12">
@@ -253,6 +254,150 @@ const ProductResourcesSection = () => {
                         </div>
                       </CardContent>
                     </Card>
+                  </div>
+                </TabsContent>
+              );
+            })}
+          </div>
+        </Tabs>
+      </div>
+
+      {/* Mobile Version */}
+      <div className="container mx-auto px-4 md:hidden">
+        <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
+          {/* Mobile Tabs Navigation - Minimal Square Tabs */}
+          <div className="mb-8">
+            <TabsList className="grid w-full grid-cols-5 h-auto bg-white rounded-lg p-1 shadow-sm border gap-1">
+              {resources.map((resource) => {
+                return (
+                  <TabsTrigger
+                    key={resource.id}
+                    value={resource.id}
+                    className="flex flex-col items-center gap-1 p-2 rounded-md data-[state=active]:bg-brand-blue data-[state=active]:text-white transition-all duration-300 aspect-square"
+                  >
+                    <LordIcon
+                      src={resource.lordIcon.src}
+                      trigger="manual"
+                      colors={activeTab === resource.id ? resource.lordIcon.colorsActive : resource.lordIcon.colors}
+                      style={{
+                        width: "20px",
+                        height: "20px"
+                      }}
+                    />
+                    <span className="text-[10px] font-medium text-center leading-tight">
+                      {resource.tabLabel.split(' ')[0]}
+                    </span>
+                  </TabsTrigger>
+                );
+              })}
+            </TabsList>
+          </div>
+
+          {/* Mobile Tab Content */}
+          <div className="relative">
+            {resources.map((resource) => {
+              return (
+                <TabsContent key={resource.id} value={resource.id} className="mt-0">
+                  <div className="animate-fade-in">
+                    <Card className="bg-white border-0 shadow-lg rounded-xl overflow-hidden">
+                      <CardContent className="p-0">
+                        {/* Mobile Image */}
+                        <div className="relative bg-gradient-to-br from-stone-100 to-stone-200 flex items-center justify-center p-4">
+                          <div className="relative w-full max-w-xs mx-auto">
+                            <img 
+                              src={resource.imageUrl}
+                              alt={resource.title}
+                              className="w-full h-auto rounded-lg shadow-xl"
+                            />
+                          </div>
+                        </div>
+
+                        {/* Mobile Content */}
+                        <div className="p-4">
+                          <div className="flex items-center gap-3 mb-4">
+                            <div className="w-10 h-10 rounded-lg flex items-center justify-center">
+                              <LordIcon
+                                src={resource.lordIcon.src}
+                                trigger="hover"
+                                colors={resource.lordIcon.colors}
+                                style={{
+                                  width: "40px",
+                                  height: "40px"
+                                }}
+                              />
+                            </div>
+                            <div>
+                              <h3 className="text-lg font-bold text-stone-800 leading-tight">
+                                {resource.title}
+                              </h3>
+                            </div>
+                          </div>
+                          
+                          <p className="text-sm text-stone-600 leading-relaxed mb-6">
+                            {resource.description}
+                          </p>
+
+                          {/* Features List */}
+                          <div className="space-y-2 mb-6">
+                            {resource.features.map((feature, featureIndex) => (
+                              <div 
+                                key={featureIndex}
+                                className="flex items-start gap-2"
+                              >
+                                <div className="mt-1 w-4 h-4 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                  <Check className="w-2.5 h-2.5 text-green-600" strokeWidth={2} />
+                                </div>
+                                <span className="text-sm text-stone-700 leading-relaxed">
+                                  {feature}
+                                </span>
+                              </div>
+                            ))}
+
+                            {/* Coming Soon Features */}
+                            {resource.comingSoon?.map((feature, featureIndex) => (
+                              <div 
+                                key={`coming-${featureIndex}`}
+                                className="flex items-start gap-2"
+                              >
+                                <div className="mt-1 w-4 h-4 bg-amber-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                  <Clock className="w-2.5 h-2.5 text-amber-600" strokeWidth={2} />
+                                </div>
+                                <div className="flex items-center gap-2 flex-wrap">
+                                  <span className="text-sm text-stone-600 leading-relaxed">
+                                    {feature.replace(" (em breve)", "")}
+                                  </span>
+                                  <span className="px-2 py-0.5 bg-amber-100 text-amber-700 text-xs rounded-full font-medium">
+                                    Em breve
+                                  </span>
+                                </div>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      </CardContent>
+                    </Card>
+
+                    {/* Mobile CTA Button Carousel */}
+                    <div className="mt-4">
+                      <Carousel className="w-full">
+                        <CarouselContent>
+                          <CarouselItem className="pl-1">
+                            <Button size="default" className="bg-brand-blue hover:bg-brand-blue/90 text-white w-full">
+                              Falar com a Eduzz
+                              <ArrowRight className="w-4 h-4 ml-2" />
+                            </Button>
+                          </CarouselItem>
+                          <CarouselItem className="pl-1">
+                            <Button variant="outline" size="default" className="w-full border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white">
+                              Saiba mais sobre {resource.tabLabel}
+                              <ArrowRight className="w-4 h-4 ml-2" />
+                            </Button>
+                          </CarouselItem>
+                        </CarouselContent>
+                        <CarouselPrevious className="left-2" />
+                        <CarouselNext className="right-2" />
+                      </Carousel>
+                    </div>
                   </div>
                 </TabsContent>
               );
